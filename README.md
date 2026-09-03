@@ -1,6 +1,6 @@
 # Containing Files
 
-1. The LICENSE file:
+1. The LICENSE file :
 In most cases, the license for SAP sample projects is `Apache 2.0`.
 
 2. The REUSE.toml file: 
@@ -9,7 +9,7 @@ The [Reuse Tool](https://reuse.software/) must be used for your samples project.
 3. The README.md file (this file):
 Please edit this file as it is the primary description file for your project. You can find some placeholder titles for sections below.
 
-# Session ID - Session Title
+# IN262 - Build an integration scenario from scratch with AI assistance at every step
 
 ## Description
 
