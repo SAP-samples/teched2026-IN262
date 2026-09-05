@@ -43,9 +43,19 @@ Only Product Master Data Steward and End User / Customer persona will be used in
 
 </br> </br>
 
-## Requirements
+## 2. System Landscape
 
-The requirements to follow the exercises in this repository are...
+| System | Purpose |
+|---|---|
+| SAP Integration Suite | Connects all systems; hosts the integration flows |
+| Integration Suite AEM | [TODO] Raises event on product creation in S/4HANA |
+| S/4HANA (On-Premise) | [TODO] Source system for product creation; triggers the event |
+| Emarsys | [TODO]Campaign management — receives enriched data and executes the campaign |
+| Inbox | [TODO]Human approval step in the workflow |
+| AI Client | [TODO] MCP Inspector (current); IT-provided AI client (planned) |
+
+> [!Note]
+>  All systems will be pre-configured and seeded with data by the session organiser. Participants need not perform any system setup.
 
 ## Exercises
 
