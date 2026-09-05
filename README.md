@@ -4,11 +4,44 @@
 
 ## Description
 
-This repository contains the material for the SAP TechEd 2026 session called Session ID - Session Title.  
+This repository contains the material for the SAP TechEd 2026 Hands-on workshop session [IN262 - Build an integration scenario from scratch with AI assistance at every step](https://github.com/SAP-samples/teched2026-IN262).
+It captures the business scenario, session structure, exercise outlines and content standards. 
 
 ## Overview
 
-This session introduces attendees to...
+## 1. Business Scenario - Campaign Management
+###  1.1 Overview
+**Company:** Best Run Business
+
+**Problem:** Preparing product launch campaigns, festival season offers, and personalised purchase-history-based offers manually is time-consuming and error-prone.
+
+**Goal:** Use AI-assisted integration to automatically curate and deliver campaigns to customers based on their buying history and local festival/product launch schedules.
+</br> </br> 
+
+### 1.2 Personas
+| Persona | Role |
+|---|---|
+| Requester / Business User | Initiates the request for a new product |
+| **Product Master Data Steward** | Creates and enriches product master data in S4/HANA, ensures data quality |
+| Data Owner / Product Owner | Validates business attributes and approves the request |
+| **End User / Customer** | Receives notification about the new product and associated campaign offers |
+
+> [!NOTE]
+Only Product Master Data Steward and End User / Customer persona will be used in this hands-on session
+</br>
+
+### 1.3 End-to-End User Journey
+
+1. **[Master Data Steward]** Creates a new product entry in S/4HANA using an AI agent client (MCP Inspector / AI client)
+2. **[System]** Event raised automatically on product creation via Integration Suite AEM
+3. **[Integration Suite]** Flows orchestrate the campaign — enriching product data, calculating a personalised discount based on customer purchase history, and triggering Emarsys
+4. **[End User / Customer]** Receives new product information along with a personalised special discount offer
+[TODO revisit based on email and myinbox task] A task will be triggered automatically by the System
+5. **[End User / Customer]** Places an order for the product
+6. **[System]** Acknowledges the order back to the customer and delivers a cross-selling campaign offer
+[TODO revisit based on email and myinbox task] Receives a notifcation task in his / her inbox along with the cross selling campaign details
+
+</br> </br>
 
 ## Requirements
 
