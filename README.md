@@ -8,7 +8,6 @@ This repository contains the material for the SAP TechEd 2026 Hands-on workshop 
 It captures the business scenario, session structure, exercise outlines and content standards. 
 
 ## Overview
-
 ## 1. Business Scenario - Campaign Management
 ###  1.1 Overview
 **Company:** Best Run Business
@@ -16,8 +15,7 @@ It captures the business scenario, session structure, exercise outlines and cont
 **Problem:** Preparing product launch campaigns, festival season offers, and personalised purchase-history-based offers manually is time-consuming and error-prone.
 
 **Goal:** Use AI-assisted integration to automatically curate and deliver campaigns to customers based on their buying history and local festival/product launch schedules.
-</br> </br> 
-
+</br>
 ### 1.2 Personas
 | Persona | Role |
 |---|---|
@@ -27,11 +25,9 @@ It captures the business scenario, session structure, exercise outlines and cont
 | **End User / Customer** | Receives notification about the new product and associated campaign offers |
 
 > [!NOTE]
-Only Product Master Data Steward and End User / Customer persona will be used in this hands-on session
-</br>
+Only Product Master Data Steward and End User / Customer persona will be used in this hands-on session </br>
 
 ### 1.3 End-to-End User Journey
-
 1. **[Master Data Steward]** Creates a new product entry in S/4HANA using an AI agent client (MCP Inspector / AI client)
 2. **[System]** Event raised automatically on product creation via Integration Suite AEM
 3. **[Integration Suite]** Flows orchestrate the campaign — enriching product data, calculating a personalised discount based on customer purchase history, and triggering Emarsys
@@ -40,8 +36,7 @@ Only Product Master Data Steward and End User / Customer persona will be used in
 5. **[End User / Customer]** Places an order for the product
 6. **[System]** Acknowledges the order back to the customer and delivers a cross-selling campaign offer
 [TODO revisit based on email and myinbox task] Receives a notifcation task in his / her inbox along with the cross selling campaign details
-
-</br> </br>
+</br> 
 
 ## 2. System Landscape
 
@@ -53,26 +48,27 @@ Only Product Master Data Steward and End User / Customer persona will be used in
 | Emarsys | [TODO]Campaign management — receives enriched data and executes the campaign |
 | Inbox | [TODO]Human approval step in the workflow |
 | AI Client | [TODO] MCP Inspector (current); IT-provided AI client (planned) |
-
 > [!Note]
 >  All systems will be pre-configured and seeded with data by the session organiser. Participants need not perform any system setup.
 
-## Exercises
+</br> </br>
 
-Provide the exercise content here directly in README.md using [markdown](https://guides.github.com/features/mastering-markdown/) and linking to the specific exercise pages, below is an example.
+## 3. Exercises
 
-- [Getting Started](exercises/ex0/)
-- [Exercise 1 - First Exercise Description](exercises/ex1/)
-    - [Exercise 1.1 - Exercise 1 Sub Exercise 1 Description](exercises/ex1#exercise-11-sub-exercise-1-description)
-    - [Exercise 1.2 - Exercise 1 Sub Exercise 2 Description](exercises/ex1#exercise-12-sub-exercise-2-description)
-- [Exercise 2 - Second Exercise Description](exercises/ex2/)
-    - [Exercise 2.1 - Exercise 2 Sub Exercise 1 Description](exercises/ex2#exercise-21-sub-exercise-1-description)
-    - [Exercise 2.2 - Exercise 2 Sub Exercise 2 Description](exercises/ex2#exercise-22-sub-exercise-2-description)
+| # | Block | Type | Duration |
+|---|-------|------|----------|
+| 0 | Welcome, Business Scenario & Technical Overview | Instructor-led | 10 min 
+| 1 | **Exercise 1:** [TODO] [Generate an Integration Flow with AI](exercises/ex1#exercise-11-sub-exercise-1-description) | Hands-on | 25 min |
+| 2 | **Exercise 2:** [TODO] [Optimize the Script with AI](exercises/ex1#exercise-11-sub-exercise-2-description) | Hands-on | 10 min |
+| 3 | **Exercise 3:** [TODO] [Profile & Deploy](exercises/ex1#exercise-11-sub-exercise-3-description) | Hands-on | 15 min |
+| 4 | **Exercise 4:** [TODO] [Create MCP Server & Expose the API](exercises/ex1#exercise-11-sub-exercise-4-description) | Hands-on | 20 min |
+| 5 | **Exercise 5:** [TODO] [Run the Scenario, Resolve the Error & Complete the Campaign](exercises/ex1#exercise-11-sub-exercise-5-description) | Hands-on | 30 min |
+| 6 | Wrap-up, Q&A & Key Takeaways | Instructor-led | 10 min |
+
+**Total: ~120 min** — with ~5 min buffer across exercises for questions.
 
   
-**OR** Link to the Tutorial Navigator for example...
 
-Start the exercises [here](https://developers.sap.com/tutorials/abap-environment-trial-onboarding.html).
 
 **IMPORTANT**
 
