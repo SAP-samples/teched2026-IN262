@@ -1,4 +1,14 @@
-# Exercise 1 - Exercise 1 Description
+# Exercise 1: Generate an Integration Flow with AI
+**AI Feature:** AI-generated Integration Flow
+
+**Duration:** 25 min
+
+**Business Context:**
+Building integration flows manually requires deep technical knowledge and long time for configuration. With AI-assisted generation in Integration Suite, you describe what you need in plain language and the system generates a structured flow for you.
+
+**What AI Does Here:**
+Generates a integration flow — including connectors, mappings, and routing logic — from a natural language prompt.
+
 
 In this exercise, we will create...
 
