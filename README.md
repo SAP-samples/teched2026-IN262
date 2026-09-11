@@ -25,7 +25,7 @@ It captures the business scenario, session structure, exercise outlines and cont
 | **End User / Customer** | Receives notification about the new product and associated campaign offers |
 
 > [!NOTE]
-Only Product Master Data Steward and End User / Customer persona will be used in this hands-on session </br>
+Only **Product Master Data Steward** and **End User / Customer** persona will be used in this hands-on session </br>
 
 ### 1.3 Technical Overview
 
