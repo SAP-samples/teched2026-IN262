@@ -31,6 +31,7 @@ Only **Product Master Data Steward** and **End User / Customer** persona will be
 
 his session takes participants through the complete lifecycle of building an AI-assisted integration — from generating the first integration flow to running the scenario end-to-end. At each step, a different AI capability embedded in SAP Integration Suite does the heavy lifting: generating, optimising, profiling, and resolving errors. Participants will also step beyond integration and into the agentic world — creating an MCP Server to expose a backend API, and calling it directly from an AI agent to trigger the full campaign flow.
 
+<img src="/exercises/ex0/images/1_AI_Settings_Page.png" alt="Pic_IN262_1" >
 
 Participants will:
 
