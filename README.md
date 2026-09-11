@@ -58,13 +58,12 @@ Only Product Master Data Steward and End User / Customer persona will be used in
 | # | Block | Type | Duration |
 |---|-------|------|----------|
 | 0 | Welcome, Business Scenario & Technical Overview | Instructor-led | 10 min 
-| 1 | **Exercise 1:** [TODO] [Generate an Integration Flow with AI](exercises/ex1#exercise-11-sub-exercise-1-description) <br> Generate iflow, add script(s), add mapping and configure | Hands-on | 25 min |
-| 2 | **Exercise 2:** [TODO] [Optimize the Script with AI](exercises/ex1#exercise-11-sub-exercise-2-description) <br> [TODO] this can be merged with profiling where we also show script optimisation | Hands-on | 10 min |
-| 3 | **Exercise 3:** [TODO] [Profile & Deploy](exercises/ex1#exercise-11-sub-exercise-3-description) | Hands-on | 15 min |
-| 4 | **Exercise 4:** [TODO] [Create MCP Server & Expose the API](exercises/ex1#exercise-11-sub-exercise-4-description) | Hands-on | 20 min |
-| 5 | **Exercise 5:** [TODO] [Test Run the Scenario to Resolve the Errors if any](exercises/ex1#exercise-11-sub-exercise-5-description) <br> Test the scenario and Error resolution  | Hands-on | 15 min |
-| 6 | **Exercise 6:** [TODO] [Run the Scenario & Complete the Campaign](exercises/ex1#exercise-11-sub-exercise-5-description) | Hands-on | 15 min |
-| 7 | Wrap-up, Q&A & Key Takeaways | Instructor-led | 10 min |
+| 1 | **Exercise 1:** [TODO] [Generate and configure an Integration Flow with AI](exercises/ex1#exercise-11-sub-exercise-1-description) <br> Generate iflow, add script(s), add mapping and configure | Hands-on | 30 min |
+| 2 | **Exercise 2:** [TODO] [[Profile, Optimise the Script with AI and deploy](exercises/ex1#exercise-11-sub-exercise-2-description) <br> [TODO] this can be merged with profiling where we also show script optimisation | Hands-on | 20 min |
+| 3 | **Exercise 3:** [TODO] [Test Run the Scenario to Resolve the Errors if any](exercises/ex1#exercise-11-sub-exercise-3-description) | Hands-on | 10 min |
+| 4 | **Exercise 4:** [TODO] [Create MCP Server & Expose the API](exercises/ex1#exercise-11-sub-exercise-4-description) <br> MCP for Product Creation API in S4/HANA| Hands-on | 20 min |
+| 5 | **Exercise 5:** [TODO] [Run the Scenario & Complete the Campaign](exercises/ex1#exercise-11-sub-exercise-5-description)  | Hands-on | 20 min |
+| 6 | Wrap-up, Q&A & Key Takeaways | Instructor-led | 10 min |
 
 **Total: ~120 min** — with ~5 min buffer across exercises for questions.
 
