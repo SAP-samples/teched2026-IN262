@@ -40,7 +40,7 @@ Participants will:
 | 1 | Generate an integration flow from a natural language prompt, add scripts and mapping, and configure it | AI-assisted iFlow Generation in Integration Suite |
 | 2 | Profile the flow to identify bottlenecks, optimize the script with AI, then deploy | AI Script Optimization + Profiler |
 | 3 | Run a test and use AI to diagnose and resolve errors in the flow | AI Error Resolution |
-| 4 | Create an MCP Server to expose the S/4HANA product creation API as an agent-callable tool | API Specification Generation + MCP Server |
+| 4 | Create an MCP Server to expose the S/4HANA product creation API as an agent-callable tool |  MCP Server , API Specification Generation (OPTIONAL) |
 | 5 | Trigger the full scenario via an AI agent and complete the campaign end-to-end | Agent Interaction via MCP |
 
 
