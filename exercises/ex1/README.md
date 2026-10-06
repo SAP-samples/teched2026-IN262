@@ -1,25 +1,28 @@
-# Exercise 1: Generate an Integration Flow with AI
-**AI Feature:** AI-generated Integration Flow
+# Exercise 4: Create MCP Server & Expose the API
+**AI Feature:** Build MCP for S4/HANA Product Creation API
 
-**Duration:** 25 min
+**Duration:** 20 min
 
 **Business Context:**
-Building integration flows manually requires deep technical knowledge and long time for configuration. With AI-assisted generation in Integration Suite, you describe what you need in plain language and the system generates a structured flow for you.
+Enable AI agents to securely and efficiently create products in SAP S/4HANA by exposing the S/4HANA Product Creation API as an MCP tool. This allows agents to interact with product master data through a governed, standardized interface, reducing manual effort and enabling automated, end-to-end business processes.
 
 **What AI Does Here:**
-Generates a integration flow — including connectors, mappings, and routing logic — from a natural language prompt.
+Create an MCP Server to expose the S/4HANA product creation API as an agent-consumable tool
 
+In this exercise, you will build and configure an MCP Server that exposes the S/4HANA Product API as a tool in SAP Integration Suite, enabling AI agents to automate s.. securely and with proper governance, without compromising business context. 
 
-In this exercise, we will create...
+Note-For a deeper understanding of the Model Context Protocol (MCP) and MCP paradigm in SAP Integration Suite, refer to What is the Model Context Protocol (MCP)? and API-Centric Integration in SAP Integration Suite: A New Paradigm for API & MCP
 
-## Exercise 1.1 Sub Exercise 1 Description
+## Exercise 4.1 Create an Integration Package
 
 After completing these steps you will have created...
 
-1. Click here.
+1. In SAP Integration Suite, go to Design → Integrations and APIs.
+   You will see a list of existing Integration Packages on the tenant.
+2. Click Create
 <br>![](/exercises/ex1/images/01_01_0010.png)
 
-2.	Insert this line of code.
+3.	Insert this line of code.
 ```abap
 response->set_text( |Hello World! | ). 
 ```
