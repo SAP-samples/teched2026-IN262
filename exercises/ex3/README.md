@@ -1,5 +1,5 @@
 # Exercise 3: Create MCP Server & Expose the API
-**AI Feature:** Build MCP for S4/HANA Product Creation API
+**AI Feature:** Build MCP for S4/HANA API
 
 **Duration:** 20 min
 
@@ -13,13 +13,23 @@ In this exercise, you will build and configure an MCP Server that exposes the S/
 
 > [!NOTE]
 > For a deeper understanding of the **Model Context Protocol (MCP)** and **MCP paradigm in SAP Integration Suite**, refer to [What is the Model Context Protocol (MCP)?](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) and [API-Centric Integration in SAP Integration Suite: A New Paradigm for API & MCP](https://community.sap.com/t5/technology-blog-posts-by-sap/api-centric-integration-in-sap-integration-suite-a-new-paradigm-for-api-amp/ba-p/14438245)
-## Exercise 4.1 Create an Integration Package
-1. In SAP Integration Suite, go to **Design → Integrations and APIs**.
-<br>You will see a list of existing Integration Packages on the tenant.
+## Exercise 3.1 Create an API Artifact from pre-configured S/4HANA business systems 
+After completing these steps, you will have created an API Artifact by discovering APIs and their metadata from pre-configured business systems (e.g., SAP S/4HANA Cloud and deploying it on Integration Cell Runtime
 
-3. Click **Create**
-   
-4. Fill in the following integration package details:
+> **Reference:** [Create an MCP Server from an API Artifact](https://help.sap.com/docs/integration-suite/isuite-integrations-and-apis/create-mcp-server-from-api-artifact)
+
+1. From the left navigation pane, choose **Design → Integrations and APIs**, open the package created in the last exercise IN262-0XX-Campaign-Management (where XX is your user name), Navigate to **Artifacts** tab and click on **Edit**
+<br>![](/exercises/ex3/images/ex04-1-1.png)
+2. On the package details page, choose **Artifacts**, and under **Add**, select **API**. The **Add API** dialog opens.
+<br>![](/exercises/ex3/images/ex04-1-2.png)
+3. Select Runtime profile as **Integration Cell** and click **Next**
+<br>![](/exercises/ex3/images/ex04-1-3.png)
+4. Select a method as **API Provider** and click **Next**
+<br>![](/exercises/ex3/images/ex04-1-4.png)
+5. Under **Select API Provider** switch to **Destinations** tab, select **APIPORTAL-HE4_Connect**, and click **Next**
+<br>![](/exercises/ex3/images/ex04-1-5.png)
+6.
+7. Fill in the following integration package details:
 
 | Field | Value |
 |---|---|
