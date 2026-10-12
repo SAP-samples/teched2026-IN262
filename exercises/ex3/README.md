@@ -28,16 +28,21 @@ After completing these steps, you will have created an API Artifact by discoveri
 <br>![](/exercises/ex3/images/ex04-1-4.png)
 5. Under **Select API Provider** switch to **Destinations** tab, select **APIPORTAL-HE4_Connect**, and click **Next**
 <br>![](/exercises/ex3/images/ex04-1-5.png)
-6.
-7. Fill in the following integration package details:
+6. Fill in the following API details:
 
 | Field | Value |
 |---|---|
-| Name | `plant-supply-risk-package-XX` (replace XX with your assigned participant number) |
-| Technical Name | *(auto-populated)* |
-| Short Description | `This package is created to create MCP artifacts using the OpenAPI specification & API composed URL from the plant supply risk graph` |
-| Version | `1.0.0` |
-| Vendor | `SAP` |
+| Name | `Product_АРІ_IN262-000` (replace XX with your assigned participant number) |
+| ID | *(auto-populated)* |
+| API Provider | *(auto-populated)* |
+| Relative URL | `/sap/opu/odata/sap/API_PRODUCT_SRV` |
+| Service Type | *(auto-populated)* |
+| API Base Path | `/IN262-000` (replace XX with your assigned participant number) |
+| API State | *(auto-populated)* |
+| API Version | `1.0.0` |
+| Runtime Profile | *(auto-populated)* |
+| Virtual Host | *(auto-populated)* |
+<br>![](/exercises/ex3/images/ex04-1-6.png)
 
 5. Click **Save**
 6. After saving, you will land on the package detail page.
