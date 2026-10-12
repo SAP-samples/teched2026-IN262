@@ -1,4 +1,4 @@
-# Exercise 4: Create MCP Server & Expose the API
+# Exercise 3: Create MCP Server & Expose the API
 **AI Feature:** Build MCP for S4/HANA Product Creation API
 
 **Duration:** 20 min
