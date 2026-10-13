@@ -42,9 +42,22 @@ After completing these steps, you will have created an API Artifact by discoveri
 | API Version | `1.0.0` |
 | Runtime Profile | *(auto-populated)* |
 | Virtual Host | *(auto-populated)* |
+
 <br>![](/exercises/ex3/images/ex04-1-6.png)
 
-5. Click **Save**
+7. Click **Next**
+8. In **Generate Open API Specification** dialog, click **Add and Open in API Designer**
+<br>![](/exercises/ex3/images/ex04-1-7.png)
+9. API Designer will open, click **Edit**
+<br>![](/exercises/ex3/images/ex04-1-8.png)
+10. On the next screen, choose **Import**
+<br>![](/exercises/ex3/images/ex04-1-9.png)
+11. On the Import Dialog, choose the ** Browse ** icon to upload the **API Product.json** file from the local system.
+<br>![](/exercises/ex3/images/ex04-1-10.png)
+12. Choose **Open**
+<br>![](/exercises/ex3/images/ex04-1-11.png)
+13. Click on **Import**
+<br>![](/exercises/ex3/images/ex04-1-12.png)
 6. After saving, you will land on the package detail page.
 7. Click the **Artifacts** tab.
 8. In the **Add MCP Server** wizard, select **HTTP Endpoint with OpenAPI Specification**
