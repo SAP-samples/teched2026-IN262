@@ -61,12 +61,9 @@ By the end of the session, participants will have hands-on experience with **6 d
 
 | System | Purpose |
 |---|---|
-| SAP Integration Suite | Connects all systems; hosts the integration flows |
-| Integration Suite AEM | [TODO] Raises event on product creation in S/4HANA |
-| S/4HANA (On-Premise) | [TODO] Source system for product creation; triggers the event |
-| Emarsys | [TODO]Campaign management — receives enriched data and executes the campaign |
-| Inbox | [TODO]Human approval step in the workflow |
-| AI Client | [TODO] MCP Inspector (current); IT-provided AI client (planned) |
+| SAP Integration Suite | Generate, optimise and profile the artifacts |
+| Inbox | Human approval and notifications |
+| AI Client | Claude Code on Participant Machines|
 > [!Note]
 >  All systems will be pre-configured and seeded with data by the session organiser. Participants need not perform any system setup.
 
