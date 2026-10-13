@@ -18,7 +18,7 @@ After completing these steps, you will have created an API Artifact by discoveri
 
 > **Reference:** [Create an MCP Server from an API Artifact](https://help.sap.com/docs/integration-suite/isuite-integrations-and-apis/create-mcp-server-from-api-artifact)
 
-1. From the left navigation pane, choose **Design → Integrations and APIs**, open the package created in the last exercise IN262-0XX-Campaign-Management (where XX is your user name), Navigate to **Artifacts** tab and click on **Edit**
+1. From the left navigation pane, choose **Design → Integrations and APIs**, open the already-created package in the last exercise IN262-0XX-Campaign-Management (where XX is your user name), Navigate to **Artifacts** tab and click on **Edit**
 <br>![](/exercises/ex3/images/ex04-1-1.png)
 2. On the package details page, choose **Artifacts**, and under **Add**, select **API**. The **Add API** dialog opens.
 <br>![](/exercises/ex3/images/ex04-1-2.png)
@@ -85,7 +85,44 @@ br>![](/exercises/ex3/images/ex04-1-17.png)
 br>![](/exercises/ex3/images/ex04-1-18.png)
 24. The API should be deployed successfully, and **Deployment Status** should be **Deployed**
 br>![](/exercises/ex3/images/ex04-1-19.png)
-6. After saving, you will land on the package detail page.
+
+## Exercise 3.2 Create and configure MCP Server
+After completing these steps, you will have exposed a deployed API artifact (for example, the S/4HANA Onpremise **API Product SRV** API) as an MCP server, so that AI agents can discover and invoke its operations as tools.
+
+1. From the left navigation pane, choose **Design → Integrations and APIs**, open the already-created package in the last exercise IN262-0XX-Campaign-Management (where XX is your participant number).
+br>![](/exercises/ex3/images/ex04-2-1.png)
+2. Navigate to **Artifacts** tab and click on **Edit**
+br>![](/exercises/ex3/images/ex04-2-2.png)
+3. Under **Add**, select **MCP Server**. The **Create MCP Server** dialog opens.
+br>![](/exercises/ex3/images/ex04-2-3.png)
+4. Select **API** as the source type and choose **Next**.
+br>![](/exercises/ex3/images/ex04-2-4.png)
+5. In the **Provide MCP Details** step, choose the icon next to the **API** field.
+br>![](/exercises/ex3/images/ex04-2-5.png)  
+6. In the **Select an API** dialog, search for the deployed S/4HANA On Premise API (for example, *Product API*), select it, and choose **Add**.
+br>![](/exercises/ex3/images/ex04-2-6.png)    
+7. Fill in the MCP server details:
+
+   | Field | Value |
+   | --- | --- |
+   | **Name** | API_PRODUCT_mcpServer_in262_0XX (where XX is your participant number)| 
+   | **ID** | APL_PRODUCT_mcpServer_in262_0XX (where XX is your participant number) |
+   | **MCP Path** | /mcp_in262-0XX (where XX is your participant number) |
+   | **Version** | Optional. Add a version to manage multiple concurrent versions of the server. |
+   | **Runtime Profile** | Select the **Integration Cell** runtime node. |
+   | **Virtual Host** | Review the virtual host URL; it is combined with the base path to form the public endpoint. |
+ br>![](/exercises/ex3/images/ex04-2-7.png)
+8. Choose **Next** to proceed to **Create Tools**.
+
+9. In **Create Tools**, select the API resources (operations) you want to expose as MCP tools by checking the checkbox next to each one. Remember the limit of **30 tools** per MCP server.
+br>![](/exercises/ex3/images/ex04-2-8.png)
+11. Choose **Add** to finalize and create the MCP server. It opens in the editor view.
+br>![](/exercises/ex3/images/ex04-2-9.png)
+12. (Optional) Choose **Edit** to refine the configuration. Use the **MCP Configuration** tab to adjust **Source, Tools, Resources, and Prompts**, and the **Policies** tab to configure traffic-management and security policies. See [Configure an MCP Server Created from an API Artifact](https://help.sap.com/docs/integration-suite/isuite-integrations-and-apis/configure-mcp-server-created-from-api-artifact).
+
+13. **Deploy** the MCP server.
+br>![](/exercises/ex3/images/ex04-2-10.png)    
+1. After saving, you will land on the package detail page.
 7. Click the **Artifacts** tab.
 8. In the **Add MCP Server** wizard, select **HTTP Endpoint with OpenAPI Specification**
 9. Click **Add → MCP Server**.
