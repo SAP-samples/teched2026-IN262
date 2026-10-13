@@ -144,15 +144,21 @@ After completing this exercise, you will have an MCP Server that can be invoked 
 6. Select the MCP server and then choose **Create Product**.
 <br>![](/exercises/ex3/images/ex04-3-7.png)
 7. The Create Product dialog opens. Provide all required product information:
-   
- | Field | Value |
-   | --- | --- |
-   | **Name** | IN262-0XX-Product (where XX is your participant number)| 
-   | **ID** | IN262-0XX-Product (where XX is your participant number) |
-   | **Short Text** | This is DH product for IN262-0XX (where XX is your participant number) |
-   | **Description** | This is Developer Hub product for IN262-0XX (where XX is your participant number) | 
-<br>![](/exercises/ex3/images/ex04-3-8.png)
+    
+| Field | Value |
+| --- | --- |
+| **Name** | IN262-0XX-Product (where XX is your participant number)| 
+| **ID** | IN262-0XX-Product (where XX is your participant number) |
+| **Short Text** | This is DH product for IN262-0XX (where XX is your participant number) |
+| **Description** | This is Developer Hub product for IN262-0XX (where XX is your participant number) | 
 
+<br>![](/exercises/ex3/images/ex04-3-8.png)
+8. This request will be shown as **Scheduled Request** on the Information dialog. Choose **Close** to close the dialog.
+<br>![](/exercises/ex3/images/ex04-3-9.png)
+9. The Status of the request will be **In Progress**
+<br>![](/exercises/ex3/images/ex04-3-10.png)
+10. Refresh the page by choosing **Refresh** and the status should soon turn into a **Success**
+<br>![](/exercises/ex3/images/ex04-3-11.png)
 Verify the selected MCP Servers listed at the bottom.
 Remove any server by clicking the x if needed.
 
