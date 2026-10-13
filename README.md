@@ -75,7 +75,9 @@ By the end of the session, participants will have hands-on experience with **6 d
 ## 3. Exercises
 
 0. Welcome, Business Scenario & Technical Overview — *Instructor-led, 10 min*
-1. **Exercise 1 [TODO]:** [Generate, Configure, Profile, Optimise and Deploy the Integration Flow with AI](exercises/ex1/README.md) — *Hands-on, 50 min*
+1. **Exercise 1:** [Generate, Configure, Profile, Optimise and Deploy the Integration Flow with AI](exercises/ex1/README.md) — *Hands-on, 25 min*
+   - [Exercise 1.1 — Generate the iFlow with AI](exercises/ex1/ex1-1/README.md)
+   - [Exercise 1.2 — Memory Profiling and Script Optimisation](exercises/ex1/ex1-2/README.md)
 2. **Exercise 2 [TODO]:** [Test Run the Scenario and Resolve Errors with AI](exercises/ex2/README.md)  — *Hands-on, 10 min*
 3. **Exercise 3 [TODO]:** [Create and Configure MCP Server](exercises/ex3/README.md) — *Hands-on, 20 min*
 4. **Exercise 4 [TODO]:** [Run the Scenario & Complete the Campaign](exercises/ex4/README.md) — *Hands-on, 20 min*
