@@ -135,13 +135,9 @@ After completing this exercise, you will have an MCP Server that can be invoked 
 <br>![](/exercises/ex3/images/ex04-2.png)
 2. Choose **Developer Hub**
 <br>![](/exercises/ex3/images/ex04-2-1.png)
-3. Log in to Developer Hub if not already logged in. Navigate to the **Admin Center->Manage Content**.
+3. Log in to Developer Hub if not already logged in. Navigate to the **Admin Center->Manage Content**. 
 <br>![](/exercises/ex3/images/ex04-2-4.png)
- 
-
-A list of all business systems is displayed.
-
-Select Integration Suite business system to discover the MCP servers within that business system:
+4. A list of all business systems is displayed. Select the Integration Suite business system **workshop02b** to discover the MCP servers within that business system:
 Choose the MCP Servers tab.
 A list of all MCP servers within the business system is displayed.
 
