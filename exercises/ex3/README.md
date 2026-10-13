@@ -60,7 +60,7 @@ After completing these steps, you will have created an API Artifact by discoveri
 <br>![](/exercises/ex3/images/ex04-1-12.png)
 14. The API Product specification gets imported. Now choose **Switch to API Details**
 <br>![](/exercises/ex3/images/ex04-1-13-1.png)
-15. Navigate to **Policies**
+15. Navigate to **Policies** tab
 <br>![](/exercises/ex3/images/ex04-1-13-2.png)   
 16. You will see **Authorization** and **Authentication** policies are added by default. Select **Authentication** policy and navigate to the property sheet below.
 Make sure the **Type** is **Basic**, **Client Certificate**, and **OAuth**.
@@ -75,9 +75,16 @@ br>![](/exercises/ex3/images/ex04-1-13-4.png)
 br>![](/exercises/ex3/images/ex04-1-13.png)
 19. Now you will deploy your API to Integration Cell runtime by choosing **Deploy** as shown in the screenshot.
 br>![](/exercises/ex3/images/ex04-1-14.png)
-20. On the Deploy Wizard, select ** * as ***Integration Cell** and then choose **Deploy**
+20. On the Deploy Wizard, select **Runtime Profile** as ***Integration Cell** and then choose **Deploy**
 br>![](/exercises/ex3/images/ex04-1-15.png)
-
+21. You will see a deployment triggered message on the screen **Product API IN262-000 is triggered for deployment** (where XX or the last two zeros are your participant's number)
+br>![](/exercises/ex3/images/ex04-1-16.png)
+22. Choose **Switch to API Details**
+br>![](/exercises/ex3/images/ex04-1-17.png)
+23. Navigate to **Policies** tab and check for **Deployment Status**
+br>![](/exercises/ex3/images/ex04-1-18.png)
+24. The API should be deployed successfully, and **Deployment Status** should be **Deployed**
+br>![](/exercises/ex3/images/ex04-1-19.png)
 6. After saving, you will land on the package detail page.
 7. Click the **Artifacts** tab.
 8. In the **Add MCP Server** wizard, select **HTTP Endpoint with OpenAPI Specification**
