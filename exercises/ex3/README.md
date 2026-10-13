@@ -58,6 +58,26 @@ After completing these steps, you will have created an API Artifact by discoveri
 <br>![](/exercises/ex3/images/ex04-1-11.png)
 13. Click on **Import**
 <br>![](/exercises/ex3/images/ex04-1-12.png)
+14. The API Product specification gets imported. Now choose **Switch to API Details**
+<br>![](/exercises/ex3/images/ex04-1-13-1.png)
+15. Navigate to **Policies**
+<br>![](/exercises/ex3/images/ex04-1-13-2.png)   
+16. You will see **Authorization** and **Authentication** policies are added by default. Select **Authentication** policy and navigate to the property sheet below.
+Make sure the **Type** is **Basic**, **Client Certificate**, and **OAuth**.
+br>![](/exercises/ex3/images/ex04-1-13-3.png)
+> [!NOTE]
+>  The position of the authentication policy on the flow is immutable and it’s the first policy on the flow.
+> Authentication policy is a mandatory policy and is added to request flow by default. Neither you can remove this policy, nor you can add another authentication policy to the flow.
+> Authentication policy can be added to the request flow only once. All other policies can be added to the flow multiple times.
+17. Choose **Authorization** policy and select the **Trust Upstream MCP Authorization** checkbox
+br>![](/exercises/ex3/images/ex04-1-13-4.png)
+18. Save the API by choosing **Save** in the top right corner.
+br>![](/exercises/ex3/images/ex04-1-13.png)
+19. Now you will deploy your API to Integration Cell runtime by choosing **Deploy** as shown in the screenshot.
+br>![](/exercises/ex3/images/ex04-1-14.png)
+20. On the Deploy Wizard, select ** * as ***Integration Cell** and then choose **Deploy**
+br>![](/exercises/ex3/images/ex04-1-15.png)
+
 6. After saving, you will land on the package detail page.
 7. Click the **Artifacts** tab.
 8. In the **Add MCP Server** wizard, select **HTTP Endpoint with OpenAPI Specification**
