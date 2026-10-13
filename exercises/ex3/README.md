@@ -83,7 +83,7 @@ Make sure the **Type** is **Basic**, **Client Certificate**, and **OAuth**.
 <br>![](/exercises/ex3/images/ex04-1-17.png)
 23. Navigate to **Policies** tab and check for **Deployment Status**
 <br>![](/exercises/ex3/images/ex04-1-18.png)
-24. The API should be deployed successfully, and **Deployment Status** should be **Deployed**
+24. The API should be deployed successfully, and Deployment Status should be **Deployed**
 <br>![](/exercises/ex3/images/ex04-1-19.png)
 
 ## Exercise 3.2 Create and configure MCP Server
@@ -124,8 +124,43 @@ After completing these steps, you will have exposed a deployed API artifact (for
 14. On the Deploy dialog, choose **Deploy**
 <br>![](/exercises/ex3/images/ex04-2-11.png)
 15. MCP server will be triggered for deployment.
-<br>![](/exercises/ex3/images/ex04-2-12.png)    
-1. After saving, you will land on the package detail page.
+<br>![](/exercises/ex3/images/ex04-2-12.png)
+16. The MCP Server should be deployed successfully, and Deployment Status should be **Deployed**
+<br>![](/exercises/ex3/images/ex04-2.png)
+
+## Exercise 3.3 Create agent subscription in Developer Hub
+After completing this exercise, you will have an MCP Server that can be invoked using credentials obtained through a Developer Hub subscription.
+ 
+1. On SAP Integration Suite tenant, choose the nine dots icon in the top right corner as shown in the screenshot
+<br>![](/exercises/ex3/images/ex04-2.png)
+2. Choose **Developer Hub**
+<br>![](/exercises/ex3/images/ex04-2-1.png)
+3. Log in to Developer Hub if not already logged in. Navigate to the **Admin Center->Manage Content**.
+<br>![](/exercises/ex3/images/ex04-2-4.png)
+ 
+
+A list of all business systems is displayed.
+
+Select Integration Suite business system to discover the MCP servers within that business system:
+Choose the MCP Servers tab.
+A list of all MCP servers within the business system is displayed.
+
+Select the MCP server and then choose Create Product.
+The Create Product dialog opens.
+
+Provide all required product information:
+Name*: Enter a user-friendly product name (e.g., Sales Order Integration).
+
+ID*: Enter a unique identifier using a consistent format (e.g., Sales_Order_Integration).
+
+Short Description: Add a concise summary of the product.
+
+Description: Use the rich text editor to add a detailed explanation, including purpose, key capabilities, and systems involved.
+
+Verify the Selected MCP Servers listed at the bottom.
+Remove any server by clicking the x if needed.
+
+Choose Save as Draft to save without publishing, or choose Publish to make the product available on Developer Hub; use Cancel to discard your changes
 7. Click the **Artifacts** tab.
 8. In the **Add MCP Server** wizard, select **HTTP Endpoint with OpenAPI Specification**
 9. Click **Add → MCP Server**.
