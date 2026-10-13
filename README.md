@@ -29,22 +29,25 @@ Only **Product Master Data Steward** and **End User / Customer** persona will be
 
 ### 1.3 Technical Overview
 
-his session takes participants through the complete lifecycle of building an AI-assisted integration — from generating the first integration flow to running the scenario end-to-end. At each step, a different AI capability embedded in SAP Integration Suite does the heavy lifting: generating, optimising, profiling, and resolving errors. Participants will also step beyond integration and into the agentic world — creating an MCP Server to expose a backend API, and calling it directly from an AI agent to trigger the full campaign flow.
+This session takes participants through the complete lifecycle of building an AI-assisted integration — from generating the first integration flow to running the scenario end-to-end. At each step, a different AI capability embedded in SAP Integration Suite does the heavy lifting: generating, optimising, profiling, and resolving errors. 
 
+Participants will also step beyond integration and into the agentic world — creating an MCP Server to expose a backend API, and calling it directly from an AI agent to trigger the full campaign flow.
+
+> [!NOTE]
+All the AI features covered in this hands-on can be enabled through the setting page of SAP Integration Suite. See the screenshot below
 <img src="/exercises/ex0/images/1_AI_Settings_Page.png" alt="Pic_IN262_1" >
 
-Participants will:
+#### 1.3.1 Participants will get hands on experience on :
 
 | # | What You Will Do | AI Capability Used |
 |---|---|---|
 | 1 | Generate an integration flow from a natural language prompt, add scripts and mapping, and configure it | AI-assisted iFlow Generation in Integration Suite |
 | 2 | Profile the flow to identify bottlenecks, optimize the script with AI, then deploy | AI Script Optimization + Profiler |
 | 3 | Run a test and use AI to diagnose and resolve errors in the flow | AI Error Resolution |
-| 4 | Create an MCP Server to expose the S/4HANA product creation API as an agent-callable tool |  MCP Server , API Specification Generation (OPTIONAL) |
+| 4 | Create an MCP Server to expose the S/4HANA product creation API as an agent-callable tool |  MCP Server , [TODO] API Specification Generation (OPTIONAL) |
 | 5 | Trigger the full scenario via an AI agent and complete the campaign end-to-end | Agent Interaction via MCP |
 
-
-By the end of the session, participants will have hands-on experience with **6 distinct AI capabilities** and a working end-to-end integration connecting S/4HANA, SAP Integration Suite, and Emarsys — all driven by a single natural language prompt.
+By the end of the session, participants will have hands-on experience with **5 distinct AI capabilities** and a working end-to-end integration connecting S/4HANA, SAP Integration Suite, and Emarsys — all driven by a single natural language prompt.
 
 ### 1.4 End-to-End User Journey
 1. **[Master Data Steward]** Creates a new product entry in S/4HANA using an AI agent client (MCP Inspector / AI client)
