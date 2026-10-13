@@ -14,7 +14,7 @@ You need to build an integration flow that receives a product launch event from 
 ## Prerequisites
 
 - Access to the Integration Suite tenant:  
-  `https://workshop02a.integrationsuite-cpi049.cfapps.eu10-003.hana.ondemand.com`
+  `https://url.sap/78ju6v`
 - The `IN262-Common-Artifacts` package is deployed in the tenant (contains the Script Collection and Message Mapping used in this exercise)
 - Your participant number `[NNN]` — printed on your session card (001–040)
 
@@ -82,25 +82,23 @@ Copy the full prompt below and paste it into the **"Describe your integration sc
 ```
 I need to build an integration flow called IN262-0XX-Calculate-Discount where 0XX is my participant ID (for example IN262-050-Calculate-Discount for participant 050). It should use a ProcessDirect sender adapter with address /IN262-0XX where 0XX is my participant ID.
 
-The flow works like this: it receives a JSON payload, converts it to XML using a JSON to XML Converter with root element name "root" and no namespaces. Before that conversion, add a Groovy Script step called "Log Payload" that references script9 from the script collection "IN262-Script-Collection" in package "IN262-Common-Artifacts" which contains all commonly use artifacts across this exercise.
+The flow works like this: it receives a JSON payload, converts it to XML using a JSON to XML Converter with root element name "root" and no namespaces are required. Before that conversion, add a Groovy Script step called "Log Payload" that references "Log Payload.groovy" from the script collection "IN262-Script-Collection" in package "IN262-Common-Artifacts" which contains all commonly use artifacts across this exercise.
 
-After the converter, add a Content Modifier called "Store data" that sets these exchange properties: defaultDiscount as constant value 5, ThresholdeValue as constant value 5000, discount as an empty constant, email as XPath //participantEmail with datatype java.lang.String, and ProductID as XPath //productId with datatype java.lang.String.
+After the converter, add a Content Modifier called "Store data" that sets these exchange properties: defaultDiscount as constant value 5, ThresholdeValue as constant value 5000, discount as an empty constant, email as XPath //participantEmail with datatype java.lang.String, productDescription as XPath //productDescription with datatype java.lang.String, ProductID as XPath //productId with datatype java.lang.String, price as XPath //price with datatype java.lang.Integer, currency as XPath //currency with datatype java.lang.String, businessPartner as XPath //businessPartner with datatype java.lang.String, participantId as XPath //participantId with datatype java.lang.String, and testMode as XPath //testMode with datatype java.lang.String.
 
 Next, add a Message Mapping step called "Mapping for RFC Call" that uses the mapping "IN262-BP-to-BUPA-Mapping" from the same Common Artifacts package.
 
 Then add a Request Reply step called "RFC call" with an RFC receiver adapter using destination S4HANA_RFC, BAPI BAPI_BUPA_ADDRESS_GETDETAIL, and Synchronous RFC protocol.
 
-After the RFC call, add a Content Modifier called "Store BP id" with one exchange property: BP using XPath //*[local-name()='PARTNER'][starts-with(text(), 'USCU-PT')] as java.lang.String.
+After the RFC call, add a Content Modifier called "Store BP ID" with one exchange property: BP using XPath //*[local-name()='PARTNER'][starts-with(text(), 'USCU-PT')] as java.lang.String.
 
-Then add a Request Reply called "S4Hana Call" using an OData V2 receiver adapter with address http://s4hana-he4-teched:50080/sap/opu/odata/sap/API_SALES_ORDER_SRV, SAP Cloud Connector proxy with location ID IN262, Basic authentication with credential alias HE4, Query GET operation on resource A_SalesOrder, CSRF disabled, and query options: $select=PurchaseOrderByCustomer,to_Item/SalesOrder,to_Item/SalesOrderItem,to_Item/Material,to_Item/RequestedQuantity,to_Item/RequestedQuantityUnit,to_Item/TransactionCurrency,TransactionCurrency,TotalNetAmount,to_Item/SalesOrderItemText,to_Item/MaterialByCustomer,SoldToParty&$expand=to_Item&$filter=SoldToParty eq '${property.BP}'
+Then add a Request Reply called "S4HANA Call" using an OData V2 receiver adapter with address http://s4hana-he4-teched:50080/sap/opu/odata/sap/API_SALES_ORDER_SRV, SAP Cloud Connector proxy with location ID IN262, Basic authentication with credential alias HE4, Query GET operation on resource A_SalesOrder, CSRF disabled, and query options: $select=PurchaseOrderByCustomer,to_Item/SalesOrder,to_Item/SalesOrderItem,to_Item/Material,to_Item/RequestedQuantity,to_Item/RequestedQuantityUnit,to_Item/TransactionCurrency,TransactionCurrency,TotalNetAmount,to_Item/SalesOrderItemText,to_Item/MaterialByCustomer,SoldToParty&$expand=to_Item&$filter=SoldToParty eq '${property.BP}'
 
-After the OData call, invoke a local integration process called "Calculate discount and total price".
+After the OData call, invoke a script called "CalculatedDiscount" from the common artifacts package (mentioned above) and script collection.
 
-Then add a Groovy Script step called "Log Summary" referencing script10 from IN262-Script-Collection, followed by another Groovy Script called "Prepare SBPA Payload" referencing script11 from the same collection.
+Then add a Groovy Script step called "Log Summary" referencing "Log Summary" script, followed by another Groovy Script called "Prepare SBPA Payload" referencing "SBPA_Payload" — both scripts are from the common artifacts package (mentioned above) and script collection.
 
 Finally, add a Request Reply step called "Send Offer" using an HTTP receiver adapter with POST method, URL https://spa-api-gateway-bpi-eu-prod.cfapps.eu10.hana.ondemand.com/workflow/rest/v1/workflow-instances, and OAuth2 Client Credentials authentication with credential name BPA-OAuth-Credential. End the flow with a Message End Event.
-
-For the local integration process "Calculate discount and total price": start with a Groovy Script called "Calculate Total Price" referencing script4 from IN262-Script-Collection. Then add an Exclusive Gateway called "Check discount percentage". One route named "Net amount >= 5000" uses the Non-XML condition ${property.TotalPrice} >= ${property.ThresholdeValue} and leads to a Groovy Script called "Calculate discount price" referencing script5 from the same collection. The default route leads to another Groovy Script also called "Calculate discount price" but referencing script8. Both routes end at the same End Event.
 ```
 
 > **Remember to replace `0XX` with your participant number before clicking Generate.**
@@ -318,7 +316,7 @@ The script steps still point to the deleted local files. Wire each one to the co
 
 3. Click the **RFC call** step → **Connection** tab — confirm Destination = `S4HANA_RFC`
 
-4. Click the **S4Hana Call** OData step → **Processing** tab — confirm Resource Path = `A_SalesOrder` and Query Options are populated
+4. Click the **S4HANA Call** OData step → **Processing** tab — confirm Resource Path = `A_SalesOrder` and Query Options are populated
 
 5. Click the **Send Offer** HTTP step → **Connection** tab — confirm:
    - Address: `https://spa-api-gateway-bpi-eu-prod.cfapps.eu10.hana.ondemand.com/workflow/rest/v1/workflow-instances`
