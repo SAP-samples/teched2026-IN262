@@ -8,16 +8,13 @@ Enable AI agents to securely and efficiently create products in SAP S/4HANA by e
 
 **What AI Does Here:**
 Create an MCP Server to expose the S/4HANA product creation API as an agent-consumable tool
-
 In this exercise, you will build and configure an MCP Server that exposes the S/4HANA Product API as a tool in SAP Integration Suite, enabling AI agents to automate s.. securely and with proper governance, without compromising business context. 
-
 > [!NOTE]
 > For a deeper understanding of the **Model Context Protocol (MCP)** and **MCP paradigm in SAP Integration Suite**, refer to [What is the Model Context Protocol (MCP)?](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) and [API-Centric Integration in SAP Integration Suite: A New Paradigm for API & MCP](https://community.sap.com/t5/technology-blog-posts-by-sap/api-centric-integration-in-sap-integration-suite-a-new-paradigm-for-api-amp/ba-p/14438245)
+
 ## Exercise 3.1 Create an API Artifact from pre-configured S/4HANA business systems 
 After completing these steps, you will have created an API Artifact by discovering APIs and their metadata from pre-configured business systems (e.g., SAP S/4HANA Cloud and deploying it on Integration Cell Runtime
-
 > **Reference:** [Create an MCP Server from an API Artifact](https://help.sap.com/docs/integration-suite/isuite-integrations-and-apis/create-mcp-server-from-api-artifact)
-
 1. From the left navigation pane, choose **Design → Integrations and APIs**, open the already-created package in the last exercise IN262-0XX-Campaign-Management (where XX is your user name), Navigate to **Artifacts** tab and click on **Edit**
 <br>![](/exercises/ex3/images/ex04-1-1.png)
 2. On the package details page, choose **Artifacts**, and under **Add**, select **API**. The **Add API** dialog opens.
@@ -30,21 +27,19 @@ After completing these steps, you will have created an API Artifact by discoveri
 <br>![](/exercises/ex3/images/ex04-1-5.png)
 6. Fill in the following API details:
 
-| Field | Value |
-|---|---|
-| Name | `Product_АРІ_IN262-000` (replace XX with your assigned participant number) |
-| ID | *(auto-populated)* |
-| API Provider | *(auto-populated)* |
-| Relative URL | `/sap/opu/odata/sap/API_PRODUCT_SRV` |
-| Service Type | *(auto-populated)* |
-| API Base Path | `/IN262-000` (replace XX with your assigned participant number) |
-| API State | *(auto-populated)* |
-| API Version | `1.0.0` |
-| Runtime Profile | *(auto-populated)* |
-| Virtual Host | *(auto-populated)* |
-
+   | Field | Value |
+   |---|---|
+   | Name | `Product_АРІ_IN262-000` (replace XX with your assigned participant number) |
+   | ID | *(auto-populated)* |
+   | API Provider | *(auto-populated)* |
+   | Relative URL | `/sap/opu/odata/sap/API_PRODUCT_SRV` |
+   | Service Type | *(auto-populated)* |
+   | API Base Path | `/IN262-000` (replace XX with your assigned participant number) |
+   | API State | *(auto-populated)* |
+   | API Version | `1.0.0` |
+   | Runtime Profile | *(auto-populated)* |
+   | Virtual Host | *(auto-populated)* |
 <br>![](/exercises/ex3/images/ex04-1-6.png)
-
 7. Click **Next**
 8. In **Generate Open API Specification** dialog, click **Add and Open in API Designer**
 <br>![](/exercises/ex3/images/ex04-1-7.png)
@@ -88,7 +83,6 @@ Make sure the **Type** is **Basic**, **Client Certificate**, and **OAuth**.
 
 ## Exercise 3.2 Create and configure MCP Server
 After completing these steps, you will have exposed a deployed API artifact (for example, the S/4HANA Onpremise **API Product SRV** API) as an MCP server, so that AI agents can discover and invoke its operations as tools.
-
 1. From the left navigation pane, choose **Design → Integrations and APIs**, open the already-created package in the last exercise IN262-0XX-Campaign-Management (where XX is your participant number).
 <br>![](/exercises/ex3/images/ex04-2-1.png)
 2. Navigate to **Artifacts** tab and click on **Edit**
@@ -102,7 +96,6 @@ After completing these steps, you will have exposed a deployed API artifact (for
 6. In the **Select an API** dialog, search for the deployed S/4HANA On Premise API (for example, *Product API*), select it, and choose **Add**.
 <br>![](/exercises/ex3/images/ex04-2-6.png)    
 7. Fill in the MCP server details:
-
    | Field | Value |
    | --- | --- |
    | **Name** | API_PRODUCT_mcpServer_in262_0XX (where XX is your participant number)| 
@@ -167,11 +160,12 @@ After completing this exercise, you will have an MCP Server that can be invoked 
 <br>![](/exercises/ex3/images/ex04-3-14.png)
 14. Enter the subscription details and click **Next**
 
-| Field | Value |
-| --- | --- |
-| **Name** | IN262-0XX-Agent-Subscription (where XX is your participant number)| 
-| **ID** | Agent Subscription for IN262-0XX-Product (where XX is your participant number) |
-| **Description** | Agent Subscription for IN262-000-Product, will be used to access through Al client or agent. (where XX is your participant number) | 
+   | Field | Value |
+   | --- | --- |
+   | **Name** | IN262-0XX-Agent-Subscription (where XX is your participant number)| 
+   | **ID** | Agent Subscription for IN262-0XX-Product (where XX is your participant number) |
+   | **Description** | Agent Subscription for IN262-000-Product, will be used to access through Al client or agent. (where XX is your participant number) | 
+   
 <br>![](/exercises/ex3/images/ex04-3-15.png)
 
 15. Click on **Save** to save the subscription.
