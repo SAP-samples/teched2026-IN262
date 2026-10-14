@@ -159,46 +159,26 @@ After completing this exercise, you will have an MCP Server that can be invoked 
 <br>![](/exercises/ex3/images/ex04-3-10.png)
 10. Refresh the page by choosing **Refresh** and the status should soon turn into a **Success**
 <br>![](/exercises/ex3/images/ex04-3-11.png)
-Verify the selected MCP Servers listed at the bottom.
-Remove any server by clicking the x if needed.
+11. Navigate to **My Workspace**
+<br>![](/exercises/ex3/images/ex04-3-12.png)
+12. Choose **Agents** and then choose **Subscription for Agent** from Create dropdown
+<br>![](/exercises/ex3/images/ex04-3-13.png)
+13. On **Create New Subscription for Agent** dialog select your product **IN262-0XX-Product** (where XX is your participant number)
+<br>![](/exercises/ex3/images/ex04-3-14.png)
+14. Enter the subscription details and click **Next**
 
-Choose Save as Draft to save without publishing, or choose Publish to make the product available on Developer Hub; use Cancel to discard your changes
-7. Click the **Artifacts** tab.
-8. In the **Add MCP Server** wizard, select **HTTP Endpoint with OpenAPI Specification**
-9. Click **Add → MCP Server**.
-10. 
-1. In SAP Integration Suite, go to Design → Integrations and APIs.
-   You will see a list of existing Integration Packages on the tenant.
-2. Click Create
-<br>![](/exercises/ex1/images/01_01_0010.png)
+| Field | Value |
+| --- | --- |
+| **Name** | IN262-0XX-Agent-Subscription (where XX is your participant number)| 
+| **ID** | Agent Subscription for IN262-0XX-Product (where XX is your participant number) |
+| **Description** | Agent Subscription for IN262-000-Product, will be used to access through Al client or agent. (where XX is your participant number) | 
+<br>![](/exercises/ex3/images/ex04-3-15.png)
 
-3.	Insert this line of code.
-```abap
-response->set_text( |Hello World! | ). 
-```
-
-
-
-## Exercise 1.2 Sub Exercise 2 Description
-
-After completing these steps you will have...
-
-1.	Enter this code.
-```abap
-DATA(lt_params) = request->get_form_fields(  ).
-READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
-  IF sy-subrc <> 0.
-    response->set_status( i_code = 400
-                     i_reason = 'Bad request').
-    RETURN.
-  ENDIF.
-
-```
-
-2.	Click here.
-<br>![](/exercises/ex1/images/01_02_0010.png)
-
-
+15. Click on **Save** to save the subscription.
+<br>![](/exercises/ex3/images/ex04-3-16.png)
+16. You will get a successful message: **Product(s) subscription for an application created**
+<br>![](/exercises/ex3/images/ex04-3-17.png)
+17. Once the agent subscription is created successfully, you are all set with your credentials. Copy these credentials to notepad and save them.
 ## Summary
 
 You've now ...
