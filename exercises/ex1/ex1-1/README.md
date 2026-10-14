@@ -101,7 +101,8 @@ Then add a Groovy Script step called "Log Summary" referencing "Log Summary" scr
 Finally, add a Request Reply step called "Send Offer" using an HTTP receiver adapter with POST method, URL https://spa-api-gateway-bpi-eu-prod.cfapps.eu10.hana.ondemand.com/workflow/rest/v1/workflow-instances, and OAuth2 Client Credentials authentication with credential name BPA-OAuth-Credential. End the flow with a Message End Event.
 ```
 
-> **Remember to replace `0XX` with your participant number before clicking Generate.**
+> [!IMPORTANT]
+> Remember to replace `0XX` with your participant number before clicking Generate.
 
 ![Prompt pasted in — AI response area shows analysis of systems and actions identified](images/ex01-7.png)
 
@@ -132,6 +133,7 @@ Finally, add a Request Reply step called "Send Offer" using an HTTP receiver ada
 
    ![Generated iFlow in view mode — Edit button highlighted, initial flow structure visible](images/ex01-10.png)
 
+> [!NOTE]
 > The AI has generated the flow structure. You will now see some steps with error indicators — these are local placeholder artefacts (scripts and a mapping) that were created inside this iFlow. In the next steps you will replace them with the shared artefacts from the Common Artifacts package.
 
 ---
@@ -164,6 +166,7 @@ The AI generated local copies of the scripts and mapping. These must be deleted 
 
    ![Delete Resource dialog for SBPA_Payload.groovy — Local(1) remaining](images/ex01-11-5.png)
 
+> [!NOTE]
 > Local tab now shows **Local (0)**.
 
 ---
@@ -227,6 +230,7 @@ The AI generated local copies of the scripts and mapping. These must be deleted 
 
 The script steps still point to the deleted local files. Wire each one to the correct script in the Script Collection.
 
+> [!TIP]
 > For each step below: click the step on the canvas → **Processing** tab → click **Select** → switch to **Global Resources** tab → select the script → click **OK** → **Save**.
 
 ### 9a — Log Payload
@@ -314,15 +318,27 @@ The script steps still point to the deleted local files. Wire each one to the co
 
 2. Click the **ProcessDirect** sender step → **Connection** tab — confirm the address shows `/IN262-0XX` with your participant number
 
+   ![ProcessDirect Connection tab — Address field shows /IN262-0XX](images/ex01-20-1.png)
+
 3. Click the **RFC call** step → **Connection** tab — confirm Destination = `S4HANA_RFC`
 
+   ![RFC Connection tab — Destination S4HANA_RFC confirmed](images/ex01-20.png)
+
 4. Click the **S4HANA Call** OData step → **Processing** tab — confirm Resource Path = `A_SalesOrder` and Query Options are populated
+
+   ![OData Processing tab — Resource A_SalesOrder and query options visible](images/ex01-20-2.png)
+
+   ![OData Processing tab scrolled — traceparent headers visible](images/ex01-20-3.png)
+
+   ![Externalized Parameters tab — query options and body params visible](images/ex01-20-4.png)
 
 5. Click the **Send Offer** HTTP step → **Connection** tab — confirm:
    - Address: `https://spa-api-gateway-bpi-eu-prod.cfapps.eu10.hana.ondemand.com/workflow/rest/v1/workflow-instances`
    - Method: `POST`
    - Authentication: `OAuth2 Client Credentials`
    - Credential Name: `BPA-OAuth-Credential`
+
+   ![HTTP Connection tab — BPA URL, POST method, OAuth2, BPA-OAuth-Credential confirmed](images/ex01-20-5.png)
 
 ---
 
