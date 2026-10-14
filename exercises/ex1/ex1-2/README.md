@@ -33,6 +33,7 @@ The iFlow you saved in Exercise 1.1 contains a Groovy script (`CalculatedDiscoun
 2. Set the simulation **start point** to the **CalculatedDiscount: Compute…** Groovy script step
 3. Set the simulation **end point** to the **Message End Event**
 
+> [!NOTE]
 > The simulator does not make external calls — it only instruments the steps within the boundary you define. The S/4HANA OData call, RFC call, and HTTP (BPA) call are outside this scope and will not be executed.
 
 ---
@@ -42,6 +43,7 @@ The iFlow you saved in Exercise 1.1 contains a Groovy script (`CalculatedDiscoun
 1. In the Simulator input area, paste the sample S/4HANA Sales Order XML provided by your instructor
 2. This payload represents a realistic OData response from `API_SALES_ORDER_SRV` with several orders and line items
 
+> [!NOTE]
 > The payload needs to be large enough that the memory difference between `getBody(String)` and `getBody(Reader)` is visible in the profiler output.
 
 ---
