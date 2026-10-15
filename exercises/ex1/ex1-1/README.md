@@ -13,8 +13,7 @@ You need to build an integration flow that receives a product launch event from 
 
 ## Prerequisites
 
-- Access to the Integration Suite tenant:  
-  `https://url.sap/78ju6v`
+- Access to the Integration Suite tenant: [Integration Suite Tenant (Primary)](https://url.sap/78ju6v)
 - The `IN262-Common-Artifacts` package is deployed in the tenant (contains the Script Collection and Message Mapping used in this exercise)
 - Your participant number `[NNN]` — printed on your session card (001–040)
 
@@ -36,7 +35,7 @@ Replace `0XX` with your 3-digit participant number throughout this exercise.
 
 1. In the Integration Suite home, navigate to **Design → Integrations and APIs**
 
-   ![Design — Integrations and APIs showing existing packages](images/ex01-1.png)
+   ![Design — Integrations and APIs showing existing packages with Create button highlighted](images/ex01-1.png)
 
 2. Click **Create** (top right)
 
@@ -50,11 +49,11 @@ Replace `0XX` with your 3-digit participant number throughout this exercise.
    | **Version** | `1.0.0` |
    | **Vendor** | `SAP` |
 
-   ![Package header form filled in](images/ex01-2.png)
+   ![Package header form filled in — Save button highlighted](images/ex01-1-1.png)
 
 4. Click **Save** — you will see the confirmation toast *"The package has been successfully created"*
 
-   ![Package created confirmation](images/ex01-3.png)
+   ![Package created confirmation toast](images/ex01-1-2.png)
 
 ---
 
@@ -63,21 +62,26 @@ Replace `0XX` with your 3-digit participant number throughout this exercise.
 1. Click the **Artifacts** tab
 2. Click **Add → Integration Flow**
 
-   ![Artifacts tab — Add dropdown with Integration Flow highlighted](images/ex01-4.png)
+   ![Artifacts tab — Add dropdown with Integration Flow highlighted](images/ex01-1-3.png)
 
 3. In the dialog, select **"Generate Integrations with assistance from AI"**
 
-   ![Add Integration Flow dialog — AI generation option selected](images/ex01-5.png)
+   ![Add Integration Flow dialog — AI generation option selected](images/ex01-1-4.png)
 
 4. The **Generate Integration Flow** dialog opens with a prompt text area
+> [!TIP]
+> Adjust the dialog size to get more space to work with — drag the resize handle in the bottom-right corner
 
-   ![Generate Integration Flow dialog — empty prompt area](images/ex01-6.png)
+   ![Generate Integration Flow dialog — empty prompt area with resize handle highlighted](images/ex01-1-5.png)
 
 ---
 
 ## Step 3 — Paste the AI Prompt
 
 Copy the full prompt below and paste it into the **"Describe your integration scenario"** field:
+> [!IMPORTANT]
+> Remember to replace `0XX` at 2 places with your participant number before clicking Generate — the iFlow name and the ProcessDirect address.
+> **Example:** for participant 050: iFlow name = `IN262-050-Calculate-Discount`, ProcessDirect address = `/IN262-050`
 
 ```
 I need to build an integration flow called IN262-0XX-Calculate-Discount where 0XX is my participant ID (for example IN262-050-Calculate-Discount for participant 050). It should use a ProcessDirect sender adapter with address /IN262-0XX where 0XX is my participant ID.
@@ -101,73 +105,74 @@ Then add a Groovy Script step called "Log Summary" referencing "Log Summary" scr
 Finally, add a Request Reply step called "Send Offer" using an HTTP receiver adapter with POST method, URL https://spa-api-gateway-bpi-eu-prod.cfapps.eu10.hana.ondemand.com/workflow/rest/v1/workflow-instances, and OAuth2 Client Credentials authentication with credential name BPA-OAuth-Credential. End the flow with a Message End Event.
 ```
 
-> [!IMPORTANT]
-> Remember to replace `0XX` with your participant number before clicking Generate.
-
-![Prompt pasted in — AI response area shows analysis of systems and actions identified](images/ex01-7.png)
+![Prompt pasted in — AI response area shows analysis of systems and actions identified](images/ex01-1-6.png)
 
 ---
 
 ## Step 4 — Review AI Analysis and Generate
 
-1. The AI analyses your prompt and shows the identified systems and actions — review it
+1. The AI analyses your prompt and shows the identified systems, actions and the proposed iFlow structure — review it, then verify the **Name** field at the bottom shows `IN262-0XX-Calculate-Discount` with your participant number
 
-   ![AI response showing identified systems and proposed iFlow structure](images/ex01-8.png)
+2. Click **Generate**
 
-2. Verify the **Name** field at the bottom shows `IN262-0XX-Calculate-Discount` with your participant number
+> [!IMPORTANT]
+> The name of the iFlow should have your participant number instead of `0XX`
 
-3. Click **Generate**
+   ![AI response showing identified systems and proposed iFlow structure — Generate button highlighted](images/ex01-1-7.png)
 
-   ![Generate button highlighted — name field shows IN262-0XX-Calculate-Discount](images/ex01-9.png)
 
-4. AI generates the iFlow — the dialog closes and the new artefact appears in the package
 
-   ![Generation in progress — spinner visible in AI response area](images/ex01-9-1.png)
+3. The iFlow is created — a confirmation toast appears
+
+   ![iFlow created toast — IN262-0XX-Calculate-Discount created](images/ex01-1-8.png)
 
 ---
 
 ## Step 5 — Open the Generated iFlow
 
-1. Click the iFlow name `IN262-0XX-Calculate-Discount` to open it
-2. Click **Edit** (top right) to enter edit mode
-
-   ![Generated iFlow in view mode — Edit button highlighted, initial flow structure visible](images/ex01-10.png)
-
+1. iFlow  `IN262-0XX-Calculate-Discount` automatically opens 
 > [!NOTE]
-> The AI has generated the flow structure. You will now see some steps with error indicators — these are local placeholder artefacts (scripts and a mapping) that were created inside this iFlow. In the next steps you will replace them with the shared artefacts from the Common Artifacts package.
+> The AI has generated the flow structure. You will now see some steps with error indicators — these are local placeholder artefacts (scripts and a mapping) that were created inside this iFlow. In the next steps you will replace some of them with the shared artefacts from the Common Artifacts package.
+
+   ![Generated iFlow in view mode — Edit button highlighted](images/ex01-1-9.png)
+
+2. Click **Edit** (top right) to enter edit mode, click on the editor canvas and pull up the property sheet
+   ![iFlow in view mode — Edit button and Expand icon highlighted](images/ex01-2.png)
 
 ---
 
 ## Step 6 — Remove Local Artefacts (Fix 1)
 
-The AI generated local copies of the scripts and mapping. These must be deleted and replaced with the global shared versions.
+The AI generated local copies of the scripts and mapping. Delete all of them **except `CalculatedDiscount`** — that script stays local to your iFlow and will be used in Exercise 1.2.
 
-1. In the bottom panel, click the **References** tab, then **Local (5)**
+> [!IMPORTANT]
+> Do NOT delete the `CalculatedDiscount` script
 
-   ![References tab — Local tab showing 1 mapping and 4 scripts](images/ex01-11.png)
+1. In the bottom panel, click the **References** tab, then **Local (5)** (visible when you click on canvas)
+
+   ![References tab — Local(5) showing 1 mapping and 4 scripts, delete icons highlighted](images/ex01-2-1.png)
 
 2. Delete **`IN262-BP-to-BUPA-Mapping`** (Message Mapping) — click the delete icon → confirm **Delete**
 
-   ![Delete Resource dialog for IN262-BP-to-BUPA-Mapping](images/ex01-11-1.png)
+   ![Delete Resource dialog for IN262-BP-to-BUPA-Mapping](images/ex01-2-2.png)
 
-3. Delete **`CalculatedDiscount`** Groovy Script → confirm **Delete**
+3. Delete **`Log Payload`** Groovy Script → confirm **Delete**
 
-   ![Delete Resource dialog for CalculatedDiscount.groovy](images/ex01-11-2.png)
+   ![Delete Resource dialog for Log Payload.groovy — Local(4) showing](images/ex01-2-3.png)
 
-4. Delete **`Log Payload`** Groovy Script → confirm **Delete**
+4. Delete **`Log Summary`** Groovy Script → confirm **Delete**
 
-   ![Delete Resource dialog for Log Payload.groovy](images/ex01-11-3.png)
+   ![Delete Resource dialog for Log Summary.groovy — Local(3) showing](images/ex01-2-4.png)
 
-5. Delete **`Log Summary`** Groovy Script → confirm **Delete**
+5. Delete **`SBPA_Payload`** Groovy Script → confirm **Delete**
 
-   ![Delete Resource dialog for Log Summary.groovy](images/ex01-11-4.png)
+   ![Delete Resource dialog for SBPA_Payload.groovy — Local(2) showing](images/ex01-2-5.png)
 
-6. Delete **`SBPA_Payload`** Groovy Script → confirm **Delete**
-
-   ![Delete Resource dialog for SBPA_Payload.groovy — Local(1) remaining](images/ex01-11-5.png)
-
+6. Re-confirm that `CalculatedDiscount` is not deleted
 > [!NOTE]
-> Local tab now shows **Local (0)**.
+> Local tab now shows **Local (1)** — only `CalculatedDiscount` remains. Click **Global (0)** to proceed.
+
+   ![Local(1) with only CalculatedDiscount remaining — Global(0) tab highlighted](images/ex01-3.png)
 
 ---
 
@@ -176,59 +181,53 @@ The AI generated local copies of the scripts and mapping. These must be deleted 
 1. Click the **Global (0)** tab
 2. Click **Add References → Message Mapping**
 
-   ![Global tab empty — Add References dropdown showing Message Mapping option](images/ex01-12.png)
+   ![Global(0) tab — Add References dropdown showing Message Mapping highlighted](images/ex01-3-1.png)
 
-3. In the References dialog, click the Package dropdown — it defaults to your own package
+3. In the References dialog, click the **×** next to the current package to clear it
 
-   ![References dialog — package dropdown showing own package selected](images/ex01-12-1.png)
+   ![References dialog — own package shown, × to clear highlighted](images/ex01-3-2.png)
 
-4. Clear the current package and select **`IN262-Common-Artifacts`**
+4. Click the dropdown and select **`IN262-Common-Artifacts`**
 
-   ![Package dropdown open — IN262-Common-Artifacts highlighted](images/ex01-12-3.png)
+   ![Package dropdown open — IN262-Common-Artifacts highlighted](images/ex01-3-3.png)
 
-   ![IN262-Common-Artifacts selected in dropdown](images/ex01-12-4.png)
+5. The artifact list shows **`IN262-BP-to-BUPA-Mapping`** — tick the checkbox, then click **OK**
 
-5. The artifact list shows **`IN262-BP-to-BUPA-Mapping`** — tick the checkbox
+   ![References dialog — IN262-BP-to-BUPA-Mapping listed, checkbox ticked, OK highlighted](images/ex01-3-4.png)
 
-   ![References dialog — IN262-BP-to-BUPA-Mapping listed, checkbox ticked, OK highlighted](images/ex01-12-5.png)
+6. The mapping appears under Global (1) — click **Add References → Script Collection**
 
-6. Click **OK** — the mapping appears under Global (1)
-
-   ![Global (1) tab — IN262-BP-to-BUPA-Mapping from IN262-Common-Artifacts confirmed](images/ex01-12-6.png)
+   ![Global(1) tab — IN262-BP-to-BUPA-Mapping from IN262-Common-Artifacts confirmed, Add References → Script Collection highlighted](images/ex01-3-5.png)
 
 ---
 
 ## Step 8 — Add Global Script Collection Reference (Fix 3)
 
-1. Click **Add References → Script Collection**
+1. In the References dialog, click the **×** to clear the current package
 
-   ![Add References dropdown — Script Collection highlighted](images/ex01-13.png)
+   ![References dialog for Script Collection — own package shown, × to clear highlighted](images/ex01-3-6.png)
 
-2. In the References dialog, clear the package and select **`IN262-Common-Artifacts`**
+2. Select **`IN262-Common-Artifacts`** from the dropdown
 
-   ![References dialog for Script Collection — own package shown initially](images/ex01-13-1.png)
+   ![Package dropdown — IN262-Common-Artifacts highlighted](images/ex01-3-7.png)
 
-   ![Package dropdown — IN262-Common-Artifacts selected](images/ex01-13-2.png)
+3. The artifact list shows **`IN262-Script-Collection`** — tick the checkbox, then click **OK**
 
-3. The artifact list shows **`IN262-Script-Collection`** — tick the checkbox
+   ![IN262-Script-Collection listed — checkbox ticked, OK highlighted](images/ex01-3-8.png)
 
-   ![IN262-Script-Collection listed — checkbox ticked, OK highlighted](images/ex01-13-3.png)
+4. Global tab now shows **Global (2)**
 
-4. Click **OK** — Global tab now shows **Global (2)**
+   ![Global(2) — both IN262-BP-to-BUPA-Mapping and IN262-Script-Collection listed](images/ex01-3-9.png)
 
-   ![Global (2) — both IN262-BP-to-BUPA-Mapping and IN262-Script-Collection listed](images/ex01-13-4.png)
+5. Click **Save** — confirm the saved toast
 
-5. Click **Save** — confirm the *"saved"* toast
-
-   ![Save button highlighted — Global (2) confirmed, saved toast visible](images/ex01-13-5.png)
-
-   ![Saved confirmation toast](images/ex01-13-6.png)
+   ![Save button highlighted — Global(2) confirmed, saved toast visible](images/ex01-3-10.png)
 
 ---
 
 ## Step 9 — Wire Scripts to the Script Collection (Fix 4)
 
-The script steps still point to the deleted local files. Wire each one to the correct script in the Script Collection.
+The script steps for Log Payload, Log Summary, and SBPA Payload still point to the deleted local files. Wire each one to the correct script in the Script Collection. `CalculatedDiscount` stays wired to its local file — do not change it.
 
 > [!TIP]
 > For each step below: click the step on the canvas → **Processing** tab → click **Select** → switch to **Global Resources** tab → select the script → click **OK** → **Save**.
@@ -238,126 +237,220 @@ The script steps still point to the deleted local files. Wire each one to the co
 1. Click the **Log Payload** step on the canvas
 2. Processing tab → click **Select**
 
-   ![Log Payload step selected — Processing tab, Select button highlighted](images/ex01-14.png)
+   ![Log Payload step selected — Processing tab, Select button highlighted](images/ex01-4.png)
 
 3. Switch to **Global Resources** tab → select **`Log Payload`** from the list → click **OK**
 
-   ![Select Resource dialog — Global Resources tab, Log Payload highlighted](images/ex01-14-1.png)
+   ![Select Resource dialog — Global Resources tab, Log Payload highlighted, OK highlighted](images/ex01-4-1.png)
 
 4. Click **Save**
 
-   ![Script File shows /script/Log Payload.groovy — saved toast](images/ex01-14-2.png)
+   ![Script File shows /script/Log Payload.groovy — saved toast](images/ex01-4-1-1.png)
 
 ### 9b — Message Mapping step
 
 1. Click the **IN262-BP-to-BUPA-Mapping** step on the canvas
 2. Processing tab → click **Select**
 
-   ![Message Mapping step selected — Select button highlighted](images/ex01-15.png)
+   ![Message Mapping step selected — Processing tab, Select button highlighted](images/ex01-4-2.png)
 
-3. Switch to **Global Resources** tab → select **`IN262262BPtoBUPAMapping`** → click **OK**
+3. Switch to **Global Resources** tab → select **`IN262BPtoBUPAMapping`** → click **OK**
 
-   ![Select Mapping Resource — Global Resources tab, IN262262BPtoBUPAMapping selected](images/ex01-15-1.png)
-
-4. Click **Save**
-
-   ![Resource shows IN262BPtoBUPAMapping — saved toast](images/ex01-15-2.png)
-
-### 9c — CalculatedDiscount
-
-1. Click the **CalculatedDiscount: Compute…** step on the canvas
-2. Processing tab → click **Select**
-
-   ![CalculatedDiscount step selected — Select button highlighted](images/ex01-16.png)
-
-3. Global Resources → select **`CalculatedDiscount`** → click **OK**
-
-   ![Select Resource — CalculatedDiscount highlighted in script list](images/ex01-16-1.png)
+   ![Select Mapping Resource — Global Resources tab, IN262BPtoBUPAMapping selected, OK highlighted](images/ex01-4-3.png)
 
 4. Click **Save**
 
-   ![Script File shows /script/CalculatedDiscount — saved](images/ex01-16-2.png)
+   ![Message Mapping saved — saved toast visible](images/ex01-4-4.png)
 
-### 9d — Log Summary
+### 9c — Log Summary
 
 1. Click the **Log Summary** step → Processing tab → **Select**
 
-   ![Log Summary step selected](images/ex01-17.png)
+   ![Log Summary step selected — Processing tab, Select button highlighted](images/ex01-4-5.png)
 
 2. Global Resources → select **`Log Summary`** → click **OK**
 
-   ![Select Resource — Log Summary highlighted](images/ex01-17-1.png)
+   ![Select Resource — Global Resources tab, Log Summary highlighted, OK highlighted](images/ex01-4-6.png)
 
 3. Click **Save**
 
-   ![Saved toast confirmed](images/ex01-17-2.png)
+   ![Script File shows /script/Log Summary.groovy — Save button highlighted](images/ex01-4-7.png)
 
-### 9e — Prepare SBPA Payload
+   ![Saved toast confirmed](images/ex01-4-8.png)
+
+### 9d — Prepare SBPA Payload
 
 1. Click the **Prepare SBPA Payload** step → Processing tab → **Select**
 
-   ![Prepare SBPA Payload step selected](images/ex01-18.png)
+   ![Prepare SBPA Payload step selected — Processing tab, Select button highlighted](images/ex01-4-9.png)
 
 2. Global Resources → select **`SBPA_Payload`** → click **OK**
 
-   ![Select Resource — SBPA_Payload highlighted](images/ex01-18-1.png)
+   ![Select Resource — Global Resources tab, SBPA_Payload highlighted, OK highlighted](images/ex01-4-10.png)
 
 3. Click **Save**
 
-   ![Saved toast confirmed](images/ex01-18-2.png)
+   ![Script File shows /script/SBPA_Payload.groovy — Save button highlighted](images/ex01-4-11.png)
+
+   ![Saved toast confirmed](images/ex01-4-12.png)
 
 ---
 
 ## Step 10 — Verify the Full iFlow and Adapter Settings
 
-1. Click the **Arrange Horizontally** button (bottom of canvas) to see the complete flow
+1. Click the **Arrange Horizontally** button (bottom-right of canvas) to see the complete flow
 
-   ![Full iFlow overview at 47% zoom — all steps visible including local integration process](images/ex01-19.png)
+   ![Arrange Horizontally button highlighted](images/ex01-5.png)
 
-   ![Full iFlow — canvas showing complete flow](images/ex01-19-1.png)
+   ![Full iFlow overview at 48% zoom — all steps visible](images/ex01-5-1.png)
 
 2. Click the **ProcessDirect** sender step → **Connection** tab — confirm the address shows `/IN262-0XX` with your participant number
 
-   ![ProcessDirect Connection tab — Address field shows /IN262-0XX](images/ex01-20-1.png)
+   ![ProcessDirect Connection tab — Address field shows /IN262-0XX](images/ex01-5-2.png)
 
 3. Click the **RFC call** step → **Connection** tab — confirm Destination = `S4HANA_RFC`
 
-   ![RFC Connection tab — Destination S4HANA_RFC confirmed](images/ex01-20.png)
+   ![RFC Connection tab — Destination S4HANA_RFC confirmed](images/ex01-5-3.png)
 
 4. Click the **S4HANA Call** OData step → **Processing** tab — confirm Resource Path = `A_SalesOrder` and Query Options are populated
 
-   ![OData Processing tab — Resource A_SalesOrder and query options visible](images/ex01-20-2.png)
+   ![OData Processing tab — Resource A_SalesOrder and query options visible](images/ex01-5-4.png)
 
-   ![OData Processing tab scrolled — traceparent headers visible](images/ex01-20-3.png)
+5. Scroll down in Processing — confirm Request/Response Headers = `traceparent`
 
-   ![Externalized Parameters tab — query options and body params visible](images/ex01-20-4.png)
+   ![OData Processing tab scrolled — traceparent headers visible](images/ex01-5-5.png)
 
-5. Click the **Send Offer** HTTP step → **Connection** tab — confirm:
+6. Click **Externalized Parameters** tab — confirm the query options and OData body parameters are listed
+
+   ![Externalized Parameters tab — query options and body params visible](images/ex01-5-6.png)
+
+7. Click the **Send Offer** HTTP step → **Connection** tab — confirm:
    - Address: `https://spa-api-gateway-bpi-eu-prod.cfapps.eu10.hana.ondemand.com/workflow/rest/v1/workflow-instances`
    - Method: `POST`
    - Authentication: `OAuth2 Client Credentials`
    - Credential Name: `BPA-OAuth-Credential`
 
-   ![HTTP Connection tab — BPA URL, POST method, OAuth2, BPA-OAuth-Credential confirmed](images/ex01-20-5.png)
+   ![HTTP Connection tab — BPA URL, POST method, OAuth2, BPA-OAuth-Credential confirmed](images/ex01-5-7.png)
+
+8. Click **Save** — confirm the saved toast
+
+   ![Save button highlighted — saved toast visible](images/ex01-5-8.png)
 
 ---
 
-## Step 11 — Save as Version
+## Step 11 — Update the CalculatedDiscount Script
 
-1. Click **Save as Version**
+The AI generated a placeholder script in the `CalculatedDiscount` step. Replace it with the exercise script below.
 
-2. In the Version Information dialog:
-   - **Version:** `1.0.1`
-   - **Comment:** `Adjusted the common artifacts`
-   - Click **Save**
+1. Click the **CalculatedDiscount** step on the canvas → **Processing** tab
 
-3. Toast confirms *"saved as version"*
+   ![CalculatedDiscount step selected — Processing tab, Script File highlighted](images/ex01-6.png)
+
+2. Click the script filename to open the editor — the default template is shown
+
+   ![Script editor open — default template content visible](images/ex01-6-1.png)
+
+3. Select all the existing content and replace it by pasting the script below:
+
+```groovy
+import com.sap.gateway.ip.core.customdev.util.Message
+import groovy.util.XmlSlurper
+
+def Message processData(Message message) {
+
+    double totalPrice = 0.0
+    double highValueTotal = 0.0
+    double standardTotal = 0.0
+    int orderCount = 0
+    int highValueCount = 0
+    String orderSummary = ""
+    String itemSummary = ""
+
+    try {
+        def body = message.getBody(java.io.Reader)
+        def root = new XmlSlurper().parse(body)
+
+        root.A_SalesOrderType.each { order ->
+            def salesOrderId = order.SalesOrder.text().trim()
+            def currency = order.TransactionCurrency.text().trim()
+            def amount = order.TotalNetAmount.text().trim()
+            double orderAmount = 0.0
+
+            if (amount) {
+                try {
+                    orderAmount = Double.parseDouble(amount)
+                    totalPrice += orderAmount
+                    orderCount++
+                } catch (NumberFormatException e) {
+                }
+            }
+
+            if (orderAmount >= 5000) {
+                highValueTotal += orderAmount
+                highValueCount++
+                orderSummary = orderSummary + "HIGH|" + salesOrderId + "|" + currency + "|" + orderAmount + "\n"
+            } else {
+                standardTotal += orderAmount
+                orderSummary = orderSummary + "STD|" + salesOrderId + "|" + currency + "|" + orderAmount + "\n"
+            }
+
+            order.to_Item.A_SalesOrderItemType.each { item ->
+                def itemId = item.SalesOrderItem.text().trim()
+                def material = item.Material.text().trim()
+                def itemText = item.SalesOrderItemText.text().trim()
+                def qty = item.RequestedQuantity.text().trim()
+                def unit = item.RequestedQuantityUnit.text().trim()
+                itemSummary = itemSummary + salesOrderId + "|" + itemId + "|" + material + "|" + itemText + "|" + qty + " " + unit + "\n"
+            }
+        }
+    } catch (Exception e) {
+    }
+
+    message.setProperty("TotalPrice", totalPrice.toString())
+    message.setProperty("OrderCount", orderCount.toString())
+    message.setProperty("HighValueOrderCount", highValueCount.toString())
+    message.setProperty("HighValueTotal", highValueTotal.toString())
+    message.setProperty("StandardTotal", standardTotal.toString())
+
+    double productPrice = 1000.0
+    double discountRate = totalPrice > 5000 ? 15 : 5
+    double discountPercentage = discountRate / 100.0
+    double finalPrice = productPrice - (productPrice * discountPercentage)
+
+    message.setProperty("ProductPrice", productPrice.toString())
+    message.setProperty("DiscountDecimal", discountPercentage.toString())
+    message.setProperty("FinalPrice", finalPrice.toString())
+    message.setProperty("Discount", discountRate.toString() + "%")
+
+    return message
+}
+```
+
+   ![Script editor — exercise script pasted in, scrolled to show bottom](images/ex01-6-2.png)
+
+4. Click **Apply**
+
+   ![Apply button highlighted](images/ex01-6-3.png)
+
+5. An **Incompatibilities** warning appears — this is expected (Groovy 1.x vs 2.x version notice). Click **OK**
+
+   ![Incompatibilities dialog — OK button highlighted, Script changed successfully toast visible](images/ex01-6-4.png)
+
+6. Click **Close** to return to the canvas
+
+   ![Close button highlighted](images/ex01-6-5.png)
+
+7. Click **Save** — confirm the saved toast
+
+   ![CalculatedDiscount step on canvas — Save button highlighted](images/ex01-6-6.png)
+
+   ![Saved toast confirmed](images/ex01-6-7.png)
 
 ---
 
 ## Exercise 1.1 Complete
 
-Your iFlow is saved and ready for Memory Profiling. It was generated from a plain-language description and wired to shared artefacts — without writing a single line of code or configuring adapters manually.
+Your iFlow is wired and ready for Exercise 1.2. It was generated from a plain-language description and wired to shared artefacts — without writing a single line of code or configuring adapters manually.
 
 ---
 

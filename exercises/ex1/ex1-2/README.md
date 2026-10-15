@@ -7,7 +7,7 @@
 
 ## Business Context
 
-The iFlow you saved in Exercise 1.1 contains a Groovy script (`CalculatedDiscount`) with several coding issues introduced deliberately. Before deploying it to production, you will use the Integration Suite **Simulator with AI Memory Profiling** to surface the bottleneck — and then let **AI Script Optimisation** fix it.
+The iFlow you built in Exercise 1.1 contains a Groovy script (`CalculatedDiscount`) with several coding issues introduced deliberately. You will first use **AI Script Optimisation** to detect and fix code-level issues statically — then run the **Simulator with AI Memory Profiling** to surface the runtime memory bottleneck and optimise again with that additional context.
 
 ---
 
@@ -15,110 +15,203 @@ The iFlow you saved in Exercise 1.1 contains a Groovy script (`CalculatedDiscoun
 
 | Capability | What happens |
 |---|---|
-| **Memory Profiling** | Runs the script steps inside the Simulator, measures per-step memory allocation, and flags the most memory-intensive step with AI-generated recommendations |
-| **Script Optimisation** | Analyses the flagged Groovy script and proposes fixes across three categories: memory efficiency, numeric precision, and error observability |
+| **Script Optimisation (static)** | Analyses the Groovy script for code quality issues — inefficient patterns, precision risks, empty catch blocks — and proposes targeted fixes |
+| **Memory Profiling** | Runs the script steps inside the Simulator with a large payload, measures per-step heap allocation, and flags the most memory-intensive step |
+| **Script Optimisation (with profiling context)** | Re-analyses the same script enriched with the profiling results — the AI now has both code and runtime evidence to recommend the streaming fix |
 
 ---
 
-## Step 1 — Open the iFlow in Edit Mode
+## Step 1 — Download the Sample Input Payload
+
+Download the file below — you will upload it into the Simulator in Step 4.
+
+[CalculatedDiscount_SimInput.xml](CalculatedDiscount_SimInput.xml)
+
+---
+
+## Step 2 — Open the iFlow in Edit Mode
 
 1. Navigate to your iFlow `IN262-0XX-Calculate-Discount`
 2. Click **Edit** to enter edit mode
 
 ---
 
-## Step 2 — Open the Simulator
+## Step 3 — Script Optimisation (Static Analysis)
 
-1. In the toolbar, click the **Simulate** icon (or select **Simulation** from the toolbar)
-2. Set the simulation **start point** to the **CalculatedDiscount: Compute…** Groovy script step
-3. Set the simulation **end point** to the **Message End Event**
+1. Click the **CalculatedDiscount** step on the canvas → **Processing** tab — click the script filename to open the editor
+
+   ![CalculatedDiscount step selected — Processing tab, script file link highlighted](images/ex01-7.png)
+
+2. The script editor opens — click **Optimize**
+
+   ![Script editor open — Optimize button highlighted](images/ex01-7-1.png)
+
+3. The **AI-Generated Review Report** opens — review the recommendations:
+
+   ![AI Report — Recommendation 1: Inefficient String Concatenation in Loops highlighted](images/ex01-7-3.png)
+
+   **Recommendation 1 — Inefficient String Concatenation in Loops**  
+   String concatenation with `+` inside loops creates a new `String` object on every iteration, increasing garbage collection pressure. The fix replaces these with `StringBuilder`.
+
+4. Scroll to **Improved Script** — click the **copy** icon to copy the optimised script to clipboard
+
+   ![AI Report — Improved Script section, copy icon highlighted](images/ex01-7-4.png)
+
+   ![Code copied to clipboard toast](images/ex01-7-5.png)
+
+5. Click inside the **left-hand editor pane** (the original script), select all (`Cmd+A` / `Ctrl+A`), and paste
+
+   ![Script editor left pane highlighted as paste target](images/ex01-7-6.png)
+
+   ![Script editor — improved script pasted, bottom of script visible](images/ex01-7-7.png)
+
+6. Click **Apply**
+
+   ![Apply button highlighted](images/ex01-7-8.png)
+
+   > [!NOTE]
+   > An **Incompatibilities** warning about Groovy version 2.x may appear — this is expected. Click **OK** to dismiss.
+
+   ![Incompatibilities dialog — OK button highlighted, Script changed successfully toast](images/ex01-7-9.png)
+
+7. The AI shows a final summary confirming the script follows SAP Cloud Integration best practices
+
+   ![AI Report — final summary confirming best practices, Close button highlighted](images/ex01-7-10.png)
+
+8. Click **Close** to return to the canvas
+
+   ![Close button highlighted](images/ex01-7-11.png)
+
+---
+
+## Step 4 — Set Up the Simulator
+
+1. Click the **Simulate** icon in the toolbar
+
+   ![Canvas — CalculatedDiscount step selected, Simulate icon in toolbar highlighted](images/ex01-8.png)
+
+2. Click the **Start Point** icon on the **CalculatedDiscount** step
+
+   ![Simulation mode — Start Point marker set on CalculatedDiscount step](images/ex01-8-2.png)
+
+3. The **Add Simulation Input** dialog opens — confirm **Enable Memory Insights** is ticked, then click **Upload from File System**
+
+   ![Add Simulation Input dialog — Enable Memory Insights ticked, Upload from File System highlighted](images/ex01-8-3.png)
+
+4. Select `CalculatedDiscount_SimInput.xml` from your downloads → click **Open**
+
+   ![File picker — CalculatedDiscount_SimInput.xml selected, Open highlighted](images/ex01-8-4.png)
+
+5. Confirm **Upload successful** toast → click **OK**
+
+   ![Upload successful toast — OK button highlighted](images/ex01-8-5.png)
+
+6. Click the **End Point** icon on the **Log Summary** step to set the simulation boundary
+
+   ![Canvas — End Point marker set on Log Summary step](images/ex01-8-6.png)
+
+---
+
+## Step 5 — Run Simulation and Profiling
+
+1. Click the **Run Simulation and Profiling** button in the toolbar
+
+   ![Run Simulation and Profiling button highlighted with tooltip](images/ex01-8-8.png)
+
+2. The simulation runs — a progress dialog appears
+
+   ![Running simulation and profiling progress dialog](images/ex01-8-9.png)
+
+3. Confirm the **"Simulation and profiling completed successfully"** toast
+
+   ![Simulation and profiling completed successfully toast](images/ex01-8-10.png)
+
+---
+
+## Step 6 — Review the Memory Profiling Results
+
+1. In the bottom panel, click **Memory Profiling Insights** tab — the `CalculatedDiscount` step is flagged as the top memory consumer
+
+   ![Message Content panel — Memory Profiling Insights tab, CalculatedDiscount flagged, Show More highlighted](images/ex01-8-11.png)
+
+2. Click **Show More** to expand the recommended solution
+
+   ![Memory Profiling Insights — expanded recommended solution, Optimize in Editor button highlighted](images/ex01-8-12.png)
 
 > [!NOTE]
-> The simulator does not make external calls — it only instruments the steps within the boundary you define. The S/4HANA OData call, RFC call, and HTTP (BPA) call are outside this scope and will not be executed.
+> The AI identifies that parsing the entire XML payload into memory via `XmlSlurper` without streaming causes excessive heap allocation and garbage collection pressure.
+
+3. Click **Optimize in Editor** — the script editor opens with profiling context pre-loaded
+
+   ![Script editor opens — banner confirms optimisation includes memory profiling insights, Optimize button highlighted](images/ex01-8-13.png)
 
 ---
 
-## Step 3 — Load Sample Input Payload
+## Step 7 — Optimise Again with Memory Profiling Context
 
-1. In the Simulator input area, paste the sample S/4HANA Sales Order XML provided by your instructor
-2. This payload represents a realistic OData response from `API_SALES_ORDER_SRV` with several orders and line items
+The AI now has both static analysis and runtime profiling evidence. It surfaces additional recommendations not visible from code alone:
 
-> [!NOTE]
-> The payload needs to be large enough that the memory difference between `getBody(String)` and `getBody(Reader)` is visible in the profiler output.
+1. Click **Optimize** — the AI-Generated Review Report opens
 
----
+   ![AI Report — Recommendation 1: Inefficient String Concatenation highlighted](images/ex01-8-15.png)
 
-## Step 4 — Enable Memory Profiling and Run
+   ![AI Report — Recommendation 2: Empty Catch Block for NumberFormatException highlighted](images/ex01-8-16.png)
 
-1. Tick the **Memory Profiling** checkbox in the Simulator panel
-2. Click **Run**
-3. The simulation executes — results appear in the **Memory Profiling Insights** panel
+   **Recommendation 2 — Empty Catch Block**  
+   Empty `catch` blocks swallow exceptions silently. The fix adds MPL logging so parsing failures become visible in Message Monitor.
 
----
+2. Scroll to **Improved Script** — click the **copy** icon
 
-## Step 5 — Review the Memory Profiling Results
+   ![AI Report — Improved Script section, copy icon highlighted](images/ex01-8-17.png)
 
-The Memory Profiling Insights view shows per-step memory allocation. Identify:
+   ![Code copied to clipboard toast](images/ex01-8-18.png)
 
-- The **CalculatedDiscount** script is flagged as the top memory consumer
-- The AI recommendation explains that `getBody(String)` loads the entire payload into heap memory
+3. Click inside the **left-hand editor pane**, select all, and paste
 
----
+   ![Script editor left pane highlighted as paste target](images/ex01-8-19.png)
 
-## Step 6 — Optimise the Script with AI
-
-1. Click **"Optimise with AI"** on the `CalculatedDiscount` step in the profiling results
-2. The AI Script Optimisation panel opens and analyses the script
-3. Review the **three recommendations** AI surfaces:
-
-   | # | Issue found | Category | AI-proposed fix |
-   |---|---|---|---|
-   | 1 | `message.getBody(String)` | **Memory** | Replace with `message.getBody(java.io.Reader)` — streams the payload instead of loading it fully into heap |
-   | 2 | `double` / `Double.parseDouble()` for price calculation | **Precision** | Replace with `BigDecimal` — avoids floating-point rounding errors on financial amounts |
-   | 3 | Empty `catch` block swallowing exceptions silently | **Observability** | Add MPL logging via `messageLogFactory` — failures become visible in Message Monitor |
-
-4. Review each recommendation and click **Accept** to apply all three fixes
+4. Click **Apply** → dismiss the Incompatibilities warning → click **Close**
 
 ---
 
-## Step 7 — Save and Deploy (Final)
+## Step 8 — Save as Version and Deploy
 
-1. Click **Save**
+1. Click **Save as Version**
 
-   ![Save as Version button highlighted](images/ex01-21.png)
+   ![Canvas — Save as Version button highlighted](images/ex01-9.png)
 
 2. In the Version Information dialog:
-   - **Version:** `1.0.2`
-   - **Comment:** `AI-optimised CalculatedDiscount script`
+   - **Version:** `1.0.1`
+   - **Comment:** `Optimised scripts with memory profiling`
    - Click **Save**
 
-   ![Version Information dialog — version and comment filled, Save highlighted](images/ex01-21-1.png)
+   ![Version Information dialog — version 1.0.1 and comment filled, Save highlighted](images/ex01-9-1.png)
 
-3. Toast confirms *"saved as version"* — click **Deploy**
+3. Confirm the **"saved as version"** toast — then click **Deploy**
 
-   ![Saved as version toast — Deploy button highlighted](images/ex01-21-2.png)
+   !["Saved as version" toast — Deploy button highlighted](images/ex01-9-3.png)
 
 4. In the Deploy dialog, confirm **Runtime Profile = Cloud Integration** → click **Deploy**
 
-   ![Deploy dialog — Cloud Integration runtime profile, Deploy button highlighted](images/ex01-22.png)
+   ![Deploy dialog — Cloud Integration runtime profile, Deploy button highlighted](images/ex01-9-4.png)
 
-5. Confirm the deployment dialog → click **OK**
+5. The deployment dialog confirms it is triggered → click **OK**
 
-   ![Deployment triggered dialog — OK button](images/ex01-22-1.png)
+   ![Deployment triggered dialog — OK button highlighted](images/ex01-9-5.png)
 
-6. Toast confirms *"successfully deployed"*
+6. Confirm the **"successfully deployed"** toast
 
-   ![Success toast — IN262-0XX-Calculate-Discount successfully deployed](images/ex01-22-2.png)
+   !["Successfully deployed" toast](images/ex01-9-6.png)
 
-7. Click **Deployment Status** tab — confirm Runtime Status = **Started**
+7. Click **Deployment Status** tab — confirm Deployment Status = **Deployed**, Runtime Status = **Started**
 
-   ![Deployment Status tab — Deployed, Runtime Status Started, version confirmed](images/ex01-22-4.png)
+   ![Deployment Status tab — Deployed and Started confirmed, version 1.0.1](images/ex01-9-7.png)
 
 ---
 
 ## Exercise 1.2 Complete
 
-You used AI to profile memory usage before going live, identified a real coding issue in the script, and applied AI-generated fixes across three categories — all without leaving the Integration Suite designer.
+You applied AI Script Optimisation twice — first statically on the code, then again enriched with runtime memory profiling data — and deployed the fully optimised iFlow.
 
 ---
 
@@ -126,8 +219,9 @@ You used AI to profile memory usage before going live, identified a real coding 
 
 AI assisted at every stage of Exercise 1:
 - **Generated** the integration structure from a plain-language description
+- **Optimised** the script statically — fixing string concatenation and error handling
 - **Profiled** memory usage in simulation — no deployment needed to find the bottleneck
-- **Optimised** the script with targeted fixes for memory, precision, and observability
+- **Optimised again** with profiling context — the AI identified the streaming fix only visible at runtime
 
 ---
 
