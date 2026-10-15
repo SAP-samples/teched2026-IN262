@@ -4,18 +4,18 @@
 **Duration:** 20 min
 
 **Business Context:**
-Enable AI agents to securely and efficiently create products in SAP S/4HANA by exposing the S/4HANA Product Creation API as an MCP tool. This allows agents to interact with product master data through a governed, standardized interface, reducing manual effort and enabling automated, end-to-end business processes.
+ MCP Gateway in SAP Integration Suite enables enterprises to securely connect AI agents to existing APIs, business processes, and backend services using the Model Context Protocol (MCP), e.g., in this exercise, to an SAP S/4HANA on-premises system, by exposing the S/4HANA Product Creation API as an MCP tool. This allows agents to interact with product master data through a governed, standardized interface, reducing manual effort and enabling automated, end-to-end business processes.
 
 **What AI Does Here:**
-Create an MCP Server to expose the S/4HANA product creation API as an agent-consumable tool
-In this exercise, you will build and configure an MCP Server that exposes the S/4HANA Product API as a tool in SAP Integration Suite, enabling AI agents to automate s.. securely and with proper governance, without compromising business context. 
+Create an MCP Server to expose the S/4HANA product creation API as an agent-consumable tool.
+
 > [!NOTE]
 > For a deeper understanding of the **Model Context Protocol (MCP)** and **MCP paradigm in SAP Integration Suite**, refer to [What is the Model Context Protocol (MCP)?](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) and [API-Centric Integration in SAP Integration Suite: A New Paradigm for API & MCP](https://community.sap.com/t5/technology-blog-posts-by-sap/api-centric-integration-in-sap-integration-suite-a-new-paradigm-for-api-amp/ba-p/14438245)
 
 ## Exercise 3.1 Create an API Artifact from pre-configured S/4HANA business systems 
-After completing these steps, you will have created an API Artifact by discovering APIs and their metadata from pre-configured business systems (e.g., SAP S/4HANA Cloud and deploying it on Integration Cell Runtime
+After completing these steps, you will have created an API Artifact by discovering APIs and their metadata from pre-configured business systems (e.g., SAP S/4HANA and deploying it on Integration Cell Runtime)
 > **Reference:** [Create an MCP Server from an API Artifact](https://help.sap.com/docs/integration-suite/isuite-integrations-and-apis/create-mcp-server-from-api-artifact)
-1. From the left navigation pane, choose **Design → Integrations and APIs**, open the already-created package in the last exercise IN262-0XX-Campaign-Management (where XX is your user name), Navigate to **Artifacts** tab and click on **Edit**
+1. From the left navigation pane, choose **Design → Integrations and APIs**, open the already-created package in the last exercise IN262-0XX-Campaign-Management (where XX is your participant number). Navigate to **Artifacts** tab and click on **Edit**
 <br>![](/exercises/ex3/images/ex04-1-1.png)
 2. On the package details page, choose **Artifacts**, and under **Add**, select **API**. The **Add API** dialog opens.
 <br>![](/exercises/ex3/images/ex04-1-2.png)
@@ -41,23 +41,24 @@ After completing these steps, you will have created an API Artifact by discoveri
    | Virtual Host | *(auto-populated)* |
 <br>![](/exercises/ex3/images/ex04-1-6.png)
 7. Click **Next**
+   
 8. In **Generate Open API Specification** dialog, click **Add and Open in API Designer**
 <br>![](/exercises/ex3/images/ex04-1-7.png)
-9. API Designer will open, click **Edit**
+10. API Designer will open, click **Edit**
 <br>![](/exercises/ex3/images/ex04-1-8.png)
-10. On the next screen, choose **Import**
+11. On the next screen, choose **Import**
 <br>![](/exercises/ex3/images/ex04-1-9.png)
-11. On the Import Dialog, choose the ** Browse ** icon to upload the **API Product.json** file from the local system.
+12. On the Import Dialog, choose the ** Browse ** icon to upload the **API Product.json** file (download the file from the Documents tab of your package).
 <br>![](/exercises/ex3/images/ex04-1-10.png)
-12. Choose **Open**
+13. Choose **Open**
 <br>![](/exercises/ex3/images/ex04-1-11.png)
-13. Click on **Import**
+14. Click on **Import**
 <br>![](/exercises/ex3/images/ex04-1-12.png)
-14. The API Product specification gets imported. Now choose **Switch to API Details**
+15. The API Product specification gets imported. Now choose **Switch to API Details**
 <br>![](/exercises/ex3/images/ex04-1-13-1.png)
-15. Navigate to **Policies** tab
+16. Navigate to **Policies** tab
 <br>![](/exercises/ex3/images/ex04-1-13-2.png)   
-16. You will see **Authorization** and **Authentication** policies are added by default. Select **Authentication** policy and navigate to the property sheet below.
+17. You will see **Authorization** and **Authentication** policies are added by default. Select **Authentication** policy and navigate to the property sheet below.
 Make sure the **Type** is **Basic**, **Client Certificate**, and **OAuth**.
 <br>![](/exercises/ex3/images/ex04-1-13-3.png)
 > [!NOTE]
@@ -72,7 +73,7 @@ Make sure the **Type** is **Basic**, **Client Certificate**, and **OAuth**.
 <br>![](/exercises/ex3/images/ex04-1-14.png)
 20. On the Deploy Wizard, select **Runtime Profile** as ***Integration Cell** and then choose **Deploy**
 <br>![](/exercises/ex3/images/ex04-1-15.png)
-21. You will see a deployment triggered message on the screen **Product API IN262-000 is triggered for deployment** (where XX or the last two zeros are your participant's number)
+21. You will see a deployment triggered message on the screen **Product API IN262-000 is triggered for deployment** (where XX is your participant's number)
 <br>![](/exercises/ex3/images/ex04-1-16.png)
 22. Choose **Switch to API Details**
 <br>![](/exercises/ex3/images/ex04-1-17.png)
