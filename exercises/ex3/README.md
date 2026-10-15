@@ -176,7 +176,7 @@ After completing this exercise, you will have an MCP Server that can be invoked 
 17. Once the agent subscription is created successfully, you are all set with your credentials. Copy these credentials to notepad and save them.
 ## Summary
 
-You've now ...
+You've now created an MCP Server to expose the S/4HANA product creation API as an agent-consumable tool. You have now created an Agent subscription and got the credentials for testing.
 
-Continue to - [Exercise 2 - Exercise 2 Description](../ex2/README.md)
+Continue to - [Exercise 4- Exercise 2 Description](../ex2/README.md)
 
