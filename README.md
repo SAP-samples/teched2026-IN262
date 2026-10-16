@@ -8,8 +8,7 @@ This hands-on workshop gives you practical experience with the **AI capabilities
 > [!NOTE]
 > All AI features in this session are available in SAP Integration Suite and can be enabled from the **Settings** page.
 >
-> > <img src="exercises/ex0/images/1_AI_Settings_Page.png" alt="SAP Integration Suite AI Settings Page" />
-
+>  <img src="exercises/ex0/1_AI_Settings_Page.png" alt="SAP Integration Suite AI Settings Page" />
 
 
 ---
