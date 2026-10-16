@@ -1,6 +1,7 @@
 # Exercise 4 — End-to-End: Create a Product and Trigger the Campaign
 
 **Feature:** Run end to end scenario
+
 **Duration:** 15 minutes
 
 ---
