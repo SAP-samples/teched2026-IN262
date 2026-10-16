@@ -5,6 +5,8 @@ exercises/ex4/S4H-ProductCreation-OpenAPI.yaml
 # Screenshot staging folders — reviewed before replacing images/
 exercises/ex1/ex1-1/new-screenshots/
 exercises/ex1/ex1-2/new-screenshots/
+exercises/ex3/new-screenshots/
+exercises/ex3/images-backup/
 
 # macOS
 .DS_Store
