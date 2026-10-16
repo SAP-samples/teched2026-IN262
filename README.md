@@ -24,6 +24,7 @@ This hands-on workshop gives you practical experience with the **AI capabilities
 
 | Persona | What they do in this session |
 |---|---|
+| **Integration Developer** | Builds the integration scenario using AI — generates the iFlow from a natural language prompt, optimises and profiles scripts, resolves runtime errors, creates the API artifact, and configures the MCP Server |
 | **Product Master Data Steward** | Uses an AI agent to create a new product in S/4HANA by describing it in plain language — no API client, no manual payload |
 | **End User / Customer** | Receives a personalised campaign offer in their task inbox, reviews the discount, and places the order |
 
