@@ -66,19 +66,21 @@ After completing these steps, you will have created an API Artifact by discoveri
 
    ![](images/ex03-1-8.png)
 
-10. On the Import Dialog, click the **Browse** icon, select the **API_PRODUCT.json** file from the local system, and click **Open**.
+10. Download the API specification file: [API_PRODUCT.json](downloads/API_PRODUCT.json)
+
+11. On the Import Dialog, click the **Browse** icon, select the downloaded **API_PRODUCT.json** file, and click **Open**.
 
     ![](images/ex03-1-9.png)
 
-11. The API Product specification gets imported with all operations. Click **Switch to API Details**.
+12. The API Product specification gets imported with all operations. Click **Switch to API Details**.
 
     ![](images/ex03-1-11.png)
 
-12. Click the **Policies** tab.
+13. Click the **Policies** tab.
 
     ![](images/ex03-1-12.png)
 
-13. You will see the **Authentication** policy is added by default. Click **Authentication** and check the property sheet below — make sure **Type** includes **Basic**, **Client Certificate**, and **OAuth**.
+14. You will see the **Authentication** policy is added by default. Click **Authentication** and check the property sheet below — make sure **Type** includes **Basic**, **Client Certificate**, and **OAuth**.
 
     > [!NOTE]
     > The position of the authentication policy on the flow is immutable and it's the first policy on the flow.
@@ -87,35 +89,35 @@ After completing these steps, you will have created an API Artifact by discoveri
 
     ![](images/ex03-1-13.png)
 
-14. Click the **Authorization** policy and select the **Trust Upstream MCP Authorization** checkbox.
+15. Click the **Authorization** policy and select the **Trust Upstream MCP Authorization** checkbox.
 
     ![](images/ex03-1-14.png)
 
-15. Click **Save** in the top right corner.
+16. Click **Save** in the top right corner.
 
     ![](images/ex03-1-15.png)
 
-16. You will see a **saved** confirmation toast. Click the **...** menu in the top right corner and click **Deploy**.
+17. You will see a **saved** confirmation toast. Click the **...** menu in the top right corner and click **Deploy**.
 
     ![](images/ex03-1-16.png)
 
-17. Click **Deploy** from the dropdown.
+18. Click **Deploy** from the dropdown.
 
     ![](images/ex03-1-17.png)
 
-18. On the Deploy dialog, confirm **Runtime Profile** is **Integration Cell** and click **Deploy**.
+19. On the Deploy dialog, confirm **Runtime Profile** is **Integration Cell** and click **Deploy**.
 
     ![](images/ex03-1-18.png)
 
-19. You will see a deployment triggered toast: **'Product_API_IN262-0XX' is triggered for deployment**.
+20. You will see a deployment triggered toast: **'Product_API_IN262-0XX' is triggered for deployment**.
 
     ![](images/ex03-1-19.png)
 
-20. Click the **Deployment Status** tab. The status will initially show **Deploying / Starting**.
+21. Click the **Deployment Status** tab. The status will initially show **Deploying / Starting**.
 
     ![](images/ex03-1-20.png)
 
-21. Refresh until Deployment Status shows **Deployed** and Runtime Status shows **Started**.
+22. Refresh until Deployment Status shows **Deployed** and Runtime Status shows **Started**.
 
     ![](images/ex03-1-21.png)
 
