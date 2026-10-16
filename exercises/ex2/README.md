@@ -304,4 +304,4 @@ AI error analysis works best when the error is in an external system's response 
 
 ---
 
-*Next: [Exercise 4 — Create an MCP Server](../ex4/README.md)*
+*Next: [Exercise 3 — Create an MCP Server](../ex3/README.md)*
