@@ -1,95 +1,95 @@
 
+# IN262 — Build an Integration Scenario from Scratch with AI Assistance at Every Step
 
-# IN262 - Build an integration scenario from scratch with AI assistance at every step
+## About This Session
 
-## Description
+This hands-on workshop gives you practical experience with the **AI capabilities built into SAP Integration Suite** — from design time to runtime. In 2 hours you will work through the full lifecycle of an enterprise integration: generating flows, profiling and optimising scripts, resolving errors, exposing APIs as MCP tools, and running the scenario end-to-end via an AI agent.
 
-This repository contains the material for the SAP TechEd 2026 Hands-on workshop session [IN262 - Build an integration scenario from scratch with AI assistance at every step](https://github.com/SAP-samples/teched2026-IN262).
-It captures the business scenario, session structure, exercise outlines and content standards. 
+> [!NOTE]
+> All AI features in this session are available in SAP Integration Suite and can be enabled from the **Settings** page.
+>
+> <img src="exercises/ex0/images/1_AI_Settings_Page.png" alt="SAP Integration Suite AI Settings Page" />
 
-## Overview
-## 1. Business Scenario - Campaign Management
-###  1.1 Overview
-**Company:** Best Run Business
+---
 
-**Problem:** Preparing product launch campaigns, festival season offers, and personalised purchase-history-based offers manually is time-consuming and error-prone.
+## 1. Business Scenario — Campaign Management
 
-**Goal:** Use AI-assisted integration to automatically curate and deliver campaigns to customers based on their buying history and local festival/product launch schedules.
-</br>
-### 1.2 Personas
-| Persona | Role |
+### The Story
+
+**Best Run Business** sells products across multiple markets and runs personalised campaigns for product launches and seasonal promotions. Today, campaign preparation is manual — product master data is created by hand, discount calculations are done in spreadsheets, and campaign offers are sent without personalisation. This takes days and is error-prone.
+
+**The goal:** automate the entire journey — from product creation to a personalised campaign offer landing in the customer's inbox — using AI-assisted integration on SAP Integration Suite.
+
+### Who Does What
+
+| Persona | What they do in this session |
 |---|---|
-| Requester / Business User | Initiates the request for a new product |
-| **Product Master Data Steward** | Creates and enriches product master data in S4/HANA, ensures data quality |
-| Data Owner / Product Owner | Validates business attributes and approves the request |
-| **End User / Customer** | Receives notification about the new product and associated campaign offers |
+| **Product Master Data Steward** | Uses an AI agent to create a new product in S/4HANA by describing it in plain language — no API client, no manual payload |
+| **End User / Customer** | Receives a personalised campaign offer in their task inbox, reviews the discount, and places the order |
 
-> [!NOTE]
-Only **Product Master Data Steward** and **End User / Customer** persona will be used in this hands-on session </br>
+### How It Works — End-to-End
 
-### 1.3 Technical Overview
+```
+[Data Steward]  describes new product in plain language to AI agent
+      ↓
+[AI Agent]      calls S/4HANA product creation API via MCP Server
+      ↓
+[S/4HANA]       product created → AEM event raised automatically
+      ↓
+[Integration Suite]  picks up event → calculates personalised discount
+                     based on customer purchase history → triggers campaign
+      ↓
+[Customer]      receives campaign offer task in SAP Build Process Automation inbox
+      ↓
+[Customer]      reviews offer, places order
+      ↓
+[System]        Sales Order confirmed in S/4HANA → confirmation sent to inbox
+```
 
-This session takes participants through the complete lifecycle of building an AI-assisted integration — from generating the first integration flow to running the scenario end-to-end. At each step, a different AI capability embedded in SAP Integration Suite does the heavy lifting: generating, optimising, profiling, and resolving errors. 
+---
 
-Participants will also step beyond integration and into the agentic world — creating an MCP Server to expose a backend API, and calling it directly from an AI agent to trigger the full campaign flow.
+## 2. AI Capabilities You Will Use
 
-> [!NOTE]
-All the AI features covered in this hands-on can be enabled through the setting page of SAP Integration Suite. See the screenshot below
-<img src="/exercises/ex0/images/1_AI_Settings_Page.png" alt="Pic_IN262_1" >
+SAP Integration Suite embeds AI at every stage of the integration lifecycle. In this session you will use **five distinct AI capabilities**:
 
-#### 1.3.1 Participants will get hands on experience on :
-
-| # | What You Will Do | AI Capability Used |
+| # | AI Capability | What you will do |
 |---|---|---|
-| 1 | Generate an integration flow from a natural language prompt, add scripts and mapping, and configure it | AI-assisted iFlow Generation in Integration Suite |
-| 2 | Profile the flow to identify bottlenecks, optimize the script with AI, then deploy | AI Script Optimization + Profiler |
-| 3 | Run a test and use AI to diagnose and resolve errors in the flow | AI Error Resolution |
-| 4 | Create an MCP Server to expose the S/4HANA product creation API as an agent-callable tool |  MCP Server , [TODO] API Specification Generation (OPTIONAL) |
-| 5 | Trigger the full scenario via an AI agent and complete the campaign end-to-end | Agent Interaction via MCP |
+| 1 | **AI-assisted iFlow Generation** | Generate a complete integration flow from a plain-language description |
+| 2 | **AI Script Optimisation** | Detect and fix code issues in a Groovy script — static analysis, then again enriched with runtime profiling data |
+| 3 | **AI Memory Profiling** | Run the flow in the Simulator, measure per-step heap allocation, and identify the memory bottleneck |
+| 4 | **AI Error Resolution** | Trigger a real runtime error and use AI to diagnose and fix it |
+| 5 | **MCP Server + AI Agent** | Expose the S/4HANA product API as an MCP tool and call it from Claude Code CLI using natural language |
 
-By the end of the session, participants will have hands-on experience with **5 distinct AI capabilities** and a working end-to-end integration connecting S/4HANA, SAP Integration Suite, and Emarsys — all driven by a single natural language prompt.
+---
 
-### 1.4 End-to-End User Journey
-1. **[Master Data Steward]** Creates a new product entry in S/4HANA using an AI agent client (MCP Inspector / AI client)
-2. **[System]** Event raised automatically on product creation via Integration Suite AEM
-3. **[Integration Suite]** Flows orchestrate the campaign — enriching product data, calculating a personalised discount based on customer purchase history, and triggering Emarsys
-4. **[End User / Customer]** Receives new product information along with a personalised special discount offer
-[TODO revisit based on email and myinbox task] A task will be triggered automatically by the System
-5. **[End User / Customer]** Places an order for the product
-6. **[System]** Acknowledges the order back to the customer and delivers a cross-selling campaign offer
-[TODO revisit based on email and myinbox task] Receives a notifcation task in his / her inbox along with the cross selling campaign details
-</br> 
+## 3. System Landscape
 
-## 2. System Landscape
-
-| System | Purpose |
+| System | Role |
 |---|---|
-| SAP Integration Suite | Generate, optimise and profile the artifacts |
-| Inbox | Human approval and notifications |
-| AI Client | Claude Code on Participant Machines|
-> [!Note]
->  All systems will be pre-configured and seeded with data by the session organiser. Participants need not perform any system setup.
+| **SAP Integration Suite** | Design, build, deploy, and monitor integration flows; host MCP Server |
+| **SAP S/4HANA (on-premise)** | Product master data system — source of product creation events |
+| **SAP Build Process Automation** | Campaign offer task inbox and Sales Order confirmation |
+| **Claude Code CLI** | AI agent on participant laptops — connects to the MCP Server |
 
-</br> </br>
+> [!NOTE]
+> All systems are pre-configured and seeded with data by the session organisers. You do not need to perform any system setup.
 
-## 3. Exercises
+---
 
-0. Welcome, Business Scenario & Technical Overview — *Instructor-led, 10 min*
-1. **Exercise 1:** [Generate, Configure, Profile, Optimise and Deploy the Integration Flow with AI](exercises/ex1/README.md) — *Hands-on, 25 min*
-   - [Exercise 1.1 — Generate the iFlow with AI](exercises/ex1/ex1-1/README.md)
-   - [Exercise 1.2 — Memory Profiling and Script Optimisation](exercises/ex1/ex1-2/README.md)
-2. **Exercise 2 [TODO]:** [Test Run the Scenario and Resolve Errors with AI](exercises/ex2/README.md)  — *Hands-on, 10 min*
-3. **Exercise 3 [TODO]:** [Create and Configure MCP Server](exercises/ex3/README.md) — *Hands-on, 20 min*
-4. **Exercise 4 [TODO]:** [Run the Scenario & Complete the Campaign](exercises/ex4/README.md) — *Hands-on, 20 min*
-5. Wrap-up, Q&A & Key Takeaways — *Instructor-led, 10 min*
+## 4. Exercises
+
+| | Exercise | Type | Duration |
+|---|---|---|---|
+| 0 | Welcome, Business Scenario & Technical Overview | Instructor-led | 10 min |
+| 1 | [Generate, Profile, Optimise and Deploy the Integration Flow with AI](exercises/ex1/README.md) | Hands-on | 25 min |
+| | → [Exercise 1.1 — Generate the iFlow with AI](exercises/ex1/ex1-1/README.md) | | |
+| | → [Exercise 1.2 — Memory Profiling and Script Optimisation](exercises/ex1/ex1-2/README.md) | | |
+| 2 | [Test Run the Scenario and Resolve Errors with AI](exercises/ex2/README.md) | Hands-on | 10 min |
+| 3 | [Create MCP Server and Expose the API](exercises/ex3/README.md) | Hands-on | 20 min |
+| 4 | [End-to-End: Create a Product and Trigger the Campaign](exercises/ex4/README.md) | Hands-on | 20 min |
+| 5 | Wrap-up, Q&A & Key Takeaways | Instructor-led | 10 min |
 
 
-  
-
-
-**IMPORTANT**
-
-Your repo must contain the .reuse and LICENSES folder and the License section below. DO NOT REMOVE the section or folders/files. Also, remove all unused template assets(images, folders, etc) from the exercises folder. 
 
 ## Contributing
 Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) to understand the contribution guidelines.
