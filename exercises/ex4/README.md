@@ -1,6 +1,6 @@
 # Exercise 4 — End-to-End: Create a Product and Trigger the Campaign
 
-**AI Feature:** MCP Gateway  
+**Feature:** Run end to end scenario
 **Duration:** 15 minutes
 
 ---
@@ -18,7 +18,7 @@ You have built and deployed the integration flows in Exercises 1–3. In this ex
 
 | Capability | What happens |
 |---|---|
-| **MCP Agent** | Claude Code discovers your deployed MCP server as a tool and calls the S/4HANA product creation API on your behalf — no API client or manual payload construction required |
+| **MCP Server** | Claude Code discovers your deployed MCP server as a tool and calls the S/4HANA product creation API on your behalf — no API client or manual payload construction required |
 | **Natural language → API call** | You describe the product in plain language; the agent maps it to the correct OData fields and handles authentication |
 
 ---
