@@ -63,11 +63,11 @@ You will use the Bruno collection to exchange your credentials for a short-lived
 
    ![Bruno — Get MCP Token request open, Token URL, Key, Secret filled in](images/ex04-2.png)
 
-2. Confirm your credentials are set, then click **Send**
+2. Confirm your credentials are set
+   - Click **Send**
+   - Copy the `access_token` value from the response — you will paste it into `.mcp.json` in the next step
 
    ![Bruno — Send button highlighted, 200 response with access_token in body](images/ex04-2-1.png)
-
-3. Copy the `access_token` value from the response — you will paste it into `.mcp.json` in the next step
 
 ---
 
@@ -81,13 +81,17 @@ You will use the Bruno collection to exchange your credentials for a short-lived
 
    ![Windows Explorer — right-click context menu, Open with Visual Studio Code highlighted](images/ex04-2-3.png)
 
-3. The file opens in VS Code. Replace `[YOUR_TOKEN]` with the access token you copied, and confirm `[NNN]` is set to your three-digit participant number:
+3. The file opens in VS Code. 
+   - Paste entire JSON after changes or change the specific parts
+      - Replace `XX` at the end of URL with your parcipant number 
+      - Replace `[YOUR_TOKEN]` with the access token you copied
+   - Save the file (`Ctrl+S`)
 
    ```json
    {
      "mcpServers": {
        "IN262-ProductCreation": {
-         "url": "https://workshop02a.integrationsuite-cpi049.cfapps.eu10-003.hana.ondemand.com/mcp/mcp_in262-0[NNN]",
+         "url": "https://workshop02a.integrationsuite-cpi049.cfapps.eu10-003.hana.ondemand.com/mcp/mcp_in262-0XX",
          "headers": {
            "Authorization": "Bearer [YOUR_TOKEN]"
          }
@@ -98,7 +102,7 @@ You will use the Bruno collection to exchange your credentials for a short-lived
 
    ![VS Code — .mcp.json open with MCP server URL and Bearer token filled in](images/ex04-2-4.png)
 
-4. Save the file (`Ctrl+S`)
+
 
 ---
 
@@ -126,8 +130,8 @@ You will use the Bruno collection to exchange your credentials for a short-lived
 
 2. Confirm **IN262-ProductCreation** shows status **connected** and lists **12 tools**
 
-   > [!NOTE]
-   > If the server shows **disconnected**, verify your `.mcp.json` has the correct URL and a valid (non-expired) token, then restart Claude Code.
+> [!NOTE]
+> If the server shows **disconnected**, verify your `.mcp.json` has the correct URL and a valid (non-expired) token, then restart Claude Code.
 
 ---
 
@@ -135,15 +139,25 @@ You will use the Bruno collection to exchange your credentials for a short-lived
 
 You will now act as the **Data Steward** — using natural language to instruct the AI agent to create a product in S/4HANA.
 
-1. Type the following prompt, substituting `[NNN]` with your participant number:
+1. Type the following prompt, substituting `XX` with your participant number:
 
    ```
    Create a new product in S/4HANA with the following details:
-   - Product ID: MZ-TG-ZAD01-IN262-0[NNN]
-   - Description: Smart Watch IN262-0[NNN]
-   - Product type: Finished Good (FERT)
-   - Base unit: EA
-   - Product group: 01
+   - Product ID: MZ-TG-ZAD01-IN262-0XX
+   - Description: Smart Watch IN262-0XX
+   - Product Type: HAWA
+   - Industry Sector: M 
+   - Base Unit: EA 
+   - Language: EN 
+   - Valuation Area (Plant): 1710
+   - Moving Average Price: 1000 
+   - Currency: USD
+   - InventoryValuationProcedure  : V                      
+   - ValuationClass : 3100                   
+   - PriceDeterminationControl    : 2
+   - ProductSalesOrg: 1710
+   - ProductDistributionChnl: 10 
+   - Item Category Group (MTPOS) : NORM        
    ```
 
    ![Claude Code CLI — product creation prompt entered](images/ex04-3.png)
@@ -161,11 +175,12 @@ You will now act as the **Data Steward** — using natural language to instruct 
    ![Claude Code CLI — calling IN262-ProductCreation tool, product details shown](images/ex04-3-3.png)
 
 5. Claude Code confirms the product was created successfully — a summary table with all product fields is shown
+> [!NOTE]
+> The product creation triggers an AEM event in the background. The integration flow picks this up, calculates your personalised discount, and creates a campaign task in SAP Build Process Automation. This may take some seconds.
 
    ![Claude Code CLI — product successfully created, summary table with Product ID, Description, Type, Unit, Group](images/ex04-3-4.png)
 
-   > [!NOTE]
-   > The product creation triggers an AEM event in the background. The integration flow picks this up, calculates your personalised discount, and creates a campaign task in SAP Build Process Automation — this takes about 30 seconds.
+
 
 ---
 
@@ -179,19 +194,20 @@ You now switch roles — acting as the **End User / Customer** who receives the 
 
 2. Log in with your participant credentials (`in262-0NNN@education.cloud.sap`)
 
-3. Click the **inbox icon** in the top navigation bar — locate the task **Place Order - Product Offer** for your product
+3. Click the **inbox icon** in the top navigation bar
+   - Locate the task **Place Order - Product Offer** for your product
+   - Review the offer details, confirm the quantity, and click **Place Order**
 
    ![SBPA My Inbox — "Place Order - Product Offer" task open, quantity field and Place Order button visible](images/ex04-4.png)
 
-4. Review the offer details, confirm the quantity, and click **Place Order**
-
-5. A **"Task processed successfully"** toast confirms the order was submitted
+4. A **"Task processed successfully"** toast confirms the order was submitted
 
    ![SBPA — "Task processed successfully" confirmation toast](images/ex04-4-1.png)
 
 ---
 
 ## Step 8 — Confirm the Sales Order
+Once the order is created in the backend a notification will be sent back to you for order confirmation
 
 1. Click the **inbox icon** again — you should now see a **"A Sales Order Created"** notification
 
