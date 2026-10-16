@@ -1,6 +1,6 @@
 # Exercise 4 — End-to-End: Create a Product and Trigger the Campaign
 
-**AI Feature:** MCP Server  
+**AI Feature:** MCP Gateway  
 **Duration:** 15 minutes
 
 ---
