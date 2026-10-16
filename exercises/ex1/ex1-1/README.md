@@ -1,7 +1,7 @@
 # Exercise 1.1 — Generate the iFlow with AI
 
 **AI Feature:** iFlow Generation  
-**Duration:** 15 minutes
+**Duration:** 20 minutes
 
 ---
 

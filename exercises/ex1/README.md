@@ -1,7 +1,7 @@
 # Exercise 1: Generate an Integration Flow with AI and Optimise It
 
 **AI Features:** iFlow Generation · Memory Profiling · Script Optimisation  
-**Duration:** 25 minutes
+**Duration:** 30 minutes
 
 ---
 

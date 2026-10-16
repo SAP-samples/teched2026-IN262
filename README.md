@@ -82,7 +82,7 @@ SAP Integration Suite embeds AI at every stage of the integration lifecycle. In 
 | | Exercise | Type | Duration |
 |---|---|---|---|
 | 0 | Welcome, Business Scenario & Technical Overview | Instructor-led | 10 min |
-| 1 | [Generate, Profile, Optimise and Deploy the Integration Flow with AI](exercises/ex1/README.md) | Hands-on | 25 min |
+| 1 | [Generate, Profile, Optimise and Deploy the Integration Flow with AI](exercises/ex1/README.md) | Hands-on | 30 min |
 | | → [Exercise 1.1 — Generate the iFlow with AI](exercises/ex1/ex1-1/README.md) | | |
 | | → [Exercise 1.2 — Memory Profiling and Script Optimisation](exercises/ex1/ex1-2/README.md) | | |
 | 2 | [Test Run the Scenario and Resolve Errors with AI](exercises/ex2/README.md) | Hands-on | 10 min |
