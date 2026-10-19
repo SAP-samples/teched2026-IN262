@@ -143,25 +143,29 @@ You will use the Bruno collection to exchange your credentials for a short-lived
 
 You will now act as the **Data Steward** — using natural language to instruct the AI agent to create a product in S/4HANA.
 
-1. Type the following prompt, substituting `XX` with your participant number:
+1. Type the following prompt, replacing `XX` with your 3-digit participant number and `NN` with `01` for your first product, `02` for your second attempt, and so on:
+
+> [!NOTE]
+> **Example for participant 007, first attempt:**
+> Product ID: `MZ-TG-ZAD01-IN262-00701` — Description: `Smart Watch IN262-007-01`
 
    ```
    Create a new product in S/4HANA with the following details:
-   - Product ID: MZ-TG-ZAD01-IN262-0XX
-   - Description: Smart Watch IN262-0XX
+   - Product ID: MZ-TG-ZAD01-IN262-0XXNN
+   - Description: Smart Watch IN262-0XX-NN
    - Product Type: HAWA
-   - Industry Sector: M 
-   - Base Unit: EA 
-   - Language: EN 
+   - Industry Sector: M
+   - Base Unit: EA
+   - Language: EN
    - Valuation Area (Plant): 1710
-   - Moving Average Price: 1000 
+   - Moving Average Price: 1000
    - Currency: USD
-   - InventoryValuationProcedure  : V                      
-   - ValuationClass : 3100                   
-   - PriceDeterminationControl    : 2
+   - InventoryValuationProcedure: V
+   - ValuationClass: 3100
+   - PriceDeterminationControl: 2
    - ProductSalesOrg: 1710
-   - ProductDistributionChnl: 10 
-   - Item Category Group (MTPOS) : NORM        
+   - ProductDistributionChnl: 10
+   - Item Category Group (MTPOS): NORM
    ```
 
    ![Claude Code CLI — product creation prompt entered](images/ex04-3.png)
