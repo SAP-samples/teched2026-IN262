@@ -78,7 +78,7 @@ Replace `0XX` with your 3-digit participant number throughout this exercise.
 
 ## Step 3 — Paste the AI Prompt
 
-Copy the full prompt below and paste it into the **"Describe your integration scenario"** field:
+Copy the full prompt below, paste it into the **"Describe your integration scenario"** field and click on send (arrow):
 > [!IMPORTANT]
 > Remember to replace `0XX` at 2 places with your participant number before clicking Generate — the iFlow name and the ProcessDirect address.
 > **Example:** for participant 050: iFlow name = `IN262-050-Calculate-Discount`, ProcessDirect address = `/IN262-050`
