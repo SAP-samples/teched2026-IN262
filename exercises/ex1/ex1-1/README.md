@@ -141,7 +141,7 @@ Finally, add a Request Reply step called "Send Offer" using an HTTP receiver ada
 
 ---
 
-## Step 6 — Remove Local Artefacts (Fix 1)
+## Step 6 — Remove Local Artefacts except CalculatedDiscount (Fix 1) 
 
 The AI generated local copies of the scripts and mapping. Delete all of them **except `CalculatedDiscount`** — that script stays local to your iFlow and will be used in Exercise 1.2.
 
