@@ -143,7 +143,7 @@ You will use the Bruno collection to exchange your credentials for a short-lived
 
 You will now act as the **Data Steward** — using natural language to instruct the AI agent to create a product in S/4HANA.
 
-1. Type the following prompt, replacing `XX` with your 3-digit participant number and `NN` with `01` for your first product, `02` for your second attempt, and so on:
+1. Type the following prompt, replacing `0XX` with your 3-digit participant number and `NN` with `01` for your first product, `02` for your second attempt, and so on:
 
 > [!NOTE]
 > **Example for participant 007, first attempt:**
