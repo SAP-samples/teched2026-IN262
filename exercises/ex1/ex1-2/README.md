@@ -99,14 +99,16 @@ Download the file below — you will upload it into the Simulator in Step 4.
    ![Add Simulation Input dialog — Enable Memory Insights ticked, Upload from File System highlighted](images/ex01-8-3.png)
 
 4. Select `CalculatedDiscount_SimInput.xml` from your downloads → click **Open**
+>[!NOTE]
+> If you missed to download the file in Step1, you can download the file from here [CalculatedDiscount_SimInput.xml](CalculatedDiscount_SimInput.xml)
 
    ![File picker — CalculatedDiscount_SimInput.xml selected, Open highlighted](images/ex01-8-4.png)
 
-5. Confirm **Upload successful** toast → click **OK**
+6. Confirm **Upload successful** toast → click **OK**
 
    ![Upload successful toast — OK button highlighted](images/ex01-8-5.png)
 
-6. Click the **End Point** icon on the **Log Summary** step to set the simulation boundary
+7. Click the **End Point** icon on the **Log Summary** step to set the simulation boundary
 
    ![Canvas — End Point marker set on Log Summary step](images/ex01-8-6.png)
 
