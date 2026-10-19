@@ -89,7 +89,7 @@ The test trigger iFlow fires your campaign flow on demand without waiting for a 
 
    ![Trigger iFlow in edit mode — Prepare Process Direct Data step selected, Exchange Property tab visible](images/ex2-2-2.png)
 
-4. Update the **`productId`** constant value to: `MZ-TG-ZAD01-IN262-0503` (do not change it)
+4. Use constant value `MZ-TG-ZAD01-IN262-0503` (do not change it)
 
 > [!NOTE]
 > This is a shared test product pre-loaded in S/4HANA for this exercise. All participants use the same product ID — do not change it.
