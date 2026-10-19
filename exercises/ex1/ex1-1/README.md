@@ -298,7 +298,7 @@ The script steps for Log Payload, Log Summary, and SBPA Payload still point to t
 
 ## Step 10 — Verify the Full iFlow and Adapter Settings
 
-1. Click the **Arrange Horizontally** button (bottom-right of canvas) to see the complete flow
+1. Click on integration process and the click on  **Arrange Horizontally** button (bottom-right of canvas) to see the complete flow
 
    ![Arrange Horizontally button highlighted](images/ex01-5.png)
 
