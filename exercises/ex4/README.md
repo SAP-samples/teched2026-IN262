@@ -147,12 +147,12 @@ You will now act as the **Data Steward** — using natural language to instruct 
 
 > [!NOTE]
 > **Example for participant 007, first attempt:**
-> Product ID: `MZ-TG-ZAD01-IN262-00701` — Description: `Smart Watch IN262-007-01`
+> Product ID: `MZ-TG-ZAD01-IN262-00701` — Description: `Office Laptop IN262-00701`
 
    ```
    Create a new product in S/4HANA with the following details:
    - Product ID: MZ-TG-ZAD01-IN262-0XXNN
-   - Description: Smart Watch IN262-0XX-NN
+   - Description: Office Laptop IN262-0XXNN
    - Product Type: HAWA
    - Industry Sector: M
    - Base Unit: EA
