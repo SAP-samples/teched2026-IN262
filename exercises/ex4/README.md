@@ -88,11 +88,14 @@ You will use the Bruno collection to exchange your credentials for a short-lived
       - Replace `[YOUR_TOKEN]` with the access token you copied
    - Save the file (`Ctrl+S`)
 
+   > [!NOTE]
+   > The URL above is for the **dry run (workshop02b)**. Replace `XX` with your participant number.
+
    ```json
    {
      "mcpServers": {
        "IN262-ProductCreation": {
-         "url": "https://workshop02a.integrationsuite-cpi049.cfapps.eu10-003.hana.ondemand.com/mcp/mcp_in262-0XX",
+         "url": "https://workshop02b-1727b6a7b06944a096591f5568a14821.a.integration.cloud.sap/mcp_in262-0XX",
          "headers": {
            "Authorization": "Bearer [YOUR_TOKEN]"
          }
@@ -191,7 +194,7 @@ You now switch roles — acting as the **End User / Customer** who receives the 
 
 1. Open your browser and navigate to the SBPA Lobby:
 
-   `https://in262-51kwey58.eu10.build.cloud.sap/lobby`
+   `https://url.sap/lf45f4`
 
 2. Log in with your participant credentials (`in262-0NNN@education.cloud.sap`)
 
