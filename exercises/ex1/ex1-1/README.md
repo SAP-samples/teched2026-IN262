@@ -21,7 +21,7 @@ You need to build an integration flow that receives a product launch event from 
 
 ## Naming Convention
 
-Replace `0XX` with your 3-digit participant number throughout this exercise.
+Replace `0XX` with your 3-digit participant number throughout this exercise. **(use hyphen not underscore)**
 
 | What | Format | Example for participant 050 |
 |---|---|---|
