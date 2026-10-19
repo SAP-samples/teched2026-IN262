@@ -88,7 +88,7 @@ Download the file below — you will upload it into the Simulator in Step 4.
 
 1. Click the **Simulate** icon in the toolbar
 
-   ![Canvas — CalculatedDiscount step selected, Simulate icon in toolbar highlighted](images/ex01-8.png)
+   ![Canvas — CalculatedDiscount step selected, Simulate icon in toolbar highlighted](images/ex01-8-1.png)
 
 2. Click the **Start Point** icon on the **CalculatedDiscount** step
 
