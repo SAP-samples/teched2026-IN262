@@ -86,7 +86,7 @@ Download the file below — you will upload it into the Simulator in Step 4.
 
 ## Step 4 — Set Up the Simulator
 
-1. Click the **Simulate** icon in the toolbar
+1. Select the arrow before CalculatedDiscount script and Click the **Simulate** icon in the toolbar
 
    ![Canvas — CalculatedDiscount step selected, Simulate icon in toolbar highlighted](images/ex01-8-1.png)
 
