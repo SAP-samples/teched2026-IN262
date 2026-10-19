@@ -149,24 +149,24 @@ You will now act as the **Data Steward** — using natural language to instruct 
 > **Example for participant 007, first attempt:**
 > Product ID: `MZ-TG-ZAD01-IN262-00701` — Description: `Office Laptop IN262-00701`
 
-   ```
-   Create a new product in S/4HANA with the following details:
-   - Product ID: MZ-TG-ZAD01-IN262-0XXNN
-   - Description: Office Laptop IN262-0XXNN
-   - Product Type: HAWA
-   - Industry Sector: M
-   - Base Unit: EA
-   - Language: EN
-   - Valuation Area (Plant): 1710
-   - Moving Average Price: 1000
-   - Currency: USD
-   - InventoryValuationProcedure: V
-   - ValuationClass: 3100
-   - PriceDeterminationControl: 2
-   - ProductSalesOrg: 1710
-   - ProductDistributionChnl: 10
-   - Item Category Group (MTPOS): NORM
-   ```
+```
+Create a new product in S/4HANA with the following details:
+- Product ID: MZ-TG-ZAD01-IN262-0XXNN
+- Description: Office Laptop IN262-0XXNN
+- Product Type: HAWA
+- Industry Sector: M
+- Base Unit: EA
+- Language: EN
+- Valuation Area (Plant): 1710
+- Moving Average Price: 1000
+- Currency: USD
+- InventoryValuationProcedure: V
+- ValuationClass: 3100
+- PriceDeterminationControl: 2
+- ProductSalesOrg: 1710
+- ProductDistributionChnl: 10
+- Item Category Group (MTPOS): NORM
+```
 
    ![Claude Code CLI — product creation prompt entered](images/ex04-3.png)
 
