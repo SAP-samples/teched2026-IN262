@@ -82,10 +82,10 @@ After completing these steps, you will have created an API Artifact by discoveri
 
 14. You will see the **Authentication** policy is added by default. Click **Authentication** and check the property sheet below — make sure **Type** includes **Basic**, **Client Certificate**, and **OAuth**.
 
-    > [!NOTE]
-    > The position of the authentication policy on the flow is immutable and it's the first policy on the flow.
-    > Authentication policy is a mandatory policy and is added to request flow by default. Neither you can remove this policy, nor you can add another authentication policy to the flow.
-    > Authentication policy can be added to the request flow only once. All other policies can be added to the flow multiple times.
+> [!NOTE]
+> The position of the authentication policy on the flow is immutable and it's the first policy on the flow.
+> Authentication policy is a mandatory policy and is added to request flow by default. Neither you can remove this policy, nor you can add another authentication policy to the flow.
+> Authentication policy can be added to the request flow only once. All other policies can be added to the flow multiple times.
 
     ![](images/ex03-1-13.png)
 

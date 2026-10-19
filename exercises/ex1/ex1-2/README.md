@@ -69,8 +69,8 @@ Download the file below — you will upload it into the Simulator in Step 4.
 
    ![Apply button highlighted](images/ex01-7-8.png)
 
-   > [!NOTE]
-   > An **Incompatibilities** warning about Groovy version 2.x may appear — this is expected. Click **OK** to dismiss.
+> [!NOTE]
+> An **Incompatibilities** warning about Groovy version 2.x may appear — this is expected. Click **OK** to dismiss.
 
    ![Incompatibilities dialog — OK button highlighted, Script changed successfully toast](images/ex01-7-9.png)
 

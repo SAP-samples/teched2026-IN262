@@ -51,8 +51,8 @@ Your MCP server credentials were created in Exercise 3. You will now retrieve th
 
    ![Developer Hub — Token URL, Key, and Secret revealed (blurred)](images/ex04-1-1.png)
 
-   > [!NOTE]
-   > Copy the **Token URL**, **Key**, and **Secret** — you will need them in the next step to obtain an access token.
+> [!NOTE]
+> Copy the **Token URL**, **Key**, and **Secret** — you will need them in the next step to obtain an access token.
 
 ---
 
@@ -88,8 +88,8 @@ You will use the Bruno collection to exchange your credentials for a short-lived
       - Replace `[YOUR_TOKEN]` with the access token you copied
    - Save the file (`Ctrl+S`)
 
-   > [!NOTE]
-   > The URL above is for the **dry run (workshop02b)**. Replace `XX` with your participant number.
+> [!NOTE]
+> The URL above is for the **dry run (workshop02b)**. Replace `XX` with your participant number.
 
    ```json
    {
