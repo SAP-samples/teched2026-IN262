@@ -6,7 +6,7 @@
 This hands-on session gives you practical experience with the **AI capabilities built into SAP Integration Suite** — from design time to runtime. In 2 hours you will work through the full lifecycle of an enterprise integration: generating flows, profiling and optimising scripts, resolving errors, exposing APIs as MCP tools, and running the scenario end-to-end via an AI agent.
 
 > [!NOTE]
-> All AI features in this session are available in SAP Integration Suite and can be enabled from the **Settings** page.
+> All AI features used in this session are available in SAP Integration Suite and can be enabled from the **Settings** page.
 >
 >  <img src="exercises/ex0/1_AI_Settings_Page.png" alt="SAP Integration Suite AI Settings Page" />
 
