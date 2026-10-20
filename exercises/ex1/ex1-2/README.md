@@ -21,14 +21,6 @@ The iFlow you built in Exercise 1.1 contains a Groovy script (`CalculatedDiscoun
 
 ---
 
-## Step 1 — Download the Sample Input Payload
-
-Download the file below — you will upload it into the Simulator in Step 4.
-
-[CalculatedDiscount_SimInput.xml](CalculatedDiscount_SimInput.xml)
-
----
-
 ## Step 2 — Open the iFlow in Edit Mode
 
 1. Navigate to your iFlow `IN262-0XX-Calculate-Discount`
@@ -36,7 +28,7 @@ Download the file below — you will upload it into the Simulator in Step 4.
 
 ---
 
-## Step 3 — Script Optimisation (Static Analysis)
+## Step 2 — Script Optimisation (Static Analysis)
 
 1. Click the **CalculatedDiscount** step on the canvas → **Processing** tab — click the script filename to open the editor
 
@@ -84,7 +76,7 @@ Download the file below — you will upload it into the Simulator in Step 4.
 
 ---
 
-## Step 4 — Set Up the Simulator
+## Step 3 — Set Up the Simulator
 
 1. Select the arrow before CalculatedDiscount script and Click the **Simulate** icon in the toolbar
 
@@ -98,23 +90,21 @@ Download the file below — you will upload it into the Simulator in Step 4.
 
    ![Add Simulation Input dialog — Enable Memory Insights ticked, Upload from File System highlighted](images/ex01-8-3.png)
 
-4. Select `CalculatedDiscount_SimInput.xml` from your downloads → click **Open**
->[!NOTE]
-> If you missed to download the file in Step1, you can download the file from here [CalculatedDiscount_SimInput.xml](CalculatedDiscount_SimInput.xml)
+4. Download [CalculatedDiscount_SimInput.xml](CalculatedDiscount_SimInput.xml), then select it in the file picker and click **Open**
 
    ![File picker — CalculatedDiscount_SimInput.xml selected, Open highlighted](images/ex01-8-4.png)
 
-6. Confirm **Upload successful** toast → click **OK**
+5. Confirm **Upload successful** toast → click **OK**
 
    ![Upload successful toast — OK button highlighted](images/ex01-8-5.png)
 
-7. Click the **End Point** icon on the **Log Summary** step to set the simulation boundary
+6. Click the **End Point** icon on the **Log Summary** step to set the simulation boundary
 
    ![Canvas — End Point marker set on Log Summary step](images/ex01-8-6.png)
 
 ---
 
-## Step 5 — Run Simulation and Profiling
+## Step 4 — Run Simulation and Profiling
 
 1. Click the **Run Simulation and Profiling** button in the toolbar
 
@@ -130,7 +120,7 @@ Download the file below — you will upload it into the Simulator in Step 4.
 
 ---
 
-## Step 6 — Review the Memory Profiling Results
+## Step 5 — Review the Memory Profiling Results
 
 1. In the bottom panel, click **Memory Profiling Insights** tab — the `CalculatedDiscount` step is flagged as the top memory consumer
 
@@ -149,7 +139,7 @@ Download the file below — you will upload it into the Simulator in Step 4.
 
 ---
 
-## Step 7 — Optimise Again with Memory Profiling Context
+## Step 6 — Optimise Again with Memory Profiling Context
 
 The AI now has both static analysis and runtime profiling evidence. It surfaces additional recommendations not visible from code alone:
 
@@ -176,7 +166,7 @@ The AI now has both static analysis and runtime profiling evidence. It surfaces 
 
 ---
 
-## Step 8 — Save as Version and Deploy
+## Step 7 — Save as Version and Deploy
 
 1. Click **Save as Version**
 
