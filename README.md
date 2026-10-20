@@ -57,7 +57,7 @@ SAP Integration Suite embeds AI at every stage of the integration lifecycle. In 
 | # | AI Capability | What you will do |
 |---|---|---|
 | 1 | **AI-assisted iFlow Generation** | Generate a complete integration flow from a plain-language description |
-| 2 | **AI Script Optimisation** | Detect and fix code issues in a Groovy script — static analysis, then again enriched with runtime profiling data |
+| 2 | **AI Script Optimisation** | Detect and fix code issues in a Groovy script — static analysis |
 | 3 | **AI Memory Profiling** | Run the flow in the Simulator, measure per-step heap allocation, and identify the memory bottleneck |
 | 4 | **AI Error Resolution** | Trigger a real runtime error and use AI to diagnose and fix it |
 | 5 | **MCP Server + AI Agent** | Expose the S/4HANA product API as an MCP tool and call it from Claude Code CLI using natural language |
