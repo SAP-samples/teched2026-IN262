@@ -6,8 +6,13 @@
 **Business Context:**
  MCP Gateway in SAP Integration Suite enables enterprises to securely connect AI agents to existing APIs, business processes, and backend services using the Model Context Protocol (MCP), e.g., in this exercise, to an SAP S/4HANA on-premises system, by exposing the S/4HANA Product Creation API as an MCP tool. This allows agents to interact with product master data through a governed, standardized interface, reducing manual effort and enabling automated, end-to-end business processes.
 
-**What AI Does Here:**
-Create an MCP Server to expose the S/4HANA product creation API as an agent-consumable tool.
+## What the MCP Server Enables
+
+| Capability | What happens |
+|---|---|
+| **API Discovery** | Connects to the pre-configured S/4HANA business system and discovers the Product Creation API with its metadata automatically |
+| **MCP Server** | Exposes the discovered API as a governed, agent-consumable tool via the Model Context Protocol |
+| **Agent Access** | Any MCP-compatible AI agent (e.g. Claude Code CLI) can discover and call the S/4HANA product creation API as a tool — no manual API client or payload construction needed |
 
 > [!NOTE]
 > For a deeper understanding of the **Model Context Protocol (MCP)** and **MCP paradigm in SAP Integration Suite**, refer to [What is the Model Context Protocol (MCP)?](https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro) and [API-Centric Integration in SAP Integration Suite: A New Paradigm for API & MCP](https://community.sap.com/t5/technology-blog-posts-by-sap/api-centric-integration-in-sap-integration-suite-a-new-paradigm-for-api-amp/ba-p/14438245)
