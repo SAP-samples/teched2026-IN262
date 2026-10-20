@@ -225,4 +225,4 @@ AI assisted at every stage of Exercise 1:
 
 ---
 
-*Next: [Exercise 2 — AI Error Resolution](../../ex2/README.md)*
+*Next: [Exercise 2 — Resolve an Integration Error with AI](../../ex2/README.md)*
