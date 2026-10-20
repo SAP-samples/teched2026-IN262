@@ -349,10 +349,11 @@ The script steps for Log Payload, Log Summary, and SBPA Payload still point to t
 The AI generated a placeholder script in the `CalculatedDiscount` step. Replace it with the exercise script below.
 
 1. Click the **CalculatedDiscount** step on the canvas → **Processing** tab
-
+   - Click the script filename to open the editor
+     
    ![CalculatedDiscount step selected — Processing tab, Script File highlighted](images/ex01-6.png)
 
-2. Click the script filename to open the editor — the default template is shown
+2. In the editor, default template is shown
 
    ![Script editor open — default template content visible](images/ex01-6-1.png)
 
