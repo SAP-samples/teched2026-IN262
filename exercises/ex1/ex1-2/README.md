@@ -78,27 +78,33 @@ The iFlow you built in Exercise 1.1 contains a Groovy script (`CalculatedDiscoun
 
 ## Step 3 — Set Up the Simulator
 
-1. Select the arrow before CalculatedDiscount script and Click the **Simulate** icon in the toolbar
+1. Prepare the input for memory profiling 
+   - Open the file [CalculatedDiscount_SimInput.xml](CalculatedDiscount_SimInput.xml)
+   - Click on download button to download
+     
+   ![Download CalculatedDiscount_SimInput](images/ex01-8-2-1.png)
+
+3. Select the arrow before CalculatedDiscount script and Click the **Simulate** icon in the toolbar
 
    ![Canvas — CalculatedDiscount step selected, Simulate icon in toolbar highlighted](images/ex01-8-1.png)
 
-2. Click the **Start Point** icon on the **CalculatedDiscount** step
+4. Click the **Start Point** icon on the **CalculatedDiscount** step
 
    ![Simulation mode — Start Point marker set on CalculatedDiscount step](images/ex01-8-2.png)
 
-3. The **Add Simulation Input** dialog opens — confirm **Enable Memory Insights** is ticked, then click **Upload from File System**
+5. The **Add Simulation Input** dialog opens — confirm **Enable Memory Insights** is ticked, then click **Upload from File System**
 
    ![Add Simulation Input dialog — Enable Memory Insights ticked, Upload from File System highlighted](images/ex01-8-3.png)
 
-4. Download [CalculatedDiscount_SimInput.xml](CalculatedDiscount_SimInput.xml), then select it in the file picker and click **Open**
+6. Select CalculatedDiscount_SimInput.xml in the file picker and click **Open**
 
    ![File picker — CalculatedDiscount_SimInput.xml selected, Open highlighted](images/ex01-8-4.png)
 
-5. Confirm **Upload successful** toast → click **OK**
+7. Confirm **Upload successful** toast → click **OK**
 
    ![Upload successful toast — OK button highlighted](images/ex01-8-5.png)
 
-6. Click the **End Point** icon on the **Log Summary** step to set the simulation boundary
+8. Click the **End Point** icon on the **Log Summary** step to set the simulation boundary
 
    ![Canvas — End Point marker set on Log Summary step](images/ex01-8-6.png)
 
