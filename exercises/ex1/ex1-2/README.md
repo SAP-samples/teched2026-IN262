@@ -128,8 +128,8 @@ The iFlow you built in Exercise 1.1 contains a Groovy script (`CalculatedDiscoun
 
 ## Step 5 — Review the Memory Profiling Results
 
-1. In the bottom panel, click **Memory Profiling Insights** tab — the `CalculatedDiscount` step is flagged as the top memory consumer
-
+1. Click the **message icon** on the <mark>arrow</mark> between Calculate Discount and Log Summary Step
+   - In the bottom panel, click **Memory Profiling Insights** tab — the `CalculatedDiscount` step is flagged as the top memory consumer
    ![Message Content panel — Memory Profiling Insights tab, CalculatedDiscount flagged, Show More highlighted](images/ex01-8-11.png)
 
 2. Click **Show More** to expand the recommended solution
