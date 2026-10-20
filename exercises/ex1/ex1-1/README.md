@@ -231,14 +231,28 @@ The AI generated local copies of the scripts and mapping. Delete all of them <u>
 
 ---
 
-## Step 9 — Wire Scripts to the Script Collection (Fix 4)
+## Step 9 — Fix AI-Generated Message Headers (Fix 4)
+
+The AI automatically added a **Set Mandatory Message Headers** step before the Log Payload step. One of its headers (`SAP_ApplicationID`) needs to be corrected to read `participantId` from the exchange context.
+
+1. Click the **Set Mandatory Message Headers** step on the canvas → click the **Message Header** tab in the bottom panel → locate the **`SAP_ApplicationID`** row
+
+2. Change **Source Type** to `Property` and **Source Value** to `participantId` → click **Save**
+
+   ![Set Mandatory Message Headers — SAP_ApplicationID row with Source Type Property and value participantId, Save highlighted](images/ex01-3-11.png)
+
+---
+
+## Step 10 — Wire Scripts to the Script Collection (Fix 5)
 
 The script steps for Log Payload, Log Summary, and SBPA Payload still point to the deleted local files. Wire each one to the correct script in the Script Collection. `CalculatedDiscount` stays wired to its local file — do not change it.
+
+
 
 > [!TIP]
 > For each step below: click the step on the canvas → **Processing** tab → click **Select** → switch to **Global Resources** tab → select the script → click **OK** → **Save**.
 
-### 9a — Log Payload
+### 10a — Log Payload
 
 1. Click the **Log Payload** step on the canvas
 2. Processing tab → click **Select**
@@ -253,7 +267,7 @@ The script steps for Log Payload, Log Summary, and SBPA Payload still point to t
 
    ![Script File shows /script/Log Payload.groovy — saved toast](images/ex01-4-1-1.png)
 
-### 9b — Message Mapping step
+### 10b — Message Mapping step
 
 1. Click the **IN262-BP-to-BUPA-Mapping** step on the canvas
 2. Processing tab → click **Select**
@@ -268,7 +282,7 @@ The script steps for Log Payload, Log Summary, and SBPA Payload still point to t
 
    ![Message Mapping saved — saved toast visible](images/ex01-4-4.png)
 
-### 9c — Log Summary
+### 10c — Log Summary
 
 1. Click the **Log Summary** step → Processing tab → **Select**
 
@@ -284,7 +298,7 @@ The script steps for Log Payload, Log Summary, and SBPA Payload still point to t
 
    ![Saved toast confirmed](images/ex01-4-8.png)
 
-### 9d — Prepare SBPA Payload
+### 10d — Prepare SBPA Payload
 
 1. Click the **Prepare SBPA Payload** step → Processing tab → **Select**
 
@@ -302,7 +316,7 @@ The script steps for Log Payload, Log Summary, and SBPA Payload still point to t
 
 ---
 
-## Step 10 — Verify the Full iFlow and Adapter Settings
+## Step 11 — Verify the Full iFlow and Adapter Settings
 
 1. Click on integration process and the click on  **Arrange Horizontally** button (bottom-right of canvas) to see the complete flow
 
@@ -344,7 +358,7 @@ The script steps for Log Payload, Log Summary, and SBPA Payload still point to t
 
 ---
 
-## Step 11 — Update the CalculatedDiscount Script
+## Step 12 — Update the CalculatedDiscount Script
 
 The AI generated a placeholder script in the `CalculatedDiscount` step. Replace it with the exercise script below.
 
