@@ -214,7 +214,7 @@ The `SBPA_Payload` script in your iFlow contains a typo in the BPA workflow `def
 
 8. Enter comment in the dialog:
 
-   - **Comment:** `Corrected workflow definition id`
+   - **Comment:** `Fixed 404 error after analysing the error`
    - Click **Save**
 
    ![Saved as version toast — IN262-Script-Collection saved as version](images/ex2-4-8.png)
