@@ -21,7 +21,7 @@ The iFlow you built in Exercise 1.1 contains a Groovy script (`CalculatedDiscoun
 
 ---
 
-## Step 2 — Open the iFlow in Edit Mode
+## Step 1 — Open the iFlow in Edit Mode
 
 1. Navigate to your iFlow `IN262-0XX-Calculate-Discount`
 2. Click **Edit** to enter edit mode
