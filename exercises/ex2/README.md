@@ -104,7 +104,7 @@ The test trigger iFlow fires your campaign flow on demand without waiting for a 
    ![Save as Version](images/ex2-2-3-1.png)
 
 8. In Version Information dialog **Comment**, copy and paste
-   - `Changed the productid in exchange property with MZ-TG-ZAD01-IN262-0503`
+   - `Changed the process direct address to /IN262-0XX`
    - Click **Save**
    ![Save as Version button highlighted](images/ex2-2-4.png)
 
