@@ -92,11 +92,20 @@ After completing these steps, you will have created an API Artifact by discoveri
 
     ![](images/ex03-1-11.png)
 
-15. Click the **Policies** tab.
+15. In the API Details view, update the following fields — replace `XX` with your two-digit participant number:
+
+   | Field | Value |
+   |---|---|
+   | **Name** | `Product_API_IN262-0XX` |
+   | **API Base Path** | `/IN262-0XX` |
+
+   ![](images/ex03-1-11-1.png)
+
+16. Click the **Policies** tab.
 
     ![](images/ex03-1-12.png)
 
-16. You will see the **Authentication** policy is added by default. Click **Authentication** and check the property sheet below — make sure **Type** includes **Basic**, **Client Certificate**, and **OAuth**.
+17. You will see the **Authentication** policy is added by default. Click **Authentication** and check the property sheet below — make sure **Type** includes **Basic**, **Client Certificate**, and **OAuth**.
 
 > [!NOTE]
 > The position of the authentication policy on the flow is immutable and it's the first policy on the flow.
@@ -105,35 +114,35 @@ After completing these steps, you will have created an API Artifact by discoveri
 
    ![](images/ex03-1-13.png)
 
-17. Click the **Authorization** policy and select the **Trust Upstream MCP Authorization** checkbox.
+18. Click the **Authorization** policy and select the **Trust Upstream MCP Authorization** checkbox.
 
    ![](images/ex03-1-14.png)
 
-18. Click **Save** in the top right corner.
+19. Click **Save** in the top right corner.
 
     ![](images/ex03-1-15.png)
 
-19. You will see a **saved** confirmation toast. Click the **...** menu in the top right corner and click **Deploy**.
+20. You will see a **saved** confirmation toast. Click the **...** menu in the top right corner and click **Deploy**.
 
     ![](images/ex03-1-16.png)
 
-20. Click **Deploy** from the dropdown.
+21. Click **Deploy** from the dropdown.
 
     ![](images/ex03-1-17.png)
 
-21. On the Deploy dialog, confirm **Runtime Profile** is **Integration Cell** and click **Deploy**.
+22. On the Deploy dialog, confirm **Runtime Profile** is **Integration Cell** and click **Deploy**.
 
     ![](images/ex03-1-18.png)
 
-22. You will see a deployment triggered toast: **'Product_API_IN262-0XX' is triggered for deployment**.
+23. You will see a deployment triggered toast: **'Product_API_IN262-0XX' is triggered for deployment**.
 
     ![](images/ex03-1-19.png)
 
-23. Click the **Deployment Status** tab. The status will initially show **Deploying / Starting**.
+24. Click the **Deployment Status** tab. The status will initially show **Deploying / Starting**.
 
     ![](images/ex03-1-20.png)
 
-24. Refresh until Deployment Status shows **Deployed** and Runtime Status shows **Started**.
+25. Refresh until Deployment Status shows **Deployed** and Runtime Status shows **Started**.
 
     ![](images/ex03-1-21.png)
 
