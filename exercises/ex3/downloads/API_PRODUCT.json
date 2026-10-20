@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "API_PRODUCT",
+    "title": "Product_API_IN262-0XX",
     "version": "1.2.0",
     "description": "This service is located at [http://localhost/api/](http://localhost/api/)",
     "x-apiProvider": "APIPORTAL-HE4_Connect",
@@ -9,7 +9,7 @@
   },
   "servers": [
     {
-      "url": "https://workshop02a-c039b3d24e9f48d59e9171f581f5486b.a.integration.cloud.sap/ProductUser00"
+      "url": "https://localhost"
     }
   ],
   "tags": [
