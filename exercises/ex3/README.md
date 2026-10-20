@@ -92,7 +92,7 @@ After completing these steps, you will have created an API Artifact by discoveri
 
     ![](images/ex03-1-11.png)
 
-15. In the API Details view, update the following fields — replace `XX` with your two-digit participant number:
+15. In the API Details view, update the following fields — replace `0XX` with your 3 digit participant number:
 
    | Field | Value |
    |---|---|
