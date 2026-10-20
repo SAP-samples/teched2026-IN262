@@ -21,7 +21,7 @@ Your integration flow is deployed and running. The next run fails silently — t
 
 ## Prerequisites
 
-- Exercise 1 complete — your `IN262-0XX-Calculate-Discount` iFlow is deployed and running
+- Exercise 1 complete — your `IN262-0XX-Calculate-Discount` iFlow is deployed and running <mark>**(where 0XX is your participant number)**</mark>
 - Your participant number `[NNN]` — printed on your session card (001–040)
 
 ---
