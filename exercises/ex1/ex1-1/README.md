@@ -77,7 +77,7 @@ Replace `0XX` with your 3-digit participant number throughout this exercise. <ma
 
 ---
 
-## Step 3 — Paste the AI Prompt
+## Step 3 — Paste the AI Prompt <mark> (changes required at 2 places) </mark>
 
 Copy the full prompt below, paste it into the **"Describe your integration scenario"** field and click on send (arrow):
 > [!IMPORTANT]
