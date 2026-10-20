@@ -12,7 +12,7 @@ This exercise covers three AI capabilities across two sub-exercises:
 | Sub-exercise | What you do | AI Capability |
 |---|---|---|
 | [Exercise 1.1 — Generate the iFlow with AI](ex1-1/README.md) | Generate the flow from a natural language prompt, wire shared artefacts, save as version | iFlow Generation |
-| [Exercise 1.2 — Memory Profiling and Script Optimisation](ex1-2/README.md) | Profile memory usage in Simulator, optimise the flagged script, deploy | Memory Profiling · Script Optimisation |
+| [Exercise 1.2 — Memory Profiling and Script Optimisation](ex1-2/README.md) | Optimise the flagged script, profile memory usage in Simulator,  deploy |Script Optimisation · Memory Profiling  |
 
 ---
 
