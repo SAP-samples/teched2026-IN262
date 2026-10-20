@@ -136,7 +136,7 @@ Finally, add a Request Reply step called "Send Offer" using an HTTP receiver ada
 
 ## Step 5 — Open the Generated iFlow
 
-1. iFlow  `IN262-0XX-Calculate-Discount` automatically opens 
+1. iFlow  `IN262-0XX-Calculate-Discount` automatically opens <mark> (where `0XX` is your 3-digit participant number) </mark>
 > [!NOTE]
 > The AI has generated the flow structure. You will now see some steps with error indicators — these are local placeholder artefacts (scripts and a mapping) that were created inside this iFlow. In the next steps you will replace some of them with the shared artefacts from the Common Artifacts package.
 
