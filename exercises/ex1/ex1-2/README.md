@@ -137,7 +137,7 @@ The iFlow you built in Exercise 1.1 contains a Groovy script (`CalculatedDiscoun
    ![Memory Profiling Insights — expanded recommended solution, Optimize in Editor button highlighted](images/ex01-8-12.png)
 
 > [!NOTE]
-> The AI identifies that parsing the entire XML payload into memory via `XmlSlurper` without streaming causes excessive heap allocation and garbage collection pressure.
+> The AI analyses the runtime heap allocation per step and flags the most memory-intensive operation in `CalculatedDiscount`. Review the recommended solution — your result may vary slightly depending on the script version, but the AI will always point to the hotspot and suggest a fix.
 
 3. Click **Optimize in Editor** — the script editor opens with profiling context pre-loaded
 
@@ -147,16 +147,16 @@ The iFlow you built in Exercise 1.1 contains a Groovy script (`CalculatedDiscoun
 
 ## Step 6 — Optimise Again with Memory Profiling Context
 
-The AI now has both static analysis and runtime profiling evidence. It surfaces additional recommendations not visible from code alone:
+The AI now has both static analysis and runtime profiling evidence. It surfaces recommendations based on both code quality and runtime behaviour:
 
-1. Click **Optimize** — the AI-Generated Review Report opens
+1. Click **Optimize** — the AI-Generated Review Report opens — review the recommendations shown
 
    ![AI Report — Recommendation 1: Inefficient String Concatenation highlighted](images/ex01-8-15.png)
 
    ![AI Report — Recommendation 2: Empty Catch Block for NumberFormatException highlighted](images/ex01-8-16.png)
 
-   **Recommendation 2 — Empty Catch Block**  
-   Empty `catch` blocks swallow exceptions silently. The fix adds MPL logging so parsing failures become visible in Message Monitor.
+> [!NOTE]
+> The AI may surface one or more recommendations — common findings include inefficient string concatenation in loops, empty catch blocks swallowing exceptions, or memory-intensive parsing patterns. Apply whichever recommendations are shown.
 
 2. Scroll to **Improved Script** — click the **copy** icon
 
