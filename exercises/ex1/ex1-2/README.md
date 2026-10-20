@@ -203,7 +203,7 @@ The AI now has both static analysis and runtime profiling evidence. It surfaces 
 
    !["Successfully deployed" toast](images/ex01-9-6.png)
 
-7. Click **Deployment Status** tab — confirm Deployment Status = **Deployed**, Runtime Status = **Started**
+7. Click on <mark> empty canvas </mark> , **Deployment Status** tab — confirm Deployment Status = **Deployed**, Runtime Status = **Started**
 
    ![Deployment Status tab — Deployed and Started confirmed, version 1.0.1](images/ex01-9-7.png)
 
