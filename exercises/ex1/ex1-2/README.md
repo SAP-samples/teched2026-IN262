@@ -1,6 +1,6 @@
-# Exercise 1.2 — Memory Profiling and Script Optimisation
+# Exercise 1.2 — Script Optimisation and Memory Profiling 
 
-**AI Features:** Memory Profiling · Script Optimisation  
+**AI Features:** Script Optimisation · Memory Profiling
 **Duration:** 10 minutes
 
 ---
