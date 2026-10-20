@@ -92,11 +92,11 @@ After completing these steps, you will have created an API Artifact by discoveri
 > Authentication policy is a mandatory policy and is added to request flow by default. Neither you can remove this policy, nor you can add another authentication policy to the flow.
 > Authentication policy can be added to the request flow only once. All other policies can be added to the flow multiple times.
 
-    ![](images/ex03-1-13.png)
+   ![](images/ex03-1-13.png)
 
 15. Click the **Authorization** policy and select the **Trust Upstream MCP Authorization** checkbox.
 
-    ![](images/ex03-1-14.png)
+   ![](images/ex03-1-14.png)
 
 16. Click **Save** in the top right corner.
 
