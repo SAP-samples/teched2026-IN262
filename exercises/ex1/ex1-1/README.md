@@ -34,10 +34,11 @@ Replace `0XX` with your 3-digit participant number throughout this exercise. <ma
 ## Step 1 — Create Your Integration Package
 
 1. In the Integration Suite home, navigate to **Design → Integrations and APIs**
+2. Click **Create** (top right)
 
    ![Design — Integrations and APIs showing existing packages with Create button highlighted](images/ex01-1.png)
 
-2. Click **Create** (top right)
+
 
 3. Fill in the package header:
 
