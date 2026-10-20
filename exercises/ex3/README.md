@@ -71,28 +71,32 @@ After completing these steps, you will have created an API Artifact by discoveri
 
    ![](images/ex03-1-8.png)
 
-10. Open the specification file in <mark> NEW tab (right click, open link in new tab) </mark>  [API_PRODUCT.json](downloads/API_PRODUCT.json)
+10. The Import dialog opens — click the **Browse** icon to select the specification file.
+
+   ![](images/ex03-1-10-1.png)
+
+11. Open the specification file in <mark> NEW tab (right click, open link in new tab) </mark>  [API_PRODUCT.json](downloads/API_PRODUCT.json)
  - Click on download button to download
    
   ![](images/ex03-1-8-1.png)
    
-11. On the Import Dialog, click the **Browse** icon, select the downloaded **API_PRODUCT.json** file, and click **Open**.
+12. On the file picker, select the downloaded **API_PRODUCT.json** file, and click **Open**.
 
     ![](images/ex03-1-9.png)
 
-12. The file name appears in the Import dialog — click **Import** to confirm.
+13. The file name appears in the Import dialog — click **Import** to confirm.
 
    ![](images/ex03-1-10.png)
 
-13. The API Product specification gets imported with all operations. Click **Switch to API Details**.
+14. The API Product specification gets imported with all operations. Click **Switch to API Details**.
 
     ![](images/ex03-1-11.png)
 
-14. Click the **Policies** tab.
+15. Click the **Policies** tab.
 
     ![](images/ex03-1-12.png)
 
-15. You will see the **Authentication** policy is added by default. Click **Authentication** and check the property sheet below — make sure **Type** includes **Basic**, **Client Certificate**, and **OAuth**.
+16. You will see the **Authentication** policy is added by default. Click **Authentication** and check the property sheet below — make sure **Type** includes **Basic**, **Client Certificate**, and **OAuth**.
 
 > [!NOTE]
 > The position of the authentication policy on the flow is immutable and it's the first policy on the flow.
@@ -101,35 +105,35 @@ After completing these steps, you will have created an API Artifact by discoveri
 
    ![](images/ex03-1-13.png)
 
-16. Click the **Authorization** policy and select the **Trust Upstream MCP Authorization** checkbox.
+17. Click the **Authorization** policy and select the **Trust Upstream MCP Authorization** checkbox.
 
    ![](images/ex03-1-14.png)
 
-17. Click **Save** in the top right corner.
+18. Click **Save** in the top right corner.
 
     ![](images/ex03-1-15.png)
 
-18. You will see a **saved** confirmation toast. Click the **...** menu in the top right corner and click **Deploy**.
+19. You will see a **saved** confirmation toast. Click the **...** menu in the top right corner and click **Deploy**.
 
     ![](images/ex03-1-16.png)
 
-19. Click **Deploy** from the dropdown.
+20. Click **Deploy** from the dropdown.
 
     ![](images/ex03-1-17.png)
 
-20. On the Deploy dialog, confirm **Runtime Profile** is **Integration Cell** and click **Deploy**.
+21. On the Deploy dialog, confirm **Runtime Profile** is **Integration Cell** and click **Deploy**.
 
     ![](images/ex03-1-18.png)
 
-21. You will see a deployment triggered toast: **'Product_API_IN262-0XX' is triggered for deployment**.
+22. You will see a deployment triggered toast: **'Product_API_IN262-0XX' is triggered for deployment**.
 
     ![](images/ex03-1-19.png)
 
-22. Click the **Deployment Status** tab. The status will initially show **Deploying / Starting**.
+23. Click the **Deployment Status** tab. The status will initially show **Deploying / Starting**.
 
     ![](images/ex03-1-20.png)
 
-23. Refresh until Deployment Status shows **Deployed** and Runtime Status shows **Started**.
+24. Refresh until Deployment Status shows **Deployed** and Runtime Status shows **Started**.
 
     ![](images/ex03-1-21.png)
 
