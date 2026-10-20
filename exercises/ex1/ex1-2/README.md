@@ -104,8 +104,8 @@ The iFlow you built in Exercise 1.1 contains a Groovy script (`CalculatedDiscoun
 
    ![Upload successful toast — OK button highlighted](images/ex01-8-5.png)
 
-8. Click the **End Point** icon on the **Log Summary** step to set the simulation boundary
-
+8. Click the **Arrow** between **Calculate Discount** and **Log Summary** step to set the simulation boundary
+   - Click **Simulation End Point** 
    ![Canvas — End Point marker set on Log Summary step](images/ex01-8-6.png)
 
 ---
