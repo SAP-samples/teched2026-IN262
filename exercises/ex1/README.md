@@ -27,8 +27,8 @@ You need to build an integration flow that receives a product launch event from 
 | Capability | When it fires | What you see |
 |---|---|---|
 | **iFlow Generation** | You paste a prompt describing the scenario | AI generates the complete flow structure: steps, adapters, local processes, and a pre-filled name |
+| **Script Optimisation** | You click "Optimise with AI" on the flagged script | AI proposes targeted code fixes across precision and error handling |
 | **Memory Profiling** | You run the Simulator with Memory Profiling enabled | AI identifies which script step consumes the most memory and explains why |
-| **Script Optimisation** | You click "Optimise with AI" on the flagged script | AI proposes targeted code fixes across memory, precision, and error handling |
 
 ---
 
