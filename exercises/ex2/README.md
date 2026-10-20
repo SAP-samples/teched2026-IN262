@@ -89,34 +89,38 @@ The test trigger iFlow fires your campaign flow on demand without waiting for a 
 
    ![Trigger iFlow in edit mode — Prepare Process Direct Data step selected, Exchange Property tab visible](images/ex2-2-2.png)
 
-4. Use constant value `MZ-TG-ZAD01-IN262-0503` (do not change it)
+4. Verify the constant value `MZ-TG-ZAD01-IN262-0503` <mark> **(do not change it)** </mark>
 
 > [!NOTE]
 > This is a shared test product pre-loaded in S/4HANA for this exercise. All participants use the same product ID — do not change it.
 
    ![Content Modifier — productId property with value MZ-TG-ZAD01-IN262-0503](images/ex2-2-3.png)
 
-5. Click **Save as Version**
+5. Click receiver **Process Direct** adapter, click **Connection** Tab
+   - Enter `/IN262-0XX` <mark>(replace `0XX` with your participant number)</mark>
+   ![Call particpant process for testing](images/ex2-2-3-0-1.png)
+
+7. Click **Save as Version**
    ![Save as Version](images/ex2-2-3-1.png)
 
-6. In Version Information dialog **Comment**, copy and paste
+8. In Version Information dialog **Comment**, copy and paste
    - `Changed the productid in exchange property with MZ-TG-ZAD01-IN262-0503`
    - Click **Save**
    ![Save as Version button highlighted](images/ex2-2-4.png)
 
-7. Toast confirms saved as version
+9. Toast confirms saved as version
 
    ![Version Information dialog — version and comment filled, Save highlighted](images/ex2-2-5.png)
 
-8. Click **Deploy**
+10. Click **Deploy**
 
    ![Saved as version toast](images/ex2-2-6.png)
 
-9. Confirm Runtime Profile as **Cloud Integration** → click **Deploy**
+11. Confirm Runtime Profile as **Cloud Integration** → click **Deploy**
 
    ![Deploy button highlighted](images/ex2-2-7.png)
 
-10. Click **OK** on the deployment confirmation
+11. Click **OK** on the deployment confirmation
 
    ![Deploy dialog — Cloud Integration runtime profile, Deploy highlighted](images/ex2-2-8.png)
 
