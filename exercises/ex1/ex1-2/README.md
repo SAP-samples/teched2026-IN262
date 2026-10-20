@@ -79,7 +79,7 @@ The iFlow you built in Exercise 1.1 contains a Groovy script (`CalculatedDiscoun
 ## Step 3 — Set Up the Simulator
 
 1. Prepare the input for memory profiling 
-   - Open the file [CalculatedDiscount_SimInput.xml](CalculatedDiscount_SimInput.xml)
+   - Open the file in <mark> NEW tab (right click, open link in new tab) </mark> [CalculatedDiscount_SimInput.xml](CalculatedDiscount_SimInput.xml)
    - Click on download button to download
      
    ![Download CalculatedDiscount_SimInput](images/ex01-8-2-1.png)
