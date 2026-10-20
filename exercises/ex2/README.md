@@ -47,7 +47,7 @@ The test trigger iFlow fires your campaign flow on demand without waiting for a 
    ![Artifacts tab — IN262-Trigger-Campaign-Flow-Test listed, three-dot menu open, Copy highlighted](images/ex2-1-3.png)
 
 5. In the Copy dialog:
-   - Enter **Name:** `IN262-Trigger-Campaign-Flow-Test_IN262-0XX`
+   - Enter **Name:** `IN262-Trigger-Campaign-Flow-Test_IN262-0XX` 
 
 > [!NOTE]
 > Replace XX with your parcipant number
@@ -56,7 +56,7 @@ The test trigger iFlow fires your campaign flow on demand without waiting for a 
 
    ![Copy dialog — name filled in, Select button highlighted](images/ex2-1-4.png)
 
-6. In the Package Selection dialog, choose **`IN262-0XX-Campaign-Management`**
+6. In the Package Selection dialog, choose **`IN262-0XX-Campaign-Management`** <mark> (select the package that you created with your participant number)</mark>
 > [!NOTE]
 > Select the package which you created with your participant number XX 
 
