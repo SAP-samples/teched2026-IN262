@@ -90,7 +90,7 @@ The iFlow you built in Exercise 1.1 contains a Groovy script (`CalculatedDiscoun
 
    ![Add Simulation Input dialog — Enable Memory Insights ticked, Upload from File System highlighted](images/ex01-8-3.png)
 
-4. Download [CalculatedDiscount_SimInput.xml](CalculatedDiscount_SimInput.xml), then select it in the file picker and click **Open**
+4. Download [CalculatedDiscount_SimInput.xml](CalculatedDiscount_SimInput.xml?raw=true), then select it in the file picker and click **Open**
 
    ![File picker — CalculatedDiscount_SimInput.xml selected, Open highlighted](images/ex01-8-4.png)
 
