@@ -461,4 +461,4 @@ Your iFlow is wired and ready for Exercise 1.2. It was generated from a plain-la
 
 ---
 
-*Next: [Exercise 1.2 — Memory Profiling and Script Optimisation](../ex1-2/README.md)*
+*Next: [Exercise 1.2 — Script Optimisation and Memory Profiling ](../ex1-2/README.md)*
