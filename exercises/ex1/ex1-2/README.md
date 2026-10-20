@@ -170,6 +170,8 @@ The AI now has both static analysis and runtime profiling evidence. It surfaces 
 
 4. Click **Apply** → dismiss the Incompatibilities warning → click **Close**
 
+   ![Script editor apply and close](images/ex01-8-20.png)
+   
 ---
 
 ## Step 7 — Save as Version and Deploy
