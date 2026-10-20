@@ -310,7 +310,7 @@ The script steps for Log Payload, Log Summary, and SBPA Payload still point to t
 
    ![Full iFlow overview at 48% zoom — all steps visible](images/ex01-5-1.png)
 
-2. Click the **ProcessDirect** sender step → **Connection** tab — confirm the address shows `/IN262-0XX` with your participant number
+2. Click the **ProcessDirect** sender step → **Connection** tab — confirm the address shows <mark> **`/IN262-0XX` with your participant number** </mark>
 
    ![ProcessDirect Connection tab — Address field shows /IN262-0XX](images/ex01-5-2.png)
 
