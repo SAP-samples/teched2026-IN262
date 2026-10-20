@@ -71,8 +71,11 @@ After completing these steps, you will have created an API Artifact by discoveri
 
    ![](images/ex03-1-8.png)
 
-10. Download the API specification file: [API_PRODUCT.json](downloads/API_PRODUCT.json)
-
+10. Open the specification file in <mark> NEW tab (right click, open link in new tab) </mark>  [API_PRODUCT.json](downloads/API_PRODUCT.json)
+ - Click on download button to download
+   
+  ![](images/ex03-1-8-1.png)
+   
 11. On the Import Dialog, click the **Browse** icon, select the downloaded **API_PRODUCT.json** file, and click **Open**.
 
     ![](images/ex03-1-9.png)
