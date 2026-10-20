@@ -326,7 +326,7 @@ The script steps for Log Payload, Log Summary, and SBPA Payload still point to t
 
    ![OData Processing tab scrolled — traceparent headers visible](images/ex01-5-5.png)
 
-6. Click **Externalized Parameters** tab — confirm the query options and OData body parameters are listed
+6. Click on canvas (see arrow in screenshot), select **Externalized Parameters** tab — confirm the query options and OData body parameters are listed
 
    ![Externalized Parameters tab — query options and body params visible](images/ex01-5-6.png)
 
