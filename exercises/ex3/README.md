@@ -67,19 +67,20 @@ After completing these steps, you will have created an API Artifact by discoveri
 
    ![](images/ex03-1-7.png)
 
-9. Click **Import**.
+9. We need to import specification file, for that we will download the file as given below
+  - Open the specification file in <mark> NEW tab (right click, open link in new tab) </mark>  [API_PRODUCT.json](downloads/API_PRODUCT.json)
+  - Click on download button to download
+   
+   ![](images/ex03-1-8-1.png)
+   
+10. Click **Import**.
 
    ![](images/ex03-1-8.png)
 
-10. The Import dialog opens — click the **Browse** icon to select the specification file.
+11. The Import dialog opens — click the **Browse** icon to select the specification file.
 
    ![](images/ex03-1-10-1.png)
-
-11. Open the specification file in <mark> NEW tab (right click, open link in new tab) </mark>  [API_PRODUCT.json](downloads/API_PRODUCT.json)
- - Click on download button to download
-   
-  ![](images/ex03-1-8-1.png)
-   
+    
 12. On the file picker, select the downloaded **API_PRODUCT.json** file, and click **Open**.
 
     ![](images/ex03-1-9.png)
@@ -118,8 +119,10 @@ After completing these steps, you will have created an API Artifact by discoveri
 
     ![](images/ex03-1-12.png)
 
-17. You will see the **Authentication** policy is added by default. Click **Authentication** and check the property sheet below — make sure **Type** includes **Basic**, **Client Certificate**, and **OAuth**.
-
+17. You will see the **Authentication** policy is added by default. Click **Authentication**.
+  - add **Basic** if not available
+  - check the property sheet below — make sure **Type** includes **Basic**, **Client Certificate**, and **OAuth**
+     
 > [!NOTE]
 > The position of the authentication policy on the flow is immutable and it's the first policy on the flow.
 > Authentication policy is a mandatory policy and is added to request flow by default. Neither you can remove this policy, nor you can add another authentication policy to the flow.
