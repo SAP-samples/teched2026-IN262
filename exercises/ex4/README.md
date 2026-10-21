@@ -92,16 +92,19 @@ You will use the Bruno collection to exchange your credentials for a short-lived
 > The URL above is for the **dry run (workshop02b)**. Replace `XX` with your participant number.
 
    ```json
-   {
-     "mcpServers": {
-       "IN262-ProductCreation": {
-         "url": "https://workshop02b-1727b6a7b06944a096591f5568a14821.a.integration.cloud.sap/mcp_in262-0XX",
-         "headers": {
-           "Authorization": "Bearer [YOUR_TOKEN]"
-         }
-       }
-     }
-   }
+
+{
+  "mcpServers": {
+    "IN262-ProductCreation": {
+      "type": "http",
+      "url": "https://workshop02b-1727b6a7b06944a096591f5568a14821.a.integration.cloud.sap/mcp_in262-0XX",
+     
+      "headers": {
+        "Authorization": "Bearer [YOUR_TOKEN]“
+      }
+    }
+  }
+}
    ```
 
    ![VS Code — .mcp.json open with MCP server URL and Bearer token filled in](images/ex04-2-4.png)
