@@ -232,9 +232,7 @@ After completing these steps, you will have exposed a deployed API artifact (for
 
     ![](images/ex03-2-14.png)
 
-16. Navigate back to **Design → Integrations and APIs** to confirm the API artifact also shows **Deployed** status.
 
-    ![](images/ex03-2.png)
 
 ## Exercise 3.3 Create agent subscription in Developer Hub
 After completing this exercise, you will have an MCP Server that can be invoked using credentials obtained through a Developer Hub subscription.
