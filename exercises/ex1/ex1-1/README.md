@@ -13,7 +13,7 @@ You need to build an integration flow that receives a product launch event from 
 
 ## Prerequisites
 
-- Access to the Integration Suite tenant: [Integration Suite Tenant (Primary)](https://url.sap/ei6p8k)
+- Access to the Integration Suite tenant <mark>**Right click -> Open Link in New Window**</mark>  : [Integration Suite Tenant (Primary)](https://url.sap/ei6p8k)
 - The `IN262-Common-Artifacts` package is deployed in the tenant (contains the Script Collection and Message Mapping used in this exercise)
 - Your participant number `[NNN]` — printed on your session card (001–040)
 
