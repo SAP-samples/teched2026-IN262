@@ -98,7 +98,7 @@ You will use the Bruno collection to exchange your credentials for a short-lived
       "url": "https://workshop02b-1727b6a7b06944a096591f5568a14821.a.integration.cloud.sap/mcp_in262-0XX",
      
       "headers": {
-        "Authorization": "Bearer [YOUR_TOKEN]“
+        "Authorization": "Bearer [YOUR_TOKEN]"
       }
     }
   }
