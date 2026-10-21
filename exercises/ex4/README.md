@@ -197,9 +197,9 @@ Create a new product in S/4HANA with the following details:
 
 You now switch roles — acting as the **End User / Customer** who receives the campaign offer.
 
-1. Open your browser and navigate to the SBPA Lobby:
+1. Open your browser and navigate to the SBPA MyInbox:
 
-   `https://url.sap/lf45f4`
+   [My Inbox](https://url.sap/lf45f4)
 
 2. Log in with your participant credentials (`in262-0NNN@education.cloud.sap`)
 
