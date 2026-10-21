@@ -90,9 +90,7 @@ You will use the Bruno collection to exchange your credentials for a short-lived
 
 > [!NOTE]
 > The URL above is for the **dry run (workshop02b)**. Replace `XX` with your participant number.
-
-   ```json
-
+```json
 {
   "mcpServers": {
     "IN262-ProductCreation": {
@@ -105,7 +103,7 @@ You will use the Bruno collection to exchange your credentials for a short-lived
     }
   }
 }
-   ```
+```
 
    ![VS Code — .mcp.json open with MCP server URL and Bearer token filled in](images/ex04-2-4.png)
 
