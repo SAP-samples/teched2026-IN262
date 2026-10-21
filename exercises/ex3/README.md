@@ -84,17 +84,28 @@ After completing these steps, you will have created an API Artifact by discoveri
 
     ![](images/ex03-1-9.png)
 
-13. The file name appears in the Import dialog — click **Import** to confirm.
+13. The file name appears in the Import dialog.
+>[!CAUTION]
+> <mark> **An error on import is expected**, see step 15 to fix it.</mark>
+> This happens as import causes overwriting of some API Details like **Name** and **API Base Path**.
 
+  
+  - Click **Import** to confirm
+  
    ![](images/ex03-1-10.png)
 
-14. The API Product specification gets imported with all operations. Click **Switch to API Details**.
+14. The API Product specification gets imported with all operations. 
+>[!TIP]
+> <mark> **An error on import is expected**, see step 15 to fix it.</mark>
+> This happens as import causes overwriting of some API Details like **Name** and **API Base Path**.
 
-    ![](images/ex03-1-11.png)
+ - Click **Switch to API Details**.
 
-15. In the API Details view, update the following fields — replace `0XX` with your 3 digit participant number:
+![](images/ex03-1-11.png)
+
+15. In the API Details view, <mark>**update the following fields AGAIN** </mark> — replace `0XX` with your 3 digit participant number:
 >[!IMPORTANT]
->After import some of the values are overwritten. e.g. Name and API Base Path
+>After import Name and API Base Path are overwritten, update these values again.
 
    | Field | Value |
    |---|---|
