@@ -193,8 +193,8 @@ After completing these steps, you will have exposed a deployed API artifact (for
 
    | Field | Value |
    | --- | --- |
-   | **Name** | `API_PRODUCT_mcpServer_in262_0XX` (where XX is your participant number) |
-   | **ID** | `API_PRODUCT_mcpServer_in262_0XX` (where XX is your participant number) |
+   | **Name** | `Product_API_IN262_0XX_mcpServer` (where XX is your participant number) |
+   | **ID** | `Product_API_IN262-0XX_mcpServer` (where XX is your participant number) |
    | **MCP Path** | `/mcp_in262-0XX` (where XX is your participant number) |
    | **Version** | Optional. Add a version to manage multiple concurrent versions of the server. |
    | **Runtime Profile** | Select the **Integration Cell** runtime node. |
@@ -220,11 +220,11 @@ After completing these steps, you will have exposed a deployed API artifact (for
 
     ![](images/ex03-2-11.png)
 
-13. You will see a deployment triggered toast: **'API_PRODUCT_mcpServer_in262_0XX' is triggered for deployment**.
+13. You will see a deployment triggered toast: **'Product_API_IN262_0XX_mcpServer' is triggered for deployment**.
 
     ![](images/ex03-2-12.png)
 
-14. The MCP Server is successfully deployed. The toast confirms: **'API_PRODUCT_mcpServer_in262_0XX' successfully deployed**.
+14. The MCP Server is successfully deployed. The toast confirms: **'Product_API_IN262_0XX_mcpServer' successfully deployed**.
 
     ![](images/ex03-2-13.png)
 
