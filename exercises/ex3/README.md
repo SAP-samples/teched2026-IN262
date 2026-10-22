@@ -195,9 +195,9 @@ After completing these steps, you will have exposed a deployed API artifact (for
 
    | Field | Value |
    | --- | --- |
-   | **Name** | `Product_API_IN262_0XX_mcpServer` (where XX is your participant number) |
-   | **ID** | `Product_API_IN262-0XX_mcpServer` (where XX is your participant number) |
-   | **MCP Path** | `/mcp_in262-0XX` (where XX is your participant number) |
+   | **Name** | `Product_API_IN262_048` <br> (where 0XX is your participant number) |
+   | **ID** | `Product_API_IN262-0XX_mcpServer` <br> (where 0XX is your participant number) |
+   | **MCP Path** | `/mcp_in262-0XX` <br> (where 0XX is your participant number) |
    | **Version** | Optional. Add a version to manage multiple concurrent versions of the server. |
    | **Runtime Profile** | Select the **Integration Cell** runtime node. |
    | **Virtual Host** | Review the virtual host URL; it is combined with the base path to form the public endpoint. |
