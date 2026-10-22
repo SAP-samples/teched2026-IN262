@@ -49,6 +49,8 @@ This hands-on session gives you practical experience with the **AI capabilities 
 ```
 
 ---
+### How It Works — Flow Diagram
+![Flow Diagram](exercises/ex0/images/IN262-Flow-Diagram.gif)
 
 ## 2. AI Capabilities You Will Use
 
