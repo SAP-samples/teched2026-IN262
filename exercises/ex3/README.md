@@ -213,8 +213,9 @@ After completing these steps, you will have exposed a deployed API artifact (for
     
    ![](images/ex03-2-8.png)
 
-10. Scroll down to confirm your tool selection and click **Add** to finalize and create the MCP server.
-
+10. Select <mark>**GET and POST of `/A_ProductDescription`** </mark> and click **Add** to finalize and create the MCP server.
+ - Scroll up to check and **confirm that total 12 tools are selected**
+     
     ![](images/ex03-2-9.png)
 
 11. The MCP Server details page opens. Note the **MCP URL** shown at the top — this is the endpoint your AI agent will use. Click **Deploy**.
