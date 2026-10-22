@@ -206,8 +206,11 @@ After completing these steps, you will have exposed a deployed API artifact (for
 
 8. Click **Next** to proceed to **Create Tools**.
 
-9. In **Create Tools**, select the API resources (operations) you want to expose as MCP tools by checking the checkbox next to each one. Remember the limit of **30 tools** per MCP server.
-
+9. In **Create Tools**, select the API resources (operations) by checking the checkbox next to each one. 
+ - Select in the following <mark>(carefully)</mark>
+   - **First 10** tools
+   - Scroll down to select <mark>**GET and POST of `/A_ProductDescription`** </mark> also
+    
    ![](images/ex03-2-8.png)
 
 10. Scroll down to confirm your tool selection and click **Add** to finalize and create the MCP server.
