@@ -275,10 +275,10 @@ After completing this exercise, you will have an MCP Server that can be invoked 
 
    | Field | Value |
    | --- | --- |
-   | **Name** | `IN262-0XX-Product` (where XX is your participant number) |
-   | **ID** | `IN262-0XX-Product` (where XX is your participant number) |
-   | **Short Text** | `This is DH product for IN262-0XX` (where XX is your participant number) |
-   | **Description** | `This is Developer Hub product for IN262-0XX` (where XX is your participant number) |
+   | **Name** | `IN262-0XX-Product` <br> (where 0XX is your participant number) |
+   | **ID** | `IN262-0XX-Product` <br> (where 0XX is your participant number) |
+   | **Short Text** | `This is DH product for IN262-0XX` <br> (where 0XX is your participant number) |
+   | **Description** | `This is Developer Hub product for IN262-0XX` <br> (where 0XX is your participant number) |
 
    Click **Publish**.
 
