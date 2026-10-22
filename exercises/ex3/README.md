@@ -195,7 +195,7 @@ After completing these steps, you will have exposed a deployed API artifact (for
 
    | Field | Value |
    | --- | --- |
-   | **Name** | `Product_API_IN262_048` <br> (where 0XX is your participant number) |
+   | **Name** | `Product_API_IN262_0XX` <br> (where 0XX is your participant number) |
    | **ID** | `Product_API_IN262-0XX_mcpServer` <br> (where 0XX is your participant number) |
    | **MCP Path** | `/mcp_in262-0XX` <br> (where 0XX is your participant number) |
    | **Version** | Optional. Add a version to manage multiple concurrent versions of the server. |
@@ -218,27 +218,40 @@ After completing these steps, you will have exposed a deployed API artifact (for
      
     ![](images/ex03-2-9.png)
 
-11. The MCP Server details page opens. Note the **MCP URL** shown at the top — this is the endpoint your AI agent will use. Click **Deploy**.
+11. The MCP Server details page opens. <mark>**Copy this URL as this will be used upcoming exercises**</mark>  
 >[!IMPORTANT]
+> Note this **MCP URL** will be used by the AI Agent
+> 
 > Confirm the URL should end with **your participant number**
->
-> <mark>**Copy this URL as this will be used upcoming exercises**</mark>
 
- ![](images/ex03-2-10.png)
 
-12. On the Deploy dialog, confirm **Runtime Profile** is **Integration Cell** and click **Deploy**.
+   ![](images/ex03-2-10-1.png)
+
+12. Open Notepad on your machine
+   ![](images/ex03-2-10-2.png)
+
+13. Paste the URL to keep it handy for later use
+> [!IMPORTANT]
+> Confirm the URL ends with **your participant number**
+
+   ![](images/ex03-2-10-3.png)
+
+14. Go back to MCP Server Details page and Click **Deploy**
+   ![](images/ex03-2-10.png)
+
+15. On the Deploy dialog, confirm **Runtime Profile** is **Integration Cell** and click **Deploy**.
 
     ![](images/ex03-2-11.png)
 
-13. You will see a deployment triggered toast: **'Product_API_IN262_0XX_mcpServer' is triggered for deployment**.
+16. You will see a deployment triggered toast: **'Product_API_IN262_0XX_mcpServer' is triggered for deployment**.
 
     ![](images/ex03-2-12.png)
 
-14. The MCP Server is successfully deployed. The toast confirms: **'Product_API_IN262_0XX_mcpServer' successfully deployed**.
+17. The MCP Server is successfully deployed. The toast confirms: **'Product_API_IN262_0XX_mcpServer' successfully deployed**.
 
     ![](images/ex03-2-13.png)
 
-15. Click the **Policies** tab and then the **Deployment Status** tab. Deployment Status should be **Deployed** and Runtime Status **Started**.
+18. Click the **Policies** tab and then the **Deployment Status** tab. Deployment Status should be **Deployed** and Runtime Status **Started**.
 
     ![](images/ex03-2-14.png)
 
