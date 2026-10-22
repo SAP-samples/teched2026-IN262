@@ -293,8 +293,10 @@ After completing this exercise, you will have an MCP Server that can be invoked 
    ![](images/ex03-3-8.png)
 
 10. Click **Refresh** until the status turns to **Success**.
-
-    ![](images/ex03-3-9.png)
+>[!TIP]
+> It may take couple of minutes to process the request
+ 
+ ![](images/ex03-3-9.png)
 
 11. Navigate to **My Workspace**.
 
