@@ -185,7 +185,9 @@ After completing these steps, you will have exposed a deployed API artifact (for
 
    ![](images/ex03-2-5.png)
 
-6. In the **Select an API** dialog, select your deployed API **API_PRODUCT (Product_API_IN262-0XX)** and click **Add**.
+6. In the **Select an API** dialog, select your deployed API **Product_API_IN262-0XX** and click **Add**.
+> [!NOTE]
+> Select the <mark>API that you created in previous step with **your participant number**</mark>
 
    ![](images/ex03-2-6.png)
 
