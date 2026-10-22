@@ -272,6 +272,8 @@ After completing this exercise, you will have an MCP Server that can be invoked 
    ![](images/ex03-3-5.png)
 
 7. The Create Product dialog opens. Fill in the following product details:
+>[!TIP]
+> Do not forget to replace the participant number while entering the values
 
    | Field | Value |
    | --- | --- |
@@ -280,7 +282,7 @@ After completing this exercise, you will have an MCP Server that can be invoked 
    | **Short Text** | `This is DH product for IN262-0XX` <br> (where 0XX is your participant number) |
    | **Description** | `This is Developer Hub product for IN262-0XX` <br> (where 0XX is your participant number) |
 
-   Click **Publish**.
+ - Click **Publish**.
 
    ![](images/ex03-3-6.png)
 
