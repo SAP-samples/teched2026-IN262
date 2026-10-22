@@ -219,8 +219,12 @@ After completing these steps, you will have exposed a deployed API artifact (for
     ![](images/ex03-2-9.png)
 
 11. The MCP Server details page opens. Note the **MCP URL** shown at the top — this is the endpoint your AI agent will use. Click **Deploy**.
+>[!IMPORTANT]
+> Confirm the URL should end with **your participant number**
+>
+> <mark>**Copy this URL as this will be used upcoming exercises**</mark>
 
-    ![](images/ex03-2-10.png)
+ ![](images/ex03-2-10.png)
 
 12. On the Deploy dialog, confirm **Runtime Profile** is **Integration Cell** and click **Deploy**.
 
