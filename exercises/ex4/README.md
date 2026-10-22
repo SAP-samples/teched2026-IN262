@@ -34,7 +34,8 @@ The following items are **pre-installed on your laptop** by the session IT team:
 
 The following items are **provided by the session instructor** at the start:
 
-- Bruno collection: `TechEd26-IN262` (imported into Bruno)
+- Bruno collection: `TechEd26-IN262` (imported into Bruno) — [Download Bruno Collection](downloads/IN262-Bruno-Collection.zip)
+- MCP Server config template — [Download .mcp.json](downloads/.mcp.json)
 - Your **participant number** (printed on your session card) — `001` through `040`
 
 ---
