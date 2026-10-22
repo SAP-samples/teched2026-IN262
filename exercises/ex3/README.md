@@ -51,7 +51,7 @@ After completing these steps, you will have created an API Artifact by discoveri
    | API Provider | *(auto-populated)* |
    | Relative URL | `/sap/opu/odata/sap/API_PRODUCT_SRV` |
    | Service Type | **OData** |
-   | API Base Path | `/IN262-0XX` — replace `XX` with your two-digit participant number (e.g. `/IN262-007` for participant 007) |
+   | API Base Path | `/IN262-0XX` — replace `0XX` with your 3 digit participant number (e.g. `/IN262-007` for participant 007) |
    | API State | *(auto-populated)* |
    | API Version | `1.0.0` |
    | Runtime Profile | *(auto-populated)* |
@@ -110,8 +110,8 @@ After completing these steps, you will have created an API Artifact by discoveri
 
    | Field | Value |
    |---|---|
-   | **Name** | `Product_API_IN262-0XX` |
-   | **API Base Path** | `/IN262-0XX` |
+   | **Name** | `Product_API_IN262-0XX` <br> Replace `0XX` with your 3 digit participant number (e.g. `Product_API_IN262-007` for participant 007) |
+   | **API Base Path** | `/IN262-0XX` <br> Replace `0XX` with your 3 digit participant number (e.g. `/IN262-007` for participant 007)|
 
    ![](images/ex03-1-11-1.png)
 
