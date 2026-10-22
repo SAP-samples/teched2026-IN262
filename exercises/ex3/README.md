@@ -257,7 +257,7 @@ After completing this exercise, you will have an MCP Server that can be invoked 
 
    ![](images/ex03-3-4.png)
 
-6. Select the checkbox next to your MCP server **API_PRODUCT_mcpServer_in262_0XX** and click **Create Product**.
+6. Select the checkbox next to your MCP server **Product_API_IN262_0XX_mcpServer** and click **Create Product**.
 
    ![](images/ex03-3-5.png)
 
