@@ -11,7 +11,7 @@
 | Capability | What happens |
 |---|---|
 | **API Discovery** | Connects to the pre-configured S/4HANA business system  |
-| **MCP Server** | Exposes the discovered API as a governed, agent-consumable tool via the Model Context Protocol |
+| **MCP Server** | Exposes API as a governed, agent-consumable tool via the Model Context Protocol |
 | **Agent Access** | Any MCP-compatible AI agent (e.g. Claude Code CLI) can discover and call the S/4HANA product creation API as a tool — no manual API client or payload construction needed |
 
 > [!NOTE]
