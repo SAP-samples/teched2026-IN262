@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "IN262-ProductCreation": {
+      "type": "http",
+      "url": "replace this with your MCP URL",
+     
+      "headers": {
+        "Authorization": "Bearer [GENERATE NEW TOKEN and PASTE HERE]"
+      }
+    }
+  }
+}
