@@ -313,14 +313,16 @@ After completing this exercise, you will have an MCP Server that can be invoked 
     ![](images/ex03-3-12.png)
 
 14. Fill in the subscription details and click **Next**:
+>[!TIP]
+> Do not forget to replace the participant number while entering the values
 
-    | Field | Value |
-    | --- | --- |
-    | **Name** | `IN262-0XX-Agent-Subscription` <br>(where 0XX is your participant number) |
-    | **Short Text** | `Agent Subscription for IN262-0XX-Product` <br> (where 0XX is your participant number) |
-    | **Description** | `Agent Subscription for IN262-0XX-Product, will be used to access through AI client or agent.` <br> (where 0XX is your participant number)|
+| Field | Value |
+| --- | --- |
+| **Name** | `IN262-0XX-Agent-Subscription` <br>(where 0XX is your participant number) |
+| **Short Text** | `Agent Subscription for IN262-0XX-Product` <br> (where 0XX is your participant number) |
+| **Description** | `Agent Subscription for IN262-0XX-Product, will be used to access through AI client or agent.` <br> (where 0XX is your participant number)|
 
-    ![](images/ex03-3-13.png)
+  ![](images/ex03-3-13.png)
 
 15. Review the subscription summary and click **Save**.
 
