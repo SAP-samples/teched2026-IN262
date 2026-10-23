@@ -62,7 +62,7 @@ The iFlow you built in Exercise 1.1 contains a Groovy script (`CalculatedDiscoun
    ![Apply button highlighted](images/ex01-7-8.png)
 
 > [!NOTE]
-> An **Incompatibilities** warning about Groovy version 2.x may appear — this is expected. Click **OK** to dismiss.
+> An **Incompatibilities** warning about Groovy version 2.x may appear — this **may** happen. Click **OK** to dismiss.
 
    ![Incompatibilities dialog — OK button highlighted, Script changed successfully toast](images/ex01-7-9.png)
 
