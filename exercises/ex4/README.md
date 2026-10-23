@@ -158,7 +158,7 @@ Update the following:
    - Replace `[GENERATE NEW TOKEN and PASTE HERE]` with the `access_token` 
       - you copied in Step 3 or copy it from bruno
    - Replace `replace this with your MCP URL` 
-      - with your MCP server URL (copied in Notepad)
+      - with your MCP server URL (copied in Notepad in https://github.com/SAP-samples/teched2026-IN262/tree/main/exercises/ex3#exercise-32-create-and-configure-mcp-serverExercise 3.2 step 12)
       - you can also navigate to MCP server in developer hub to get MCP URL
    - Save the file (`Ctrl+S`)
 
