@@ -20,101 +20,163 @@ You have built and deployed the integration flows in Exercises 1–3. In this ex
 | Capability | What happens |
 |---|---|
 | **MCP Server** | Claude Code discovers your deployed MCP server as a tool and calls the S/4HANA product creation API on your behalf — no API client or manual payload construction required |
-| **Natural language → API call** | You describe the product in plain language; the agent maps it to the correct OData fields and handles authentication |
+| **Natural language used to call APIs** | You describe the product in plain language; the agent maps it to the correct OData fields and handles authentication |
 
 ---
 
 ## Prerequisites
 
-The following items are **pre-installed on your laptop** by the session IT team:
+The following items are **pre-installed on your workstations** by the IT team:
 
 - **Claude Code CLI** — installed and available via `claude` in the terminal
 - **Bruno** — REST client installed
 - **Visual Studio Code** — installed
 
-The following items are **provided by the session instructor** at the start:
-
-- Bruno collection: `TechEd26-IN262` (imported into Bruno) — [Download Bruno Collection](downloads/IN262-Bruno-Collection.zip)
-- MCP Server config template — [Download .mcp.json](downloads/.mcp.json)
 - Your **participant number** (printed on your session card) — `001` through `040`
 
 ---
 
-## Step 1 — Copy Your MCP Server Credentials from Developer Hub
+## Step 1 — Setup: Import Bruno Collection and Open .mcp.json
+
+### Part A — Import Bruno Collection into Bruno
+
+1. Right click open the file in new tab or window [Bruno Collection download link](downloads/IN262-Bruno-Collection.zip) 
+   - click **Download raw file** to save the ZIP
+
+   ![GitHub — IN262-Bruno-Collection.zip file page, Download raw file button highlighted](images/ex04-0-1.png)
+
+2. Open **Bruno** → click the `+` icon next to **Collections** in the left panel → select **Import collection**
+
+   ![Bruno — Collections panel, + icon clicked, Import collection option highlighted](images/ex04-0-2.png)
+
+3. The Import Collection dialog opens — click **choose file(s)**
+
+   ![Bruno — Import Collection dialog, choose file(s) link highlighted](images/ex04-0-3.png)
+
+4. Navigate to your **Downloads** folder → select **IN262-Bruno-Collection.zip** → click **Open**
+
+   ![File picker — Downloads folder, IN262-Bruno-Collection.zip selected, Open button highlighted](images/ex04-0-4.png)
+
+5. Confirm the collection name `IN262-Bruno-Collection` → click **Import**
+
+   ![Bruno — Import dialog, name IN262-Bruno-Collection, Import button highlighted](images/ex04-0-5.png)
+
+6. The collection **IN262-Bruno-Collection** now appears in Bruno — it is ready for use in Step 2
+   - Expand and verify the POST request call entry is available
+
+   ![Bruno — IN262-Bruno-Collection expanded, Generate Token request highlighted](images/ex04-0-6.png)
+
+### Part B — Open .mcp.json in VS Code
+
+7. Right click and Open the [.mcp.json download link](downloads/.mcp.json) 
+   - on the GitHub page click **Download raw file** to save the file to your **Downloads** folder
+   - <mark> verify file name is `.mcp.json` **(file name with leading dot)** </mark>
+      - if required rename the file to `.mcp.json` with leading dot
+
+> [!CAUTION]
+> If browser save the file as **`mcp.json`** **(without the leading dot)**. 
+> 
+> You must rename it to **`.mcp.json`** after downloading:
+> - Open your **Downloads** folder → right-click `mcp.json` → **Rename** → change to `.mcp.json` → press **Enter**
+> - System may warn that changing the extension could make the file unusable — click **Yes**
+
+   ![GitHub — .mcp.json file page, Download raw file button highlighted](images/ex04-0-8.png)
+
+
+8. Open **Windows Explorer** 
+   - Navigate to your download directory 
+   - Copy the renamed file from your download folder to `C:\Users\<participant-user>`.
+
+> [!TIP]
+> If the file already exists you can overwrite it.
+
+   ![Windows Explorer — home directory, .mcp.json file highlighted](images/ex04-0-9.png)
+
+
+
+9. Right-click **.mcp.json** 
+   - select **Open with → Visual Studio Code**
+   
+   ![Windows Explorer — right-click context menu, Open with Visual Studio Code highlighted](images/ex04-0-10.png)
+   
+10. Keep VS Code open, we will fill the values in Step 4
+   
+   ![VS Code window with default values](images/ex04-0-11.png)
+
+
+---
+
+## Step 2 — Copy Your MCP Server Credentials from Developer Hub
 
 Your MCP server credentials were created in Exercise 3. You will now retrieve them.
 
 1. Navigate to **Developer Hub → My Workspace → Agents** tab and open your agent subscription **IN262-0XX-Agent-Subscription**
-
-   ![Developer Hub — Agent Subscription page, credentials hidden with eye icon](images/ex04-1.png)
+   ![Developer Hub — Agent Subscription page, credentials hidden with eye icon](images/ex04-1-0.png)
+  
 
 2. Click the **eye icon** next to the credentials to reveal the **Token URL**, **Key**, and **Secret**
 
+   ![Developer Hub — Agent Subscription page, credentials hidden with eye icon](images/ex04-1.png)
+
+> [!IMPORTANT]
+> **Keep this browser tab open** — you will copy the Token URL, Key, and Secret directly from here into Bruno in the next step. Do not close or navigate away.
+
    ![Developer Hub — Token URL, Key, and Secret revealed (blurred)](images/ex04-1-1.png)
 
-> [!NOTE]
-> Copy the **Token URL**, **Key**, and **Secret** — you will need them in the next step to obtain an access token.
+---
+
+## Step 3 — Get Your MCP Access Token via Bruno
+
+1. Open **Bruno** → expand **IN262-Bruno-Collection** in the left panel
+
+   ![Bruno — IN262-Bruno-Collection expanded, Generate Token request highlighted](images/ex04-0-6.png)
+
+2. Click **IN262-0XX - Generate Token for Product Creation MCP Server** — the POST request opens
+
+   ![Bruno — Generate Token request open](images/ex04-2-0.png)
+
+
+3. Switch to the **Developer Hub browser tab** and copy each value directly into Bruno:
+   - **Token URL** → paste into the POST URL field at the top
+   - **Key** → paste into the `client_id` value field
+   - **Secret** → paste into the `client_secret` value field
+
+   ![Bruno — POST request with Token URL, client_secret and client_id fields annotated](images/ex04-0-7.png)
+
+4. Click **Send** — the response returns a JSON body. Copy the `access_token` value **between the quotes**
+
+   ![Bruno — response body with access_token highlighted, annotation "Copy the Token between the quotes"](images/ex04-0-7-1.png)
 
 ---
 
-## Step 2 — Get Your MCP Access Token via Bruno
+## Step 4 — Configure the MCP Server in .mcp.json
 
-You will use the Bruno collection to exchange your credentials for a short-lived access token.
+1. Switch to **VS Code** — the `.mcp.json` file is already open from Step 1. 
 
-1. Open **Bruno** and select the **TechEd26-IN262** collection — open the **Get MCP Token** request
-
-   ![Bruno — Get MCP Token request open, Token URL, Key, Secret filled in](images/ex04-2.png)
-
-2. Confirm your credentials are set
-   - Click **Send**
-   - Copy the `access_token` value from the response — you will paste it into `.mcp.json` in the next step
-
-   ![Bruno — Send button highlighted, 200 response with access_token in body](images/ex04-2-1.png)
-
----
-
-## Step 3 — Configure the MCP Server in Claude Code
-
-1. Open **Windows Explorer**, navigate to your home directory (`C:\Users\TE-25`), and locate the `.mcp.json` file
-
-   ![Windows Explorer — home directory, .mcp.json file highlighted](images/ex04-2-2.png)
-
-2. Right-click `.mcp.json` and select **Open with → Visual Studio Code**
-
-   ![Windows Explorer — right-click context menu, Open with Visual Studio Code highlighted](images/ex04-2-3.png)
-
-3. The file opens in VS Code. 
-   - Paste entire JSON after changes or change the specific parts
-      - Replace `XX` at the end of URL with your parcipant number 
-      - Replace `[YOUR_TOKEN]` with the access token you copied
+Update the following:   
+   
+   - Replace `[GENERATE NEW TOKEN and PASTE HERE]` with the `access_token` 
+      - you copied in Step 3 or copy it from bruno
+   - Replace `replace this with your MCP URL` 
+      - with your MCP server URL (copied in Notepad)
+      - you can also navigate to MCP server in developer hub to get MCP URL
    - Save the file (`Ctrl+S`)
 
-> [!NOTE]
-> The URL above is for the **dry run (workshop02b)**. Replace `XX` with your participant number.
-```json
-{
-  "mcpServers": {
-    "IN262-ProductCreation": {
-      "type": "http",
-      "url": "https://workshop02b-1727b6a7b06944a096591f5568a14821.a.integration.cloud.sap/mcp_in262-0XX",
-     
-      "headers": {
-        "Authorization": "Bearer [YOUR_TOKEN]"
-      }
-    }
-  }
-}
-```
+> [!TIP]
+> - Do not change the json file format
+> 
+> - There is a space between `Bearer` and new copied token from Bruno
 
    ![VS Code — .mcp.json open with MCP server URL and Bearer token filled in](images/ex04-2-4.png)
 
-
-
 ---
 
-## Step 4 — Start Claude Code CLI
+## Step 5 — Start Claude Code CLI
 
 1. Press the **Windows key**, type `command`, and click **Command Prompt**
+
+>[!IMPORTANT]
+> You should open Claude in the **same folder** where you saved **.mcp.json file**
 
    ![Windows Search — "command" typed, Command Prompt result highlighted](images/ex04-2-5.png)
 
@@ -128,7 +190,7 @@ You will use the Bruno collection to exchange your credentials for a short-lived
 
 ---
 
-## Step 5 — Verify Your MCP Server is Connected
+## Step 6 — Verify Your MCP Server is Connected
 
 1. Type `/mcp` and press **Enter** — Claude Code lists all connected MCP servers
 
@@ -137,15 +199,25 @@ You will use the Bruno collection to exchange your credentials for a short-lived
 2. Confirm **IN262-ProductCreation** shows status **connected** and lists **12 tools**
 
 > [!NOTE]
-> If the server shows **disconnected**, verify your `.mcp.json` has the correct URL and a valid (non-expired) token, then restart Claude Code.
+> If the server shows **disconnected** 
+> - verify your `.mcp.json` has the correct URL
+> - regenerate a valid token, paste it in `.mcp.json` again
+> - restart Claude Code, type exit -> press eneter
+>     - now you can again type claude to start new session
+
+> [!TIP]
+> Press Escape key to go back to prompt in Claude
 
 ---
 
-## Step 6 — Create a Product via the AI Agent
+## Step 7 — Create a Product via the AI Agent
 
 You will now act as the **Data Steward** — using natural language to instruct the AI agent to create a product in S/4HANA.
 
-1. Type the following prompt, replacing `0XX` with your 3-digit participant number and `NN` with `01` for your first product, `02` for your second attempt, and so on:
+1. Prepare the prompt by <mark>**adjusting it as given below (see example)**</mark>
+   - copy and paste this prompt in notepad / text editor 
+   - replace `0XX` with your 3-digit participant number
+   - `NN` with `01` for your first product, `02` for your second attempt, and so on
 
 > [!NOTE]
 > **Example for participant 007, first attempt:**
@@ -185,26 +257,33 @@ Create a new product in S/4HANA with the following details:
    ![Claude Code CLI — calling IN262-ProductCreation tool, product details shown](images/ex04-3-3.png)
 
 5. Claude Code confirms the product was created successfully — a summary table with all product fields is shown
+
 > [!NOTE]
 > The product creation triggers an AEM event in the background. The integration flow picks this up, calculates your personalised discount, and creates a campaign task in SAP Build Process Automation. This may take some seconds.
 
    ![Claude Code CLI — product successfully created, summary table with Product ID, Description, Type, Unit, Group](images/ex04-3-4.png)
 
+6. **[Monitor]** Go back to Integration Suite system to monitor integration flows</mark>
 
+   ![ Message monitor to check product creation](images/ex04-3-5.png)
 
 ---
 
-## Step 7 — Approve the Campaign Offer in My Inbox
+## Step 8 — Approve the Campaign Offer in My Inbox
 
 You now switch roles — acting as the **End User / Customer** who receives the campaign offer.
 
 1. Open your browser and navigate to the SBPA MyInbox:
+   - Click on this link to open [My Inbox](https://url.sap/lf45f4)
 
-   [My Inbox](https://url.sap/lf45f4)
+>[!TIP]
+> Sign in with **teched identity provider** or ask the instructor
 
-2. Log in with your participant credentials (`in262-0NNN@education.cloud.sap`)
+   
+2. Log in with your participant credentials (`in262-0XX@education.cloud.sap`)
+   - Instructors will provide you the credentials
 
-3. Click the **inbox icon** in the top navigation bar
+3. Refresh the task list using refresh button
    - Locate the task **Place Order - Product Offer** for your product
    - Review the offer details, confirm the quantity, and click **Place Order**
 
@@ -214,10 +293,15 @@ You now switch roles — acting as the **End User / Customer** who receives the 
 
    ![SBPA — "Task processed successfully" confirmation toast](images/ex04-4-1.png)
 
+5. **[Monitor]** Go back to Integration Suite system to monitor integration flows</mark>
+
+   ![ Message monitor to check order creation](images/ex04-4-3.png)
+
 ---
 
-## Step 8 — Confirm the Sales Order
-Once the order is created in the backend a notification will be sent back to you for order confirmation
+## Step 9 — Confirm the Sales Order
+
+Once the order is created in the backend a notification will be sent back to you for order confirmation.
 
 1. Click the **inbox icon** again — you should now see a **"A Sales Order Created"** notification
 
@@ -231,12 +315,14 @@ Once the order is created in the backend a notification will be sent back to you
 
 You have completed the full end-to-end journey:
 
-1. Retrieved MCP server credentials from Developer Hub
-2. Used Bruno to exchange credentials for an OAuth access token
-3. Configured Claude Code CLI with your MCP server endpoint and token
-4. Used an AI agent to create a product in S/4HANA — no API client, no manual payload
-5. The integration platform picked up the event, calculated a personalised discount, and raised a campaign task
-6. You placed the order and received the Sales Order confirmation
+1. Imported the Bruno collection and opened the `.mcp.json` template in VS Code
+2. Retrieved MCP server credentials from Developer Hub
+3. Used Bruno to exchange credentials for an OAuth access token
+4. Configured `.mcp.json` with your MCP server URL and access token
+5. Started Claude Code CLI and verified the MCP server is connected
+6. Used an AI agent to create a product in S/4HANA — no API client, no manual payload
+7. The integration platform picked up the event, calculated a personalised discount, and raised a campaign task
+8. You placed the order and received the Sales Order confirmation
 
 ---
 
