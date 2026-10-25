@@ -8,7 +8,7 @@ This hands-on session gives you practical experience with the **AI capabilities 
 > [!NOTE]
 > All AI features used in this session are available in SAP Integration Suite and can be enabled from the **Settings** page.
 >
->  <img src="exercises/ex0/images/1_AI_Settings_Page.png" alt="SAP Integration Suite AI Settings Page" />
+>  <img src="exercises/images/1_AI_Settings_Page.png" alt="SAP Integration Suite AI Settings Page" />
 
 
 ---
@@ -50,7 +50,7 @@ This hands-on session gives you practical experience with the **AI capabilities 
 
 ---
 ### How It Works — Hands-on Flow Diagram
-<img src="exercises/ex0/images/IN262-Flow-Diagram.gif" alt="Flow Diagram" width="800" />
+<img src="exercises/images/IN262-Flow-Diagram.gif" alt="Flow Diagram" width="800" />
 
 ## 2. AI Capabilities You Will Use
 
