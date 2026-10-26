@@ -31,27 +31,12 @@ This hands-on session gives you practical experience with the **AI capabilities 
 | **End User / Customer** | Receives a personalised campaign offer in their task inbox, reviews the discount, and places the order |
 
 ### How It Works — End User Flow
-
-```
-[Data Steward]  describes new product in plain language to AI agent
-      ↓
-[AI Agent]      calls S/4HANA product creation API via MCP Server
-      ↓
-[S/4HANA]       product created → AEM event raised automatically
-      ↓
-[Integration Suite]  picks up event → calculates personalised discount
-                     based on customer purchase history → triggers campaign
-      ↓
-[Customer]      receives campaign offer task in SAP Build Process Automation inbox
-      ↓
-[Customer]      reviews offer, places order
-      ↓
-[System]        Sales Order confirmed in S/4HANA → confirmation sent to inbox
-```
+<img src="exercises/images/End-User-Flow.gif" alt="Flow Diagram" width="800" />
 
 ---
 ### How It Works — Hands-on Flow Diagram
 <img src="exercises/images/IN262-Flow-Diagram.gif" alt="Flow Diagram" width="800" />
+
 
 ## 2. AI Capabilities You Will Use
 
