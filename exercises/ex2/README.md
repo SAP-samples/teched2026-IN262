@@ -38,15 +38,12 @@ The test trigger iFlow fires your campaign flow on demand without waiting for a 
 
    ![IN262-Common-Artifacts highlighted in package list](images/ex2-1-1.png)
 
-3. Click **Edit** (top right)
 
-   ![IN262-Common-Artifacts overview — Edit button highlighted](images/ex2-1-2.png)
-
-4. Click the **Artifacts** tab — locate **`IN262-Trigger-Campaign-Flow-Test`** in the list and Click `...` → **Copy**
+3. Click the **Artifacts** tab — locate **`IN262-Trigger-Campaign-Flow-Test`** in the list and Click `...` → **Copy**
 
    ![Artifacts tab — IN262-Trigger-Campaign-Flow-Test listed, three-dot menu open, Copy highlighted](images/ex2-1-3.png)
 
-5. In the Copy dialog:
+4. In the Copy dialog:
    - Enter **Name:** `IN262-Trigger-Campaign-Flow-Test_IN262-0XX` 
 
 > [!NOTE]
@@ -56,17 +53,17 @@ The test trigger iFlow fires your campaign flow on demand without waiting for a 
 
    ![Copy dialog — name filled in, Select button highlighted](images/ex2-1-4.png)
 
-6. In the Package Selection dialog, choose **`IN262-0XX-Campaign-Management`** <mark> (select the package that you created with your participant number)</mark>
+5. In the Package Selection dialog, choose **`IN262-0XX-Campaign-Management`** <mark> (select the package that you created with your participant number)</mark>
 > [!NOTE]
 > Select the package which you created with your participant number XX 
 
    ![Package Selection dialog — IN262-0XX-Campaign-Management highlighted](images/ex2-1-5.png)
 
-7. Click **Copy**
+6. Click **Copy**
 
    ![Copy dialog — IN262-0XX-Campaign-Management selected, Copy button highlighted](images/ex2-1-6.png)
 
-8. Success toast confirms the copy — click **Navigate**
+7. Success toast confirms the copy — click **Navigate**
 
    ![Success toast — Navigate button highlighted](images/ex2-1-7.png)
 

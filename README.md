@@ -1,5 +1,6 @@
 
 # IN262 — Build an Integration Scenario from Scratch with AI Assistance at Every Step
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/teched2026-IN262)](https://api.reuse.software/info/github.com/SAP-samples/teched2026-IN262)
 
 ## About This Session
 
@@ -93,7 +94,14 @@ SAP Integration Suite embeds AI at every stage of the integration lifecycle. In 
 | 4 | [End-to-End: Create a Product and Trigger the Campaign](exercises/ex4/README.md) | Hands-on | 20 min |
 | 5 | Wrap-up, Q&A & Key Takeaways | Instructor-led | 10 min |
 
+## Additional Relevant Sessions
+You can also gain some further knowledge around SAP Integration Suite and its capabilities by attending the following SAP TechEd Hands-on Workshop sessions:
 
+[IN261 | Model context protocol (MCP) unlocked: Enable governed access to AI agents](https://www.sap.com/events/teched/berlin/flow/sap/te26/catalog/page/catalog/session/1786027688241001k1kf)
+
+[IN263 | AI-supported integrations: From design quality to agent readiness](https://www.sap.com/events/teched/berlin/flow/sap/te26/catalog/page/catalog/session/1786028735882001Q0Hd)
+
+[IN163 | Build your own event-driven scenario with advanced event mesh](https://www.sap.com/events/teched/berlin/flow/sap/te26/catalog/page/catalog/session/1786029069284001qBM4)
 
 ## Contributing
 Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) to understand the contribution guidelines.
@@ -106,4 +114,4 @@ Please read the [SAP Open Source Code of Conduct](https://github.com/SAP-samples
 Support for the content in this repository is available during the actual time of the online session for which this content has been designed. Otherwise, you may request support via the [Issues](../../issues) tab.
 
 ## License
-Copyright (20xx-)20xx SAP SE or an SAP affiliate company and <your-project> contributors. Please see our [LICENSE](LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available [via the REUSE tool](https://api.reuse.software/info/github.com/SAP/<your-project>).
+Copyright 2026 SAP SE or an SAP affiliate company and <your-project> contributors. Please see our [LICENSE](LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available [via the REUSE tool](https://api.reuse.software/info/github.com/SAP/<your-project>).
