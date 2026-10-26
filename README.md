@@ -30,11 +30,11 @@ This hands-on session gives you practical experience with the **AI capabilities 
 | **Product Master Data Steward** | Uses an AI agent to create a new product in S/4HANA by describing it in plain language — no API client, no manual payload |
 | **End User / Customer** | Receives a personalised campaign offer in their task inbox, reviews the discount, and places the order |
 
-### How It Works — End User Flow
+### Hands-on : End User Flow
 <img src="exercises/images/End-User-Flow.gif" alt="Flow Diagram" width="800" />
 
 ---
-### How It Works — Hands-on Flow Diagram
+### Hands-on : Exercise Flow Diagram
 <img src="exercises/images/IN262-Flow-Diagram.gif" alt="Flow Diagram" width="800" />
 
 
