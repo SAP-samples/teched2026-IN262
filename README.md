@@ -74,9 +74,9 @@ SAP Integration Suite embeds AI at every stage of the integration lifecycle. In 
 | 1 | [Generate, Profile, Optimise and Deploy the Integration Flow with AI](exercises/ex1/README.md) | Hands-on | 30 min |
 | | → [Exercise 1.1 — Generate the iFlow with AI](exercises/ex1/ex1-1/README.md) | | |
 | | → [Exercise 1.2 — Script Optimisation and Memory Profiling](exercises/ex1/ex1-2/README.md) | | |
-| 2 | [Test Run the Scenario and Resolve Errors with AI](exercises/ex2/README.md) | Hands-on | 10 min |
+| 2 | [Test Run the Scenario and Resolve Errors with AI](exercises/ex2/README.md) | Hands-on | 15 min |
 | 3 | [Create MCP Server and Expose the API](exercises/ex3/README.md) | Hands-on | 20 min |
-| 4 | [End-to-End: Create a Product and Trigger the Campaign](exercises/ex4/README.md) | Hands-on | 20 min |
+| 4 | [End-to-End: Create a Product and Trigger the Campaign](exercises/ex4/README.md) | Hands-on | 15 min |
 | 5 | Wrap-up, Q&A & Key Takeaways | Instructor-led | 10 min |
 
 ## Additional Relevant Sessions
