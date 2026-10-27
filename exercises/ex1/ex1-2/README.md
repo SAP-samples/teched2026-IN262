@@ -145,7 +145,9 @@ The iFlow you built in Exercise 1.1 contains a Groovy script (`CalculatedDiscoun
 
 ---
 
-## Step 6 — Optimise Again with Memory Profiling Context
+## [Optional] Step 6 — Optimise Again with Memory Profiling Context
+>[!NOTE]
+> **This step is optional** as the user experience remains the same as script optimization
 
 The AI now has both static analysis and runtime profiling evidence. It surfaces recommendations based on both code quality and runtime behaviour:
 
