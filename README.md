@@ -31,7 +31,7 @@ This hands-on session gives you practical experience with the **AI capabilities 
 | **End User / Customer** | Receives a personalised campaign offer in their task inbox, reviews the discount, and places the order |
 
 ### Hands-on : End User Flow
-<img src="exercises/images/End-User-Flow.gif" alt="Flow Diagram" width="800" />
+<img src="exercises/images/End-User-Flow.png" alt="Flow Diagram" width="800" />
 
 ---
 ### Hands-on : Exercise Flow Diagram
