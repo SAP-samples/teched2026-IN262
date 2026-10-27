@@ -355,7 +355,7 @@ The AI generated a placeholder script in the `CalculatedDiscount` step. Replace 
      
    ![CalculatedDiscount step selected — Processing tab, Script File highlighted](images/ex01-6.png)
 
-2. In the editor, default template is shown
+2. In the editor, <mark>default template or empty script is shown</mark>
 
    ![Script editor open — default template content visible](images/ex01-6-1.png)
 
