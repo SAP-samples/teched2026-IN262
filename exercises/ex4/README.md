@@ -85,10 +85,12 @@ The following items are **pre-installed on your workstations** by the IT team:
 
 8. Open **Windows Explorer** 
    - Navigate to your download directory 
-   - Copy the renamed file from your download folder to `C:\Users\<participant-user>`.
+   - Copy the renamed file from your download folder to <mark>**`C:\Users\<windows-user>`**.</mark>
 
 > [!TIP]
-> If the file already exists you can overwrite it.
+> 1. Windows user will be different from your participant number
+> 
+> 2. If the file already exists you can overwrite it.
 
    ![Windows Explorer — home directory, .mcp.json file highlighted](images/ex04-0-9.png)
 
