@@ -374,10 +374,15 @@ Use this option if Bruno, VS Code, and Claude Code CLI are pre-installed on your
 
    ![GitHub — .mcp.json file page, Download raw file button highlighted](images/ex04-0-8.png)
 
-8. Open **Windows Explorer** — navigate to your Downloads folder and copy the renamed file to `C:\Users\<participant-user>`
+
+8. Open **Windows Explorer** 
+   - Navigate to your download directory 
+   - Copy the renamed file from your download folder to <mark>**`C:\Users\<windows-user>`**.</mark>
 
 > [!TIP]
-> If the file already exists you can overwrite it.
+> 1. Windows user will be different from your participant number
+> 
+> 2. If the file already exists you can overwrite it.
 
    ![Windows Explorer — home directory, .mcp.json file highlighted](images/ex04-0-9.png)
 

@@ -1,5 +1,6 @@
 
 # IN262 — Build an Integration Scenario from Scratch with AI Assistance at Every Step
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/teched2026-IN262)](https://api.reuse.software/info/github.com/SAP-samples/teched2026-IN262)
 
 ## About This Session
 
@@ -29,28 +30,13 @@ This hands-on session gives you practical experience with the **AI capabilities 
 | **Product Master Data Steward** | Uses an AI agent to create a new product in S/4HANA by describing it in plain language — no API client, no manual payload |
 | **End User / Customer** | Receives a personalised campaign offer in their task inbox, reviews the discount, and places the order |
 
-### How It Works — End User Flow
-
-```
-[Data Steward]  describes new product in plain language to AI agent
-      ↓
-[AI Agent]      calls S/4HANA product creation API via MCP Server
-      ↓
-[S/4HANA]       product created → AEM event raised automatically
-      ↓
-[Integration Suite]  picks up event → calculates personalised discount
-                     based on customer purchase history → triggers campaign
-      ↓
-[Customer]      receives campaign offer task in SAP Build Process Automation inbox
-      ↓
-[Customer]      reviews offer, places order
-      ↓
-[System]        Sales Order confirmed in S/4HANA → confirmation sent to inbox
-```
+### Hands-on : End User Flow
+<img src="exercises/images/End-User-Flow.png" alt="Flow Diagram" width="800" />
 
 ---
-### How It Works — Hands-on Flow Diagram
+### Hands-on : Exercise Flow Diagram
 <img src="exercises/images/IN262-Flow-Diagram.gif" alt="Flow Diagram" width="800" />
+
 
 ## 2. AI Capabilities You Will Use
 
@@ -88,12 +74,19 @@ SAP Integration Suite embeds AI at every stage of the integration lifecycle. In 
 | 1 | [Generate, Profile, Optimise and Deploy the Integration Flow with AI](exercises/ex1/README.md) | Hands-on | 30 min |
 | | → [Exercise 1.1 — Generate the iFlow with AI](exercises/ex1/ex1-1/README.md) | | |
 | | → [Exercise 1.2 — Script Optimisation and Memory Profiling](exercises/ex1/ex1-2/README.md) | | |
-| 2 | [Test Run the Scenario and Resolve Errors with AI](exercises/ex2/README.md) | Hands-on | 10 min |
+| 2 | [Test Run the Scenario and Resolve Errors with AI](exercises/ex2/README.md) | Hands-on | 15 min |
 | 3 | [Create MCP Server and Expose the API](exercises/ex3/README.md) | Hands-on | 20 min |
-| 4 | [End-to-End: Create a Product and Trigger the Campaign](exercises/ex4/README.md) | Hands-on | 20 min |
+| 4 | [End-to-End: Create a Product and Trigger the Campaign](exercises/ex4/README.md) | Hands-on | 15 min |
 | 5 | Wrap-up, Q&A & Key Takeaways | Instructor-led | 10 min |
 
+## Additional Relevant Sessions
+You can also gain some further knowledge around SAP Integration Suite and its capabilities by attending the following SAP TechEd Hands-on Workshop sessions:
 
+[IN261 | Model context protocol (MCP) unlocked: Enable governed access to AI agents](https://www.sap.com/events/teched/berlin/flow/sap/te26/catalog/page/catalog/session/1786027688241001k1kf)
+
+[IN263 | AI-supported integrations: From design quality to agent readiness](https://www.sap.com/events/teched/berlin/flow/sap/te26/catalog/page/catalog/session/1786028735882001Q0Hd)
+
+[IN163 | Build your own event-driven scenario with advanced event mesh](https://www.sap.com/events/teched/berlin/flow/sap/te26/catalog/page/catalog/session/1786029069284001qBM4)
 
 ## Contributing
 Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) to understand the contribution guidelines.
@@ -106,4 +99,4 @@ Please read the [SAP Open Source Code of Conduct](https://github.com/SAP-samples
 Support for the content in this repository is available during the actual time of the online session for which this content has been designed. Otherwise, you may request support via the [Issues](../../issues) tab.
 
 ## License
-Copyright (20xx-)20xx SAP SE or an SAP affiliate company and <your-project> contributors. Please see our [LICENSE](LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available [via the REUSE tool](https://api.reuse.software/info/github.com/SAP/<your-project>).
+Copyright 2026 SAP SE or an SAP affiliate company and <your-project> contributors. Please see our [LICENSE](LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available [via the REUSE tool](https://api.reuse.software/info/github.com/SAP/<your-project>).
